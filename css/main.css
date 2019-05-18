@@ -9,13 +9,14 @@ h1 {
   background: white;
 }
 .home {
-  background: #f0f;
-  width: 100%;
-  height: 50vh;
+  background: url("https://media.giphy.com/media/eN7dSsfIMEtHy/giphy.gif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 .about {
-  background: cyan;
-  color: black;
-  width: 100%;
-  height: 50vh;
+  background: url("https://media.giphy.com/media/fVeAI9dyD5ssIFyOyM/giphy.gif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
