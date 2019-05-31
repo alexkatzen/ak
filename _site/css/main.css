@@ -20,3 +20,35 @@ h1 {
   background-position: center;
   height: 100vh;
 }
+.full-hero {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* SPLASH STYLES */
+.splash-content {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  height: 120px;
+  width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 40%;
+  transform: translate(0, -40%);
+}
+.splash-content h1 {
+  font-weight: 600;
+}
+.splash-content a {
+  display: inline-block;
+  margin: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+  font-weight: 100;
+  transition: color .4s;
+}
+.splash-content a:hover {
+  color: red;
+  transition: all .4s;
+}
