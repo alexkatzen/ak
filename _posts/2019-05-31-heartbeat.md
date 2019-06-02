@@ -10,9 +10,9 @@ Heartbeat Health is a NY-based startup fighting heart disease through preventati
 
 ## A Problem Of Awareness
 
-A core challenge for Heartbeat is creating public awareness of the fact that most people are at risk of developing heart disease in their lifetime. It is the leading cause of death in both men and women, accounting for more deaths than all cancers combined. The good news is that heart disease is preventable; first by knowing your actual heart health, and second through leading a heart-healthy lifestyle.
+A core challenge for Heartbeat is creating public awareness around the fact that most people are at risk of developing heart disease in their lifetime — it is the leading cause of death in both men and women, accounting for more deaths than all cancers combined. The good news is that heart disease is preventable. First by knowing your actual heart health, and second through leading a heart-healthy lifestyle.
 
-Heartbeat's strategy in convincing people coming in to the practice to get themselves checked out. Getting a patient in for that first heart-check however, is a challenge in itself. When I came aboard, the team was already experimenting with the idea of a risk assessment people could take online to determine if they should come in. My task as the product designer was to come in and help them define and design the user experience of this step.
+Heartbeat's strategy in convincing people coming in to the practice to get themselves checked out. Getting a patient in for that first heart-check however, is a challenge in itself. When I came aboard, the team was already experimenting with the idea of a risk assessment people could take online to determine if they should come in. My task as the product designer was to come in and help them define and design the user experience of this step.
 
 ## Patient-centered Approach
 
