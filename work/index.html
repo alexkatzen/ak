@@ -4,10 +4,9 @@ layout: work
 
 <!-- <div class="page work-index"> -->
   <h1>Work</h1>
-    {% for post in site.posts %}
+    {% for project in site.projects %}
       <div class="work-posts">
-          <h2><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h2>
-
+          <h2><a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a></h2>
       </div>
     {% endfor %}
 <!-- </div> -->

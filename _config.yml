@@ -1,1 +1,5 @@
 baseurl: /ak
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
