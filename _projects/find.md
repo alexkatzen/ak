@@ -1,5 +1,7 @@
 ---
+layout: project
 title: Find
+project-type: UX, Research
 ---
 
 # Search UX for Rhapsody Music
@@ -111,7 +113,7 @@ We can maintain this browsing friendly UI and enable directed searches for our c
 
 <img src="{{ site.baseurl }}/images/find/collection-search.gif" alt="collection search">
 
-## objects
+## Objects
 
 Finally, the virtuous cycle can be made complete using the collections model to explore related content through facets exposed on the objects themselves:
 
