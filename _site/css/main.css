@@ -52,10 +52,16 @@ body {
 }
 
 /* PROJECT STYLES */
+
 .project {
-  border: 1px solid red;
+  border: 1px dashed magenta;
   width: 80vw;
   max-width: 960px;
+}
+.project .logo {
+  width: 32px;
+  height: 32px;
+  margin: 1em 0;
 }
 .project h1 {
   margin: 1em 0;
@@ -64,6 +70,13 @@ body {
 }
 .project h2 {
   font-size: 1.5em;
+}
+.project p {
+  margin: 1em 0;
+}
+.project li {
+  list-style-type: disc;
+  margin-left: 2em;
 }
 .project .project-type {
   color: #999;
