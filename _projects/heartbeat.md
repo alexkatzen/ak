@@ -4,7 +4,7 @@ title: Heartbeat
 
 # Heartbeat
 
-Heartbeat Health is a NY-based startup fighting heart disease through preventative cardiology. By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to eliminate the disease before it starts. I assisted the team in preparing their product for a Beta release.
+Heartbeat Health is a NY-based startup fighting heart disease through <em>preventative cardiology</em>. By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to eliminate the disease before it starts. I assisted the team in preparing their product for a Beta release.
 
 <img src="{{ site.baseurl }}/images/heartbeat/stress-test.jpg" alt="stress test">
 
@@ -32,9 +32,10 @@ Heartbeat was also looking for attention to their brand and visual language. To 
 
 With an understanding of the patients, a distillation of Heartbeat’s values, and important user stories defined, we had a starting point from which wireframe ideation could start.
 
+<figure>
 <img src="{{ site.baseurl }}/images/heartbeat/QUAL-v2.1-(mobile).jpg" alt="qualification wireframes (mobile)">
-
-<span class="caption">Moving the patient from landing page → qualification results.</span>
+<figcaption>Moving the patient from landing page → qualification results.</figcaption>
+</figure>
 
 ## Visual Design
 
