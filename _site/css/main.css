@@ -84,5 +84,5 @@ body {
   text-transform: uppercase;
 }
 .project img {
-  width: 100%;
+  max-width: 960px;
 }
