@@ -51,10 +51,17 @@ body {
   transition: all .4s;
 }
 
-/* PROJECT STYLES */
+/* WORK STYLES */
+.work-index {
+  margin: 3em 0;
+}
+.work-index h1 {
+  font-size: 2em;
+  font-weight: 400;
+}
 
 .project {
-  border: 1px dashed magenta;
+  /* border: 1px dashed magenta; */
   width: 80vw;
   max-width: 960px;
 }
@@ -64,8 +71,9 @@ body {
   margin: 1em 0;
 }
 .project h1 {
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 700;
   margin: 1em 0;
-  color: red;
   font-size: 2.5em;
 }
 .project h2 {

@@ -1,12 +1,12 @@
 ---
-layout: work
+layout: default
 ---
 
-<!-- <div class="page work-index"> -->
+<div class="work-index">
   <h1>Work</h1>
     {% for project in site.projects %}
       <div class="work-posts">
           <h2><a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a></h2>
       </div>
     {% endfor %}
-<!-- </div> -->
+</div>
