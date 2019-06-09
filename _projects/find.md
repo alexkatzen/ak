@@ -121,4 +121,4 @@ Finally, the virtuous cycle can be made complete using the collections model to 
 
 In this way, the objects not only serve as the content, but as a means of finding; illuminating relationships, and opening infinite pathways to navigate the sprawl of content that is so common on large sites today.
 
-[Framer prototype](http://share.framerjs.com/pdwq9lxp4rya/) (best viewed in Safari)
+Check out the [prototype](http://share.framerjs.com/pdwq9lxp4rya/) created for this project (best viewed in Safari)
