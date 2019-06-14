@@ -42,6 +42,25 @@ body {
   float: left;
 }
 
+/* BORDERS */
+.light-border {
+  border: 1px solid #ccc;
+}
+
+.img-collection {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-collection-item {
+  margin: .5em;
+}
+
+.img-collection-item img {
+  width: 100%;
+}
+
+
 
 /* SPLASH STYLES */
 .splash-content {
