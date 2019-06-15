@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Undiscovered SF
+description: Website for Undiscovered SF, a non-profit venture designed to jump-start economic activity in, and public awareness of the SOMA Pilipinas cultural district in San Francisco.
+project-type: Website
 ---
 
 # A creative night market celebrating San Francisco's Filipino cultural district.

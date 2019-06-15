@@ -1,7 +1,9 @@
 ---
 layout: project
 title: Find
-project-type: UX, Research
+description: Search for Rhapsody Music.
+project-type: User Experience, Research
+
 ---
 
 # Search UX for Rhapsody Music

@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Heartbeat
+description: Product design for Heartbeat Health, a startup trailblazing the practice of preventative cardiology.
+project-type: Product & Visual Design
 ---
 
 # Heartbeat
@@ -9,7 +11,7 @@ Heartbeat Health is a NY-based startup fighting heart disease through <em>preven
 
 <img src="{{ site.baseurl }}/images/heartbeat/stress-test.jpg" alt="stress test">
 
-## A Problem Of Awareness
+## A Problem of Awareness
 
 A core challenge for Heartbeat is creating public awareness around the fact that most people are at risk of developing heart disease in their lifetime — it is the leading cause of death in both men and women, accounting for more deaths than all cancers combined. The good news is that heart disease is preventable. First by knowing your actual heart health, and second through leading a heart-healthy lifestyle.
 

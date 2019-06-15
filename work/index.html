@@ -5,10 +5,14 @@ layout: work
   <a href="{{ site.baseurl }}/work"><img class="logo" src="{{ site.baseurl }}/images/ak-logo.png" alt=""></a><br>
   <span class="project-type">{{ page.project-type }}</span>
 </header>
-<div class="work-index">
+<div class="project-index">
     {% for project in site.projects %}
-      <div class="work-posts">
-          <h2><a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a></h2>
-      </div>
+      <a href="{{site.baseurl}}{{ project.url }}">
+        <div class="project-preview">
+            <h1>{{ project.title }}</h1>
+            <p>{{ project.description }}</p>
+            <p>{{ project.project-type }}</p>
+        </div>
+      </a>
     {% endfor %}
 </div>

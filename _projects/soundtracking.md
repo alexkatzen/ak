@@ -1,13 +1,15 @@
 ---
 layout: project
 title: SoundTracking
+description: A popular social music discovery service
+project-type: Product Design
 ---
 
 # Music Discovery via Music Moments
 
 SoundTracking was a popular music service based on sharing songs accompanied by a custom photo, personal note, and tagged location creating “music moments” — digital music posts that captured your life as told through the lens of music.
 
-As a founding product designer, I helped to grow the service from concept to a robust community with over 300,000 active users and 3M+ downloads. The service earned some recognition by Apple in 2011 when it was named a Best Music App. SoundTracking was acquired by Rhapsody International in 2014.
+As an early product designer, I helped to grow the service from concept to a robust community with over 300,000 active users and 3M+ downloads. The service earned some recognition by Apple in 2011 when it was named a Best Music App. SoundTracking was acquired by Rhapsody International in 2014.
 
 ---
 
