@@ -19,7 +19,7 @@ Heartbeat's strategy in convincing people coming in to the practice to get thems
 
 The Heartbeat team had already spent some time categorizing the types of patients they envisioned coming in. We used this initial thinking as a basis to create <a href="https://drive.google.com/drive/folders/1Ve634HA9V070lLvJ198nwLZqZvVMeyeI?usp=sharing" target="_blank">personas</a> from which to write feature stories.
 
-<div class="img-collection">
+<div class="img-collection-row">
 
   <div class="img-collection-item light-border">
     <img src="{{ site.baseurl }}/images/heartbeat/persona-1-diana.jpg" alt="user persona: diana">
@@ -29,7 +29,7 @@ The Heartbeat team had already spent some time categorizing the types of patient
   </div>
 
 </div>
-<div class="img-collection">
+<div class="img-collection-row">
   <div class="img-collection-item light-border">
     <img src="{{ site.baseurl }}/images/heartbeat/persona-3-wallstreet.jpg" alt="user persona: w.allstreet">
   </div>
@@ -52,7 +52,7 @@ Heartbeat was also looking for attention to their brand and visual language. To 
 With an understanding of the patients, a distillation of Heartbeat’s values, and important user stories defined, we had a starting point from which wireframe ideation could start.
 
 <figure>
-<img src="{{ site.baseurl }}/images/heartbeat/QUAL-v2.1-(mobile).jpg" alt="qualification wireframes (mobile)">
+<img class="light-border" src="{{ site.baseurl }}/images/heartbeat/QUAL-v2.1-(mobile).jpg" alt="qualification wireframes (mobile)">
 <figcaption>Moving the patient from landing page → qualification results.</figcaption>
 </figure>
 
@@ -60,13 +60,28 @@ With an understanding of the patients, a distillation of Heartbeat’s values, a
 
 Moving to mockups, we iterated on visuals and communication emphasizing education around heart disease risk.
 
-<img src="{{ site.baseurl }}/images/heartbeat/landing-page-explorations.jpg" alt="landing page explorations">
-<img src="{{ site.baseurl }}/images/heartbeat/qual.jpg" alt="Qualification">
-<img src="{{ site.baseurl }}/images/heartbeat/qual+results.jpg" alt="qualification & results">
+<img class="light-border vertical-space" src="{{ site.baseurl }}/images/heartbeat/landing-page-explorations.jpg" alt="landing page explorations">
+<img class="light-border vertical-space" src="{{ site.baseurl }}/images/heartbeat/qual.jpg" alt="Qualification">
+<img class="light-border vertical-space" src="{{ site.baseurl }}/images/heartbeat/qual+results.jpg" alt="qualification & results">
 
 ## Logo Update
 
-<img src="{{ site.baseurl }}/images/heartbeat/logo-update.jpg" alt="logo update">
+<div class="img-collection-column">
+
+  <figure>
+    <div class="img-collection-item light-border">
+      <img src="{{ site.baseurl }}/images/heartbeat/logo-update-before.jpg" alt="landing screen">
+    </div>
+    <figcaption>before</figcaption>
+  </figure>
+  <figure>
+    <div class="img-collection-item light-border">
+      <img src="{{ site.baseurl }}/images/heartbeat/logo-update-after.jpg" alt="landing screen">
+    </div>
+    <figcaption>after</figcaption>
+  </figure>
+
+</div>
 
 ## Style Documentation
 
@@ -74,7 +89,7 @@ Moving to mockups, we iterated on visuals and communication emphasizing educatio
 
 ## Final Designs
 
-<div class="img-collection">
+<div class="img-collection-row">
 
   <div class="img-collection-item">
     <img src="{{ site.baseurl }}/images/heartbeat/landing.gif" alt="landing screen">
@@ -84,7 +99,7 @@ Moving to mockups, we iterated on visuals and communication emphasizing educatio
   </div>
 </div>
 
-<div class="img-collection">
+<div class="img-collection-row">
   <div class="img-collection-item">
     <img src="{{ site.baseurl }}/images/heartbeat/qual-2.gif" alt="qualification screen 2">
   </div>
@@ -93,7 +108,7 @@ Moving to mockups, we iterated on visuals and communication emphasizing educatio
   </div>
 </div>
 
-<div class="img-collection">
+<div class="img-collection-row">
   <div class="img-collection-item">
     <img src="{{ site.baseurl }}/images/heartbeat/qual-4.png" alt="qualification screen 4">
   </div>

@@ -13,8 +13,21 @@ A challenge for any interface dealing with a deep amount of content is findabili
   * Search: The benchmark answer to findability is the search box. The familiar escape hatch that any person who knows how to “Google it” can use. Not only is search expected, but it is expected to be nearly instantaneous.
   * Browse: Users also expect to find content via browsing, whether that means browsing socially via user profiles, on curated pages, through “related” content, or otherwise.
 
-<img src="{{ site.baseurl }}/images/find/apple-music-search.jpg" alt="search on apple music">
-<img src="{{ site.baseurl }}/images/find/spotify-browse.jpg" alt="browse on spotify">
+<div class="img-collection-row">
+
+<figure>
+<div class="img-collection-item light-border">
+  <img src="{{ site.baseurl }}/images/find/apple-music-search.jpg" alt="search on apple music">
+</div>
+<figcaption>Search on Apple Music</figcaption>
+</figure>
+<figure>
+  <div class="img-collection-item">
+    <img src="{{ site.baseurl }}/images/find/spotify-browse.jpg" alt="browse on spotify">
+  </div>
+  <figcaption>Browse on Spotify</figcaption>
+</figure>
+</div>
 
 
 ## Coexisting Modalities
@@ -97,15 +110,21 @@ We’ve already seen how collections can augment our searches, but we must be ab
 
 When considering instant search results as we type, we generally are speaking of these two subtly different user interfaces: <em>auto-complete</em> & <p>auto-suggest</p>
 
-<figure>
-  <img src="{{ site.baseurl }}/images/find/appleMusic_autocomplete.gif" alt="auto-complete on apple music">
-  <figcaption>Auto-complete resolves partial search terms helping us craft better queries. (Auto-complete on Apple Music)</figcaption>
-</figure>
+<div class="img-collection-row">
+  <div class="img-collection-item">
+  <figure>
+    <img src="{{ site.baseurl }}/images/find/appleMusic_autocomplete.gif" alt="auto-complete on apple music">
+    <figcaption>Auto-complete resolves partial search terms helping us craft better queries. (Auto-complete on Apple Music)</figcaption>
+  </figure>
+  </div>
 
-<figure>
-  <img src="{{ site.baseurl }}/images/find/napster_autosuggest.gif" alt="auto-suggest on rhapsody music">
-  <figcaption>Auto suggest brings user to content faster by eliminating the need to perform a search query (Auto-suggest on Rhapsody)</figcaption>
-</figure>
+  <div class="img-collection-item">
+    <figure>
+      <img src="{{ site.baseurl }}/images/find/napster_autosuggest.gif" alt="auto-suggest on rhapsody music">
+      <figcaption>Auto suggest brings user to content faster by eliminating the need to perform a search query (Auto-suggest on Rhapsody)</figcaption>
+    </figure>
+  </div>
+</div>
 
 Streaming music services tend to lean towards auto-suggest for good reason. It provides the fastest route to music possible. Algorithms are good enough that the top result will be the right result, most of the time. A key benefit of auto-suggest—and important for the <em>Find</em> model— is that content is immediately visible. In this sense, the UI is already conducive to browsing.
 
@@ -119,6 +138,6 @@ Finally, the virtuous cycle can be made complete using the collections model to 
 
 <img src="{{ site.baseurl }}/images/find/object-to-find.gif" alt="from object to find">
 
-In this way, the objects not only serve as the content, but as a means of finding; illuminating relationships, and opening infinite pathways to navigate the sprawl of content that is so common on large sites today.
+In this way, the objects not only serve as the content, but as a means of finding by illuminating relationships, and opening infinite pathways to navigate the sprawl of content that is common on the large sites of today.
 
 Check out the [prototype](http://share.framerjs.com/pdwq9lxp4rya/) created for this project (best viewed in Safari)

@@ -12,14 +12,21 @@ body {
 .pull-left {
   float: left;
 }
-/* BORDERS */
+/* VISUAL STYLES */
 .light-border {
   border: 1px solid #ccc;
 }
+.vertical-space {
+  margin: 1em 0;
+}
 /* IMAGE COLLECTIONS */
-.img-collection {
+.img-collection-row {
   display: flex;
   flex-direction: row;
+}
+.img-collection-column {
+  display: flex;
+  flex-direction: column;
 }
 .img-collection-item {
   margin: .5em;

@@ -19,25 +19,33 @@ Part of the first generation of mobile-first services, SoundTracking encouraged 
 
 Tapping into music’s social nature, features were designed with community in mind — whether that meant reacting to posts through comments, giving 'likes' and 'loves', or seamlessly posting to other services like Twitter and Instagram.
 
+<div class="img-collection-row">
+<div class="img-collection-item">
 <figure>
   <img src="{{ site.baseurl }}/images/soundtracking/screen-post.jpg" alt="Post screen">
   <figcaption>SoundTracking encouraged users to share "music moments"</figcaption>
 </figure>
+</div>
 
-<figure>
+<div class="img-collection-item"><figure>
   <img src="{{ site.baseurl }}/images/soundtracking/screen-notes.jpg" alt="Notification feed">
   <figcaption>Notification feed</figcaption>
-</figure>
-
+</figure></div>
+</div>
+<div class="img-collection-row">
+<div class="img-collection-item">
 <figure>
   <img src="{{ site.baseurl }}/images/soundtracking/screen-post-creation.jpg" alt="Post-creation UI">
-  <figcaption>Post-creation UI</figcaption>
+  <figcaption>SoundTracking encouraged users to share "music moments"</figcaption>
 </figure>
+</div>
 
-<figure>
+<div class="img-collection-item"><figure>
   <img src="{{ site.baseurl }}/images/soundtracking/screen-profile.jpg" alt="User profile">
-  <figcaption>User profile</figcaption>
-</figure>
+  <figcaption>Notification feed</figcaption>
+</figure></div>
+</div>
+
 
 ## Cross-Platform
 
