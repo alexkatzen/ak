@@ -37,7 +37,7 @@ body {
 
 /* HEADER */
 .header-nav {
-  margin: 2em;
+  margin: 2em 0;
 }
 .header {
   background: white;
