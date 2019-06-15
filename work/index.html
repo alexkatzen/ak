@@ -1,9 +1,11 @@
 ---
-layout: splash
+layout: work
 ---
-
+<header>
+  <a href="{{ site.baseurl }}/work"><img class="logo" src="{{ site.baseurl }}/images/ak-logo.png" alt=""></a><br>
+  <span class="project-type">{{ page.project-type }}</span>
+</header>
 <div class="work-index">
-  <h1>Work</h1>
     {% for project in site.projects %}
       <div class="work-posts">
           <h2><a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a></h2>
