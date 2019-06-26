@@ -10,7 +10,7 @@ visible: true
 
 I was tasked with exploring strategy in offering an improved Search experience that could be implemented as part of a re-brand of the service under the Napster brand. My process involved looking at the history and evolution of Search on digital interfaces, benchmarking Search UIs across the music streaming landscape and building an understanding around how a search UI could be much more than just typing into a box. The book <a href="https://www.amazon.com/Search-Patterns-Discovery-Peter-Morville-ebook/dp/B0039QGJD4" target="_blank"><em>Search Patterns: Design for Discovery</em></a> was particularly inspiring during this project.
 
-Read about the concept behind the below prototype and how I arrived at it <a href="{{ site.baseurl }}/projects/find-concept/">here</a>.
+Read about the concept and how I arrived at it <a href="{{ site.baseurl }}/projects/find-concept/">here</a>.
 
 <div class="img-collection-row">
   <figure>

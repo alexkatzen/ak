@@ -2,7 +2,7 @@
 layout: project
 title: Undiscovered SF
 description: A night market celebrating San Francisco's Filipino cultural district
-role: Wedbsite design & development
+role: Wedbsite
 featured-image: /images/undscvrd/featured-img.jpg
 order: 2
 visible: true

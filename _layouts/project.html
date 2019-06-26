@@ -7,22 +7,23 @@ layout: work
 </header>
 <div class="project content-container">
   <article>
-
+        <p class="role">{{ page.role }}</p>
     <h1>{{ page.description }}</h1>
-    <span class="role">{{ page.role }}</span>
+
     <div class="project-content">
 
       {{ content }}
     </div>
   </article>
-  <div class="project-footer-nav">
-    <a href="{{ site.baseurl }}/work">Projects</a>
-    <ul>
-    {% for project in site.projects %}
-      {% if page.url != project.url and project.visible == true %}
-        <li><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-    </ul>
-  </div>
+
+</div>
+<div class="project-footer-nav">
+  <a href="{{ site.baseurl }}/work"><em>Projects:</em></a>
+  <ul>
+  {% for project in site.projects %}
+    {% if page.url != project.url and project.visible == true %}
+      <li><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul>
 </div>
