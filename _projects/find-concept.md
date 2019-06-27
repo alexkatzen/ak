@@ -93,17 +93,17 @@ But more importantly:
 
 The first place collections are introduced is front and center in our UI. Adjacent to the search field, collections are presented in the form of a swipe-able collection browser.
 
-<img src="{{ site.baseurl }}/images/find/collection-browser.gif" alt="collection browser">
+<img class="native" src="{{ site.baseurl }}/images/find/collection-browser.gif" alt="collection browser">
 
 ### Interacting With collections
 
 When we tap a collection, as expected, the associated content is presented to us. However, we remain in a search context, because collections are not only facets of content we can browse, but facets of content that we can narrow our search by:
 
-<img src="{{ site.baseurl }}/images/find/collection-interaction.gif" alt="collection interaction">
+<img class="native" src="{{ site.baseurl }}/images/find/collection-interaction.gif" alt="collection interaction">
 
 Using the Collection Browser, we can then further refine searches, and reveal relationships that were previously invisible:
 
-<img src="{{ site.baseurl }}/images/find/combine-tags-jazz+fusion.gif" alt="combining jazz + fusion tags">
+<img class="native" src="{{ site.baseurl }}/images/find/combine-tags-jazz+fusion.gif" alt="combining jazz + fusion tags">
 
 # Search
 
@@ -136,13 +136,13 @@ Streaming music services tend to lean towards auto-suggest for good reason. It p
 
 We can maintain this browsing friendly UI and enable directed searches for our collections by using a hybrid model. As we type into the search box, matching collections appear where they normally do, with our suggested results appearing below that:
 
-<img src="{{ site.baseurl }}/images/find/collection-search.gif" alt="collection search">
+<img class="native" src="{{ site.baseurl }}/images/find/collection-search.gif" alt="collection search">
 
 ## Objects
 
 Finally, the virtuous cycle can be made complete using the collections model to explore related content through facets exposed on the objects themselves:
 
-<img src="{{ site.baseurl }}/images/find/object-to-find.gif" alt="from object to find">
+<img class="native" src="{{ site.baseurl }}/images/find/object-to-find.gif" alt="from object to find">
 
 In this way, the objects not only serve as the content, but as a means of finding by illuminating relationships, and opening infinite pathways to navigate the sprawl of content that is common on the large sites of today.
 
