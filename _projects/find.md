@@ -13,41 +13,26 @@ I was tasked with exploring strategy in offering an improved Search experience t
 Read about the concept and how I arrived at it <a href="{{ site.baseurl }}/projects/find-concept/">here</a>.
 
 <div class="img-collection-row">
-  <figure>
   <div class="img-collection-item">
     <img src="{{ site.baseurl }}/images/find/object-to-find.gif" alt="from object to find">
   </div>
-  <figcaption></figcaption>
-</figure>
-<figure>
   <div class="img-collection-item">
     <img src="{{ site.baseurl }}/images/find/combine-tags-jazz+fusion.gif" alt="combining tags">
   </div>
-  <figcaption></figcaption>
-</figure>
 </div>
 
 <div class="img-collection-row">
-<figure>
-<div class="img-collection-item">
-  <img src="{{ site.baseurl }}/images/find/collection-browser.gif" alt="collection browser">
-</div>
-<figcaption></figcaption>
-</figure>
-<figure>
+  <div class="img-collection-item">
+    <img src="{{ site.baseurl }}/images/find/collection-browser.gif" alt="collection browser">
+  </div>
   <div class="img-collection-item">
     <img src="{{ site.baseurl }}/images/find/collection-interaction.gif" alt="collection interaction">
   </div>
-  <figcaption></figcaption>
-</figure>
-
 </div>
+
 <div class="img-collection-row">
-<figure>
 <div class="img-collection-item">
   <img src="{{ site.baseurl }}/images/find/collection-search.gif" alt="collection search">
 </div>
-<figcaption></figcaption>
-</figure>
 <div class="img-collection-item-empty"></div>
 </div>

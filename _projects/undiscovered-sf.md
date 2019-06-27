@@ -8,7 +8,7 @@ order: 2
 visible: true
 ---
 
-<img class="full-width" src="{{ site.baseurl }}/images/undscvrd/event-page-hero.jpg" alt="undiscovered sf homepage">
+<img  src="{{ site.baseurl }}/images/undscvrd/event-page-hero.jpg" alt="undiscovered sf homepage">
 
 I designed and built a website for <a href="http://undiscoveredsf.com" target="_blank">Undiscovered SF</a>, a non-profit venture designed to jump-start economic activity within, and public awareness of <a href="http://www.somapilipinas.org/">SOMA Pilipinas</a>, San Francisco's Filipino cultural district. The marquee event is a monthly creative night market featuring food, retail, and performances that attracts thousands of people each month.
 
@@ -36,8 +36,8 @@ A free night market like Undiscovered SF attracts a wide variety of people—att
 
 For each individual, a user narrative was written which identified 1) how they might have found out about the night market, 2) how they engaged with the site and event 3) why they come come back, and 4) why they would refer the experience to others. Thinking about each user's motivations and needs this way illuminated <a href="https://docs.google.com/spreadsheets/d/1CWypn2WwdE6hD4mNstqmZviSVQoumf1EKT7pt7SqpWU/edit?usp=sharing" target="_blank">user stories</a> we could be confident in designing around.
 
-<figure class="full-width">
-  <img class="full-width" src="{{ site.baseurl }}/images/undscvrd/user-story-matrix.jpg" alt="user story matrix">
+<figure >
+  <img  src="{{ site.baseurl }}/images/undscvrd/user-story-matrix.jpg" alt="user story matrix">
   <figcaption>A matrix was created to prioritze the stories that were most common amongst all user personas.</figcaption>
 </figure>
 
@@ -46,7 +46,7 @@ For each individual, a user narrative was written which identified 1) how they m
 
 A site map was created describing a potential site architecture that would meet the needs expressed in the user stories.
 
-<img class="full-width" src="{{ site.baseurl }}/images/undscvrd/site-map.jpg" alt="site map">
+<img  src="{{ site.baseurl }}/images/undscvrd/site-map.jpg" alt="site map">
 
 ## Wireframes
 

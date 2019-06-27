@@ -11,7 +11,7 @@ visible: true
 Heartbeat Health is a NY-based startup fighting heart disease through <em>preventative cardiology</em>. By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to
 eliminate the disease before it starts. I assisted the team in preparing their product for a Beta release.
 
-<img class="full-width" src="{{ site.baseurl }}/images/heartbeat/stress-test.jpg" alt="stress test">
+<img src="{{ site.baseurl }}/images/heartbeat/stress-test.jpg" alt="stress test">
 
 ## A Problem of Awareness
 
@@ -55,24 +55,24 @@ user story <a href="https://docs.google.com/spreadsheets/d/15tHqNh0g0SuM7EV_haE-
 Heartbeat was also looking for attention to their brand and visual language. To kick this off I led the team through an exercise with the <a href="https://branding.cards/" target="_blank">Brand Deck</a> to quickly identify values on which to build
 design on.
 
-<img class="full-width" src="{{ site.baseurl }}/images/heartbeat/brand-deck-results.jpg" alt="brand deck results">
+<img src="{{ site.baseurl }}/images/heartbeat/brand-deck-results.jpg" alt="brand deck results">
 
 ## Wireframe Ideation
 
 With an understanding of the patients, a distillation of Heartbeat’s values, and important user stories defined, we had a starting point from which wireframe ideation could start.
 
-<figure class="full-width">
+<figure >
   <img class="full-width light-border" src="{{ site.baseurl }}/images/heartbeat/QUAL-v2.1-(mobile).jpg" alt="qualification wireframes (mobile)">
-  <figcaption>Moving the patient from landing page → qualification results.</figcaption>
+  <figcaption>Moving the patient from landing page through qualification results.</figcaption>
 </figure>
 
 ## Visual Design
 
 Moving to mockups, we iterated on visuals and communication emphasizing education around heart disease risk.
 
-<img class="light-border vertical-space full-width" src="{{ site.baseurl }}/images/heartbeat/landing-page-explorations.jpg" alt="landing page explorations">
-<img class="light-border vertical-space full-width" src="{{ site.baseurl }}/images/heartbeat/qual.jpg" alt="Qualification">
-<img class="light-border vertical-space full-width" src="{{ site.baseurl }}/images/heartbeat/qual+results.jpg" alt="qualification & results">
+<img class="light-border vertical-space" src="{{ site.baseurl }}/images/heartbeat/landing-page-explorations.jpg" alt="landing page explorations">
+<img class="light-border vertical-space" src="{{ site.baseurl }}/images/heartbeat/qual.jpg" alt="Qualification">
+<img class="light-border vertical-space" src="{{ site.baseurl }}/images/heartbeat/qual+results.jpg" alt="qualification & results">
 
 ## Logo Update
 
@@ -80,15 +80,15 @@ Moving to mockups, we iterated on visuals and communication emphasizing educatio
 
 
   <div class="img-collection-item">
-    <figure class="full-width">
-      <img class="light-border full-width" src="{{ site.baseurl }}/images/heartbeat/logo-update-before.jpg" alt="landing screen">
+    <figure >
+      <img class="light-border" src="{{ site.baseurl }}/images/heartbeat/logo-update-before.jpg" alt="landing screen">
       <figcaption>before</figcaption>
     </figure>
   </div>
 
   <div class="img-collection-item">
-    <figure class="full-width">
-      <img class="light-border full-width" src="{{ site.baseurl }}/images/heartbeat/logo-update-after.jpg" alt="landing screen">
+    <figure >
+      <img class="light-border" src="{{ site.baseurl }}/images/heartbeat/logo-update-after.jpg" alt="landing screen">
       <figcaption>after</figcaption>
     </figure>
   </div>
