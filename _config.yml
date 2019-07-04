@@ -1,4 +1,4 @@
-baseurl: /ak
+url: "http://alexkatzen.com"
 collections:
   projects:
     output: true

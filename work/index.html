@@ -2,17 +2,17 @@
 layout: project-index
 ---
 <header>
-  <a href="{{ site.baseurl }}/work"><img class="logo" src="{{ site.baseurl }}/images/ak-logo.png" alt=""></a><br>
+  <a href="{{ site.url }}/work"><img class="logo" src="{{ site.url }}/images/ak-logo.png" alt=""></a><br>
   <span class="project-type">{{ page.project-type }}</span>
 </header>
 <div>
     {% assign sorted_projects = site.projects | sort:"order" %}
     {% for project in sorted_projects %}
       {% if project.visible == true %}
-      <a href="{{site.baseurl}}{{ project.url }}">
+      <a href="{{site.url}}{{ project.url }}">
         <div class="project-preview">
-            <div class="thumbnail-container" style="background-image:url({{site.baseurl}}/{{ project.featured-image}})">
-                <!-- <img src="{{site.baseurl}}{{ project.featured-image}}" alt=""> -->
+            <div class="thumbnail-container" style="background-image:url({{site.url}}/{{ project.featured-image}})">
+                <!-- <img src="{{site.url}}{{ project.featured-image}}" alt=""> -->
             </div>
 
             <h1>{{ project.title }}</h1>
