@@ -82,7 +82,6 @@ figcaption {
 .header-nav li {
   list-style-type: none;
 }
-
 .home {
   background: url("https://media.giphy.com/media/eN7dSsfIMEtHy/giphy.gif");
   background-size: cover;
@@ -95,7 +94,6 @@ figcaption {
   background-position: center;
   height: 100vh;
 }
-
 /* SPLASH PAGE */
 .splash {
   height: 100vh;
