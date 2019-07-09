@@ -1,28 +1,17 @@
-/* FONTS */
-@font-face {
-  font-family: "FivoSans-Regular";
-  src: url("/fonts/FivoSans/FivoSans-regular.otf");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "FivoSans-Bold";
-  src: url("/fonts/FivoSans/FivoSans-Bold.otf");
-  font-weight: normal;
-}
-
 /* GLOBAL STYLES */
+/* FONTS */
 .project h1,
 .project h2,
 .project-footer-nav ul,
 .project-footer-nav li,
 .project-footer-nav a,
 .project-preview h1 {
-  font-family: "FivoSans-bold";
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 .role,
 .header-nav,
 .project-footer-nav a.footer-heading {
-  font-family: "FivoSans-regular"
+  font-family: "Times New Roman", Times, serif;
 }
 figure,
 .project-preview p,
@@ -129,8 +118,7 @@ figcaption {
   transform: translate(0, -45%);
 }
 .splash-content h1 {
-  font-family: "FivoSans-bold";
-  font-size: 2em;
+  font-size: 3em;
   line-height: 1.3em;
   color: #6C4545;
   font-weight: 600;
@@ -275,7 +263,7 @@ header.project-header {
     width: 100%;
   }
   .splash-content h1 {
-    font-size: 1.3em;
+    font-size: 2em;
   }
   .splash-content a {
     font-size: 1em;
