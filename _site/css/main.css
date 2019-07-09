@@ -1,20 +1,34 @@
+/* FONTS */
+@font-face {
+  font-family: "FivoSans-Regular";
+  src: url("/fonts/FivoSans/FivoSans-regular.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "FivoSans-Bold";
+  src: url("/fonts/FivoSans/FivoSans-Bold.otf");
+  font-weight: normal;
+}
+
 /* GLOBAL STYLES */
-figure,
-.header-nav,
-.project-preview h1,
-.project-preview p,
 .project h1,
-.project p,
-.role,
+.project h2,
 .project-footer-nav ul,
 .project-footer-nav li,
-.project-footer-nav a
- {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+.project-footer-nav a,
+.project-preview h1 {
+  font-family: "FivoSans-bold";
 }
+.role,
 .header-nav,
 .project-footer-nav a.footer-heading {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "FivoSans-regular"
+}
+figure,
+.project-preview p,
+.project p
+ {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 body {
   color: 	#6A4444;
@@ -115,6 +129,7 @@ figcaption {
   transform: translate(0, -45%);
 }
 .splash-content h1 {
+  font-family: "FivoSans-bold";
   font-size: 2em;
   line-height: 1.3em;
   color: #6C4545;
@@ -203,11 +218,9 @@ header.project-header {
   margin: 1em 0;
 }
 .role {
-  font-weight: 400;
   letter-spacing: 1px;
   color:ROSYBROWN;
-  font-size: .65em;
-  text-transform: uppercase;
+  font-size: .75em;
 }
 .project {
   width: 80vw;
@@ -248,7 +261,7 @@ header.project-header {
   font-size: 1.2em;
   text-decoration: none;
   font-weight: 500;
-  color: rosybrown;
+  color: #3A1819;
 }
 /* RESPONSIVE STYLES */
 @media (max-width: 960px) {
