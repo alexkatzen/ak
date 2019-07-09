@@ -1,16 +1,5 @@
-/* FONTS */
-@font-face {
-  font-family: "FivoSans-Regular";
-  src: url("/fonts/FivoSans/FivoSans-regular.otf");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "FivoSans-Bold";
-  src: url("/fonts/FivoSans/FivoSans-Bold.otf");
-  font-weight: normal;
-}
-
 /* GLOBAL STYLES */
+/* FONTS */
 .project h1,
 .project h2,
 .project-footer-nav ul,
