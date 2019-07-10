@@ -1,25 +1,8 @@
 // GLOBAL STYLES
 // FONTS
-.project h1,
-.project h2,
-.project-footer-nav ul,
-.project-footer-nav li,
-.project-footer-nav a,
-.project-preview h1 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  color: red;
-}
-.role,
-.header-nav,
-.project-footer-nav a.footer-heading {
-  font-family: "Times New Roman", Times, serif;
-}
-figure,
-.project-preview p,
-.project p
- {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-}
+$font-primary: "Helvetica Neue", Helvetica, sans-serif;
+$font-secondary: "Times New Roman", Times, serif;
+
 body {
   color: 	#6A4444;
 }
@@ -68,6 +51,7 @@ a {
   width: 512px;
 }
 figure {
+  font-family: $font-primary;
   display: table;
 }
 figcaption {
@@ -79,6 +63,7 @@ figcaption {
 
 // HEADER
 .header-nav {
+  font-family: $font-secondary;
   font-size: .9em;
   margin: 1.8em .5em 1.5em;
   color: #3A1819;
@@ -187,26 +172,31 @@ header.project-header {
   margin: 0 1em 1em 0;
 }
 .project-preview h1 {
+  font-family: $font-primary;
   color: #3A1819;
   margin: 1em 0 .5em;
   font-size: 1em;
   font-weight: 600;
 }
 .project-preview p {
+  font-family: $font-primary;
   color: ROSYBROWN;
   font-size: .8em;
   line-height: 1.2em;
 }
 .project h1 {
+  font-family: $font-primary;
   color: #3A1819;
   font-weight: 700;
   margin: 1em 0;
   font-size: 2.5em;
 }
 .project h2 {
+  // font-family: $font-primary;
   margin: 1em 0;
 }
 .role {
+  font-family: $font-secondary;
   letter-spacing: 1px;
   color:ROSYBROWN;
   font-size: .75em;
@@ -219,6 +209,7 @@ header.project-header {
   font-size: 1.5em;
 }
 .project p {
+  font-family: $font-primary;
   line-height: 1.6em;
   max-width: 1280px;
   margin: 1em 0 1.5em;
@@ -232,10 +223,12 @@ header.project-header {
   margin-top: 2em;
 }
 .project-footer-nav li {
+  font-family: $font-primary;
   display: inline-block;
   line-height: 1.5em;
 }
-.project-footer-nav a.footer-heading {
+.project-footer-heading {
+  font-family: $font-secondary;
   font-size: .8em;
   font-style: italic;
   display: inline-block;
@@ -251,39 +244,4 @@ header.project-header {
   text-decoration: none;
   font-weight: 500;
   color: #3A1819;
-}
-// RESPONSIVE STYLES
-@media (max-width: 960px) {
-  p {
-    width: 100%;
-  }
-  .project {
-    width: 100%;
-  }
-  .project-content img {
-    width: 100%;
-  }
-  .splash-content h1 {
-    font-size: 2em;
-  }
-  .splash-content a {
-    font-size: 1em;
-    margin: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .img-collection-row {
-    display: flex;
-    flex-direction: column;
-  }
-  .project h1 {
-    font-size: 1.8em;
-  }
-}
-@media (max-width: 480px) {
-  .project-preview,
-  .thumbnail-container img {
-    width: 100%;
-    min-width: 100%;
-  }
 }
