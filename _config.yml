@@ -3,3 +3,7 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+
+sass:
+  sass_dir: _sass
+  style: compact

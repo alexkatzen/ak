@@ -1,0 +1,36 @@
+// SPLASH PAGE
+.splash {
+  height: 100vh;
+  background-color: $color-site-bg;
+}
+.splash-content {
+  font-family: $font-primary;
+  height: 120px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+  position: relative;
+  top: 45%;
+  transform: translate(0, -45%);
+}
+.splash-content h1 {
+  font-size: 3em;
+  line-height: 1.3em;
+  color: $color-primary-medium;
+  font-weight: 600;
+}
+.splash-content a {
+  display: inline-block;
+  margin: 40px;
+  text-decoration: none;
+  color: #6C4545;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: color .4s;
+}
+.splash-content a:hover {
+  color: $color-secondary;
+  transition: all .4s;
+}

@@ -1,0 +1,98 @@
+// FONTS
+$font-primary: "Helvetica Neue", Helvetica, sans-serif;
+$font-secondary: "Times New Roman", Times, serif;
+
+// COLOR
+$color-primary-dark: #3A1819;
+$color-primary-medium: #6A4444;
+$color-secondary: ROSYBROWN;
+$color-links: CADETBLUE;
+$color-site-bg: PAPAYAWHIP;
+
+// TYPOGRAPHY
+@mixin link-style {
+  color: $color-links;
+  text-decoration: none;
+}
+body {
+  color: $color-primary-medium;
+}
+a {
+  @include link-style;
+}
+a:hover {
+  @include link-style;
+  text-decoration: underline;
+}
+figure {
+  font-family: $font-primary;
+  display: table;
+}
+figcaption {
+  font-size: .9em;
+  display: table-caption;
+  caption-side: bottom;
+  margin: .5em 0;
+}
+
+// LAYOUT
+.content-container {
+  box-sizing: border-box;
+  padding: 1.5em;
+}
+.pull-right {
+  float: right
+}
+.pull-left {
+  float: left;
+}
+
+// VISUAL STYLES
+.logo {
+  width: 28px;
+  height: 28px;
+  margin: 1em 0;
+}
+.light-border {
+  border: 1px solid #ccc;
+}
+.vertical-space {
+  margin: 1em 0;
+}
+
+// IMAGES
+img.native {
+  width: auto;
+}
+.img-collection-row {
+  display: flex;
+  flex-direction: row;
+}
+.img-collection-column {
+  display: flex;
+  flex-direction: column;
+}
+.img-collection-row .img-collection-item {
+  margin: .5em;
+}
+.img-collection-item img {
+  width: 100%;
+}
+.img-collection-item-empty {
+  width: 512px;
+}
+
+// HEADER
+.header-nav {
+  font-family: $font-secondary;
+  font-size: .9em;
+  margin: 1.8em .5em 1.5em;
+  color: $color-primary-dark;
+}
+// turn off for a header bar
+// .project-header {
+//   background: $color-site-bg;
+// }
+.header-nav li {
+  list-style-type: none;
+}

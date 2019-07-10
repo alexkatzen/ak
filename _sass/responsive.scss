@@ -1,0 +1,35 @@
+// RESPONSIVE STYLES
+@media (max-width: 960px) {
+  p {
+    width: 100%;
+  }
+  .project {
+    width: 100%;
+  }
+  .project-content img {
+    width: 100%;
+  }
+  .splash-content h1 {
+    font-size: 2em;
+  }
+  .splash-content a {
+    font-size: 1em;
+    margin: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .img-collection-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .project h1 {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 480px) {
+  .project-preview,
+  .thumbnail-container img {
+    width: 100%;
+    min-width: 100%;
+  }
+}
