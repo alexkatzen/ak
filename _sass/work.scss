@@ -3,9 +3,6 @@
   width: 100%;
   max-width: 1280px;
 }
-img.native {
-  width: auto;
-}
 header.project-header {
   padding: 1.5em;
 }
@@ -115,5 +112,5 @@ header.project-header {
   font-size: 1.2em;
   text-decoration: none;
   font-weight: 500;
-  color: $color-primary;
+  color: $color-primary-dark;
 }
