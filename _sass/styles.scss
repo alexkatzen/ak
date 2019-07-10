@@ -1,5 +1,5 @@
-/* GLOBAL STYLES */
-/* FONTS */
+// GLOBAL STYLES
+// FONTS
 .project h1,
 .project h2,
 .project-footer-nav ul,
@@ -42,14 +42,14 @@ a {
   color: cadetblue;
   text-decoration: none;
 }
-/* VISUAL STYLES */
+// VISUAL STYLES
 .light-border {
   border: 1px solid #ccc;
 }
 .vertical-space {
   margin: 1em 0;
 }
-/* IMAGE COLLECTIONS */
+// IMAGE COLLECTIONS
 .img-collection-row {
   display: flex;
   flex-direction: row;
@@ -77,7 +77,7 @@ figcaption {
   margin: .5em 0;
 }
 
-/* HEADER */
+// HEADER
 .header-nav {
   font-size: .9em;
   margin: 1.8em .5em 1.5em;
@@ -138,8 +138,8 @@ figcaption {
   transition: all .4s;
 }
 
-/* WORK & PROJECT STYLES */
-/* PROJECT PAGES */
+//WORK & PROJECT STYLES
+// PROJECT PAGES
 .project img,
 .project figure {
   width: 100%;
@@ -252,7 +252,7 @@ header.project-header {
   font-weight: 500;
   color: #3A1819;
 }
-/* RESPONSIVE STYLES */
+// RESPONSIVE STYLES
 @media (max-width: 960px) {
   p {
     width: 100%;
