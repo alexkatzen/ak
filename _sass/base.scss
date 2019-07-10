@@ -1,0 +1,79 @@
+// FONTS
+$font-primary: "Helvetica Neue", Helvetica, sans-serif;
+$font-secondary: "Times New Roman", Times, serif;
+
+body {
+  color: 	#6A4444;
+}
+a {
+  color: cadetblue;
+  text-decoration: none;
+}
+figure {
+  font-family: $font-primary;
+  display: table;
+}
+figcaption {
+  font-size: .9em;
+  display: table-caption;
+  caption-side: bottom;
+  margin: .5em 0;
+}
+
+// LAYOUT
+.content-container {
+  box-sizing: border-box;
+  padding: 1.5em;
+}
+.pull-right {
+  float: right
+}
+.pull-left {
+  float: left;
+}
+
+// VISUAL STYLES
+.logo {
+  width: 28px;
+  height: 28px;
+  margin: 1em 0;
+}
+.light-border {
+  border: 1px solid #ccc;
+}
+.vertical-space {
+  margin: 1em 0;
+}
+
+// IMAGE COLLECTIONS
+.img-collection-row {
+  display: flex;
+  flex-direction: row;
+}
+.img-collection-column {
+  display: flex;
+  flex-direction: column;
+}
+.img-collection-row .img-collection-item {
+  margin: .5em;
+}
+.img-collection-item img {
+  width: 100%;
+}
+.img-collection-item-empty {
+  width: 512px;
+}
+
+// HEADER
+.header-nav {
+  font-family: $font-secondary;
+  font-size: .9em;
+  margin: 1.8em .5em 1.5em;
+  color: #3A1819;
+}
+.header {
+  background: white;
+}
+.header-nav li {
+  list-style-type: none;
+}
