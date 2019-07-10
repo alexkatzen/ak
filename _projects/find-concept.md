@@ -17,14 +17,14 @@ A challenge for any interface dealing with a deep amount of content is findabili
 
 <figure>
 <div class="img-collection-item light-border">
-  <img src="{{ site.url }}/images/find/apple-music-search.jpg" alt="search on apple music">
+  <img src="/images/find/apple-music-search.jpg" alt="search on apple music">
 </div>
 <figcaption>Search on Apple Music </figcaption>
 </figure>
 
 <figure>
   <div class="img-collection-item">
-    <img src="{{ site.url }}/images/find/spotify-browse.jpg" alt="browse on spotify">
+    <img src="/images/find/spotify-browse.jpg" alt="browse on spotify">
   </div>
   <figcaption>Browse on Spotify</figcaption>
 </figure>
@@ -42,7 +42,7 @@ What if there was way both modalities could coexist not only in parallel, but in
 In <a href="http://searchpatterns.org/" target="_blank"><em>Search Patterns: Design for Discovery</em></a>, Peter Morville & Jeffery Callender describe that when large sites scale, traditional means of browsing inevitably fail to support the chaotic sprawl of content that emerges. At that point, they identify three key areas with the potential to act as powerful fulcrum on which to design for findability:
 
 <figure>
-  <img src="{{ site.url }}/images/find/three-fulcra.jpg" alt="the three fulcra of large websites">
+  <img src="/images/find/three-fulcra.jpg" alt="the three fulcra of large websites">
   <figcaption>Three fulcra of large websites, from “Search Patterns: Design for Discovery”, Peter Morville & Jeffery Callender</figcaption>
 </figure>
 
@@ -74,7 +74,7 @@ How can this be achieved?
 
 # Collections
 
-<img src="{{ site.url }}/images/find/collections.jpg" alt="collections">
+<img src="/images/find/collections.jpg" alt="collections">
 
 <em>Find</em> hinges around this idea of creating a virtuous cycle between the three fulcra of a music streaming service by introducing a term borrowed from the Search Patterns book: Collections.
 
@@ -93,17 +93,17 @@ But more importantly:
 
 The first place collections are introduced is front and center in our UI. Adjacent to the search field, collections are presented in the form of a swipe-able collection browser.
 
-<img class="native" src="{{ site.url }}/images/find/collection-browser.gif" alt="collection browser">
+<img class="native" src="/images/find/collection-browser.gif" alt="collection browser">
 
 ### Interacting With collections
 
 When we tap a collection, as expected, the associated content is presented to us. However, we remain in a search context, because collections are not only facets of content we can browse, but facets of content that we can narrow our search by:
 
-<img class="native" src="{{ site.url }}/images/find/collection-interaction.gif" alt="collection interaction">
+<img class="native" src="/images/find/collection-interaction.gif" alt="collection interaction">
 
 Using the Collection Browser, we can then further refine searches, and reveal relationships that were previously invisible:
 
-<img class="native" src="{{ site.url }}/images/find/combine-tags-jazz+fusion.gif" alt="combining jazz + fusion tags">
+<img class="native" src="/images/find/combine-tags-jazz+fusion.gif" alt="combining jazz + fusion tags">
 
 # Search
 
@@ -116,7 +116,7 @@ When considering instant search results as we type, we generally are speaking of
 
   <div class="img-collection-item">
     <figure>
-    <img class="light-border" src="{{ site.url }}/images/find/appleMusic_autocomplete.gif" alt="auto-complete on apple music">
+    <img class="light-border" src="/images/find/appleMusic_autocomplete.gif" alt="auto-complete on apple music">
     <figcaption>Auto-complete resolves partial search terms helping us craft better queries. (Auto-complete on Apple Music)</figcaption>
     </figure>
   </div>
@@ -126,7 +126,7 @@ When considering instant search results as we type, we generally are speaking of
 
   <div class="img-collection-item" light border>
     <figure>
-    <img src="{{ site.url }}/images/find/napster_autosuggest.gif" alt="auto-suggest on rhapsody music">
+    <img src="/images/find/napster_autosuggest.gif" alt="auto-suggest on rhapsody music">
     <figcaption>Auto suggest brings user to content faster by eliminating the need to perform a search query (Auto-suggest on Rhapsody)</figcaption>
     </figure>
   </div>
@@ -136,13 +136,13 @@ Streaming music services tend to lean towards auto-suggest for good reason. It p
 
 We can maintain this browsing friendly UI and enable directed searches for our collections by using a hybrid model. As we type into the search box, matching collections appear where they normally do, with our suggested results appearing below that:
 
-<img class="native" src="{{ site.url }}/images/find/collection-search.gif" alt="collection search">
+<img class="native" src="/images/find/collection-search.gif" alt="collection search">
 
 ## Objects
 
 Finally, the virtuous cycle can be made complete using the collections model to explore related content through facets exposed on the objects themselves:
 
-<img class="native" src="{{ site.url }}/images/find/object-to-find.gif" alt="from object to find">
+<img class="native" src="/images/find/object-to-find.gif" alt="from object to find">
 
 In this way, the objects not only serve as the content, but as a means of finding by illuminating relationships, and opening infinite pathways to navigate the sprawl of content that is common on the large sites of today.
 
