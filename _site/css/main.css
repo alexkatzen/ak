@@ -1,6 +1,8 @@
 body { color: #6A4444; }
 
-a { color: cadetblue; text-decoration: none; }
+a { color: CADETBLUE; text-decoration: none; }
+
+a:hover { color: CADETBLUE; text-decoration: none; text-decoration: underline; }
 
 figure { font-family: "Helvetica Neue", Helvetica, sans-serif; display: table; }
 
@@ -36,9 +38,9 @@ figcaption { font-size: .9em; display: table-caption; caption-side: bottom; marg
 
 .splash { height: 100vh; background-color: PAPAYAWHIP; }
 
-.splash-content { font-family: "helvetica neue", helvetica, arial, sans-serif; height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
+.splash-content { font-family: "Helvetica Neue", Helvetica, sans-serif; height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
 
-.splash-content h1 { font-size: 3em; line-height: 1.3em; color: #6C4545; font-weight: 600; }
+.splash-content h1 { font-size: 3em; line-height: 1.3em; color: #6A4444; font-weight: 600; }
 
 .splash-content a { display: inline-block; margin: 40px; text-decoration: none; color: #6C4545; font-size: 1.2em; font-weight: 500; transition: color .4s; }
 
@@ -66,7 +68,7 @@ header.project-header { padding: 1.5em; }
 
 .project h1 { font-family: "Helvetica Neue", Helvetica, sans-serif; color: #3A1819; font-weight: 700; margin: 1em 0; font-size: 2.5em; }
 
-.project h2 { margin: 1em 0; }
+.project h2 { font-family: "Times New Roman", Times, serif; margin: 1em 0; }
 
 .role { font-family: "Times New Roman", Times, serif; letter-spacing: 1px; color: ROSYBROWN; font-size: .75em; }
 

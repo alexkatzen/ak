@@ -2,12 +2,27 @@
 $font-primary: "Helvetica Neue", Helvetica, sans-serif;
 $font-secondary: "Times New Roman", Times, serif;
 
+// COLOR
+$color-primary-dark: #3A1819;
+$color-primary-medium: #6A4444;
+$color-secondary: ROSYBROWN;
+$color-links: CADETBLUE;
+$color-site-bg: PAPAYAWHIP;
+
+// TYPOGRAPHY
+@mixin link-style {
+  color: $color-links;
+  text-decoration: none;
+}
 body {
-  color: 	#6A4444;
+  color: $color-primary-medium;
 }
 a {
-  color: cadetblue;
-  text-decoration: none;
+  @include link-style;
+}
+a:hover {
+  @include link-style;
+  text-decoration: underline;
 }
 figure {
   font-family: $font-primary;
@@ -45,7 +60,10 @@ figcaption {
   margin: 1em 0;
 }
 
-// IMAGE COLLECTIONS
+// IMAGES
+img.native {
+  width: auto;
+}
 .img-collection-row {
   display: flex;
   flex-direction: row;
