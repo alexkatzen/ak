@@ -36,15 +36,15 @@ img.native { width: auto; }
 
 .header-nav li { list-style-type: none; }
 
-.splash { height: 100vh; background-color: CORNSILK; }
+.splash { height: 100vh; background-color: black; }
 
 .splash-content { font-family: "Helvetica Neue", Helvetica, sans-serif; height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
 
-.splash-content h1 { font-size: 3em; line-height: 1.3em; color: #6A4444; font-weight: 600; }
+.splash-content h1 { font-size: 3em; letter-spacing: -1px; line-height: 1.3em; color: white; font-weight: 600; }
 
-.splash a { font-family: "Helvetica Neue", Helvetica, sans-serif; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #6C4545; font-size: 1.2em; font-weight: 500; transition: color .4s; }
+.splash a { font-family: "Helvetica Neue", Helvetica, sans-serif; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
 
-.splash a:hover { color: ROSYBROWN; transition: all .4s; }
+.splash a:hover { color: white; transition: all .4s; }
 
 .project img, .project figure { width: 100%; max-width: 1280px; }
 
