@@ -21,7 +21,11 @@
   color: $color-primary-medium;
   font-weight: 600;
 }
-.splash-content a {
+.splash a {
+  font-family: $font-primary;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
   display: inline-block;
   margin: 40px;
   text-decoration: none;
@@ -30,7 +34,7 @@
   font-weight: 500;
   transition: color .4s;
 }
-.splash-content a:hover {
+.splash a:hover {
   color: $color-secondary;
   transition: all .4s;
 }
