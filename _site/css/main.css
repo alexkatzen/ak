@@ -36,7 +36,7 @@ img.native { width: auto; }
 
 .header-nav li { list-style-type: none; }
 
-.splash { height: 100vh; background-color: PAPAYAWHIP; }
+.splash { height: 100vh; background-color: CORNSILK; }
 
 .splash-content { font-family: "Helvetica Neue", Helvetica, sans-serif; height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
 
@@ -52,7 +52,7 @@ header.project-header { padding: 1.5em; }
 
 .project-header h1 { font-size: 2em; margin: 1em 0; }
 
-.project-index { background: PAPAYAWHIP; }
+.project-index { background: CORNSILK; }
 
 .thumbnail-container { background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 80%; overflow: hidden; }
 
@@ -78,7 +78,7 @@ header.project-header { padding: 1.5em; }
 
 .project li { margin-left: 2em; }
 
-.project-footer-nav { background: PAPAYAWHIP; padding: 3em 1em; margin-top: 2em; }
+.project-footer-nav { background: CORNSILK; padding: 3em 1em; margin-top: 2em; }
 
 .project-footer-nav li { font-family: "Helvetica Neue", Helvetica, sans-serif; display: inline-block; line-height: 1.5em; }
 
