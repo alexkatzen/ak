@@ -4,7 +4,6 @@
   background-color: black;
 }
 .splash-content {
-  font-family: $font-primary;
   height: 120px;
   width: 100%;
   text-align: center;
@@ -16,11 +15,12 @@
   transform: translate(0, -45%);
 }
 .splash-content h1 {
+  font-family: $font-display;
   font-size: 3em;
   letter-spacing: -1px;
   line-height: 1.3em;
   color: white;
-  font-weight: 400;
+  font-weight: 700;
 }
 .splash a {
   font-family: $font-primary;

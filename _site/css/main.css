@@ -82,9 +82,9 @@ header.project-header { padding: 1.5em; }
 
 .splash { height: 100vh; background-color: black; }
 
-.splash-content { font-family: "Roboto Mono", monospace; height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
+.splash-content { height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
 
-.splash-content h1 { font-size: 3em; letter-spacing: -1px; line-height: 1.3em; color: white; font-weight: 400; }
+.splash-content h1 { font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: 3em; letter-spacing: -1px; line-height: 1.3em; color: white; font-weight: 700; }
 
 .splash a { font-family: "Roboto Mono", monospace; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
 
