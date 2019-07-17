@@ -1,10 +1,11 @@
 header.project-header {
   padding: 1.5em;
 }
-.project-header h1 {
-  font-size: 2em;
-  margin: 1em 0;
-}
+// .project-header h1 {
+//   font-family: $font-display;
+//   font-size: 2em;
+//   margin: 1em 0;
+// }
 .project-index {
   background: $color-site-bg;
 }
@@ -33,20 +34,18 @@ header.project-header {
   float: left;
   height: 30vh;
   min-height: 350px;
-  margin: 0 1em 1em 0;
+  margin: 0 1em 2em 0;
 }
 .project-preview h1 {
   font-family: $font-primary;
   color: $color-primary-dark;
   margin: 1em 0 .5em;
-  font-size: 1em;
-  font-weight: 600;
 }
 .project-preview p {
   font-family: $font-primary;
   color: ROSYBROWN;
-  font-size: .8em;
-  line-height: 1.2em;
+  font-size: .9em;
+  line-height: 1.4em;
 }
 .project h1 {
   font-family: $font-primary;
@@ -69,7 +68,13 @@ header.project-header {
   width: 80vw;
   max-width: 1280px;
 }
+.project h1 {
+  font-size: 2em;
+  line-height: 1.3em;
+  font-weight: 400;
+}
 .project h2 {
+  font-family: $font-primary;
   font-size: 1.5em;
 }
 .project h3 {
@@ -78,6 +83,7 @@ header.project-header {
 }
 .project p {
   font-family: $font-primary;
+  font-size: .9em;
   line-height: 1.6em;
   max-width: 1280px;
   margin: 1em 0 1.5em;
@@ -99,9 +105,8 @@ header.project-header {
   line-height: 1.5em;
 }
 .project-footer-heading {
-  font-family: $font-secondary;
+  font-family: $font-primary;
   font-size: .8em;
-  font-style: italic;
   display: inline-block;
   margin-bottom: 1em;
   color: rosybrown;

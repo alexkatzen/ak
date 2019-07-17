@@ -1,5 +1,6 @@
 // FONTS
-$font-primary: "Helvetica Neue", Helvetica, sans-serif;
+$font-display: "Helvetica Neue", Helvetica, sans-serif;
+$font-primary: 'Roboto Mono', monospace;
 $font-secondary: "Times New Roman", Times, serif;
 
 // COLOR
@@ -92,8 +93,8 @@ hr {
 
 // HEADER
 .header-nav {
-  font-family: $font-secondary;
-  font-size: .9em;
+  font-family: $font-primary;
+  font-size: .8em;
   margin: 1.8em .5em 1.5em;
   color: $color-primary-dark;
 }
