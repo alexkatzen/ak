@@ -10,8 +10,8 @@ A free night market like Undiscovered SF attracts a wide variety of people—att
 
 For each individual, a user narrative was written which identified 1) how they might have found out about the night market, 2) how they engaged with the site and event 3) why they come come back, and 4) why they would refer the experience to others. Thinking about each user's motivations and needs this way illuminated <a href="https://docs.google.com/spreadsheets/d/1CWypn2WwdE6hD4mNstqmZviSVQoumf1EKT7pt7SqpWU/edit?usp=sharing" target="_blank">user stories</a> we could be confident in designing around.
 
-<figure >
-  <img src="/images/undscvrd/user-story-matrix.jpg" alt="user story matrix">
+<figure class="full">
+  <img class="full" src="/images/undscvrd/user-story-matrix.jpg" alt="user story matrix">
   <figcaption>A matrix was created to prioritze the stories that were most common amongst all user personas.</figcaption>
 </figure>
 
@@ -20,7 +20,7 @@ For each individual, a user narrative was written which identified 1) how they m
 
 A site map was created describing a potential site architecture that would meet the needs expressed in the user stories.
 
-<img src="/images/undscvrd/site-map.jpg" alt="site map">
+<img class="full" src="/images/undscvrd/site-map.jpg" alt="site map">
 
 ## Wireframes
 

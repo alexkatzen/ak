@@ -12,7 +12,7 @@ I designed and built a website for <a href="http://undiscoveredsf.com" target="_
 
 See the process behind this project <a href="/projects/undiscovered-process/">here</a>.
 
-<img src="/images/undscvrd/event-page-hero.jpg" alt="undiscovered sf homepage">
+<img class="full" src="/images/undscvrd/event-page-hero.jpg" alt="undiscovered sf homepage">
 <div class="img-collection-row">
   <div class="img-collection-item">
     <img src="/images/undscvrd/ss-features.png" alt="features">

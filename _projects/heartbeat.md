@@ -11,7 +11,7 @@ visible: true
 Heartbeat Health is a NY-based startup fighting heart disease through <em>preventative cardiology</em>. By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to
 eliminate the disease before it starts. I assisted the team in preparing their product for a Beta release.
 
-<img src="/images/heartbeat/stress-test.jpg" alt="stress test">
+<img class="full" src="/images/heartbeat/stress-test.jpg" alt="stress test">
 
 ## A Problem of Awareness
 
@@ -55,14 +55,14 @@ user story <a href="https://docs.google.com/spreadsheets/d/15tHqNh0g0SuM7EV_haE-
 Heartbeat was also looking for attention to their brand and visual language. To kick this off I led the team through an exercise with the <a href="https://branding.cards/" target="_blank">Brand Deck</a> to quickly identify values on which to build
 design on.
 
-<img src="/images/heartbeat/brand-deck-results.jpg" alt="brand deck results">
+<img class="full" src="/images/heartbeat/brand-deck-results.jpg" alt="brand deck results">
 
 ## Wireframe Ideation
 
 With an understanding of the patients, a distillation of Heartbeat’s values, and important user stories defined, we had a starting point from which wireframe ideation could start.
 
-<figure >
-  <img class="full-width light-border" src="/images/heartbeat/QUAL-v2.1-(mobile).jpg" alt="qualification wireframes (mobile)">
+<figure class="full">
+  <img class="full light-border" src="/images/heartbeat/QUAL-v2.1-(mobile).jpg" alt="qualification wireframes (mobile)">
   <figcaption>Moving the patient from landing page through qualification results.</figcaption>
 </figure>
 
@@ -70,63 +70,58 @@ With an understanding of the patients, a distillation of Heartbeat’s values, a
 
 Moving to mockups, we iterated on visuals and communication emphasizing education around heart disease risk.
 
-<img class="light-border vertical-space" src="/images/heartbeat/landing-page-explorations.jpg" alt="landing page explorations">
-<img class="light-border vertical-space" src="/images/heartbeat/qual.jpg" alt="Qualification">
-<img class="light-border vertical-space" src="/images/heartbeat/qual+results.jpg" alt="qualification & results">
+<img class="full light-border vertical-space" src="/images/heartbeat/landing-page-explorations.jpg" alt="landing page explorations">
+<img class="full light-border vertical-space" src="/images/heartbeat/qual.jpg" alt="Qualification">
+<img class="full light-border vertical-space" src="/images/heartbeat/qual+results.jpg" alt="qualification & results">
 
 ## Logo Update
 
 <div class="img-collection-column">
-
-
   <div class="img-collection-item">
-    <figure >
-      <img class="light-border" src="/images/heartbeat/logo-update-before.jpg" alt="landing screen">
+    <figure class="full">
+      <img class="full light-border" src="/images/heartbeat/logo-update-before.jpg" alt="landing screen">
       <figcaption>before</figcaption>
     </figure>
   </div>
 
   <div class="img-collection-item">
-    <figure >
-      <img class="light-border" src="/images/heartbeat/logo-update-after.jpg" alt="landing screen">
+    <figure class="full">
+      <img class="full light-border" src="/images/heartbeat/logo-update-after.jpg" alt="landing screen">
       <figcaption>after</figcaption>
     </figure>
   </div>
-
-
-
 </div>
 
 ## Style Documentation
 
-<img src="/images/heartbeat/style+guide.jpg" alt="style documentation">
+<img class="full" src="/images/heartbeat/style+guide.jpg" alt="style documentation">
 
 ## Final Designs
 
 <div class="img-collection-row">
 
   <div class="img-collection-item">
-    <img src="/images/heartbeat/landing.gif" alt="landing screen">
+    <img class="full" src="/images/heartbeat/landing.gif" alt="landing screen">
   </div>
   <div class="img-collection-item">
-    <img src="/images/heartbeat/qual-1.gif" alt="qualification screen 1">
-  </div>
-</div>
-
-<div class="img-collection-row">
-  <div class="img-collection-item">
-    <img src="/images/heartbeat/qual-2.gif" alt="qualification screen 2">
-  </div>
-  <div class="img-collection-item">
-    <img src="/images/heartbeat/qual-3.png" alt="qualification screen 3">
+    <img class="full" src="/images/heartbeat/qual-1.gif" alt="qualification screen 1">
   </div>
 </div>
 
 <div class="img-collection-row">
   <div class="img-collection-item">
-    <img src="/images/heartbeat/qual-4.png" alt="qualification screen 4">
+    <img class="full" src="/images/heartbeat/qual-2.gif" alt="qualification screen 2">
   </div>
   <div class="img-collection-item">
-    <img src="/images/heartbeat/qual-results.png" alt="qualification results">
+    <img class="full" src="/images/heartbeat/qual-3.png" alt="qualification screen 3">
+  </div>
+</div>
+
+<div class="img-collection-row">
+  <div class="img-collection-item">
+    <img class="full" src="/images/heartbeat/qual-4.png" alt="qualification screen 4">
+  </div>
+  <div class="img-collection-item">
+    <img class="full" src="/images/heartbeat/qual-results.png" alt="qualification results">
   </div>
 </div>

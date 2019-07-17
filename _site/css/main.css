@@ -20,7 +20,7 @@ figcaption { font-size: .9em; display: table-caption; caption-side: bottom; marg
 
 .vertical-space { margin: 1em 0; }
 
-img.native { width: auto; border: 1px solid red; }
+.full { width: 100%; max-width: 1280px; }
 
 .img-collection-row { display: flex; flex-direction: row; }
 
@@ -35,18 +35,6 @@ img.native { width: auto; border: 1px solid red; }
 .header-nav { font-family: "Times New Roman", Times, serif; font-size: .9em; margin: 1.8em .5em 1.5em; color: #3A1819; }
 
 .header-nav li { list-style-type: none; }
-
-.splash { height: 100vh; background-color: black; }
-
-.splash-content { font-family: "Helvetica Neue", Helvetica, sans-serif; height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
-
-.splash-content h1 { font-size: 3em; letter-spacing: -1px; line-height: 1.3em; color: white; font-weight: 600; }
-
-.splash a { font-family: "Helvetica Neue", Helvetica, sans-serif; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
-
-.splash a:hover { color: white; transition: all .4s; }
-
-.project img, .project figure { width: 100%; max-width: 1280px; }
 
 header.project-header { padding: 1.5em; }
 
@@ -87,6 +75,16 @@ header.project-header { padding: 1.5em; }
 .project-footer-nav a:hover { text-decoration: underline; }
 
 .project-footer-nav li a { margin: 0 10px 0 0; font-size: 1.2em; text-decoration: none; font-weight: 500; color: #3A1819; }
+
+.splash { height: 100vh; background-color: black; }
+
+.splash-content { font-family: "Helvetica Neue", Helvetica, sans-serif; height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
+
+.splash-content h1 { font-size: 3em; letter-spacing: -1px; line-height: 1.3em; color: white; font-weight: 600; }
+
+.splash a { font-family: "Helvetica Neue", Helvetica, sans-serif; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
+
+.splash a:hover { color: white; transition: all .4s; }
 
 @media (max-width: 960px) { p { width: 100%; }
   .project { width: 100%; }
