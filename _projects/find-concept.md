@@ -15,19 +15,20 @@ A challenge for any interface dealing with a deep amount of content is findabili
 
 <div class="img-collection-row">
 
-<figure>
-<div class="img-collection-item light-border">
-  <img src="/images/find/apple-music-search.jpg" alt="search on apple music">
-</div>
-<figcaption>Search on Apple Music </figcaption>
-</figure>
-
-<figure>
   <div class="img-collection-item">
-    <img src="/images/find/spotify-browse.jpg" alt="browse on spotify">
+    <figure>
+      <img class="light-border" src="/images/find/apple-music-search.jpg" alt="search on apple music">
+      <figcaption>Search on Apple Music</figcaption>
+    </figure>
   </div>
-  <figcaption>Browse on Spotify</figcaption>
-</figure>
+
+  <div class="img-collection-item">
+    <figure>
+      <img src="/images/find/spotify-browse.jpg" alt="browse on spotify">
+      <figcaption>Browse on Spotify</figcaption>
+    </figure>
+  </div>
+
 </div>
 
 
@@ -121,12 +122,9 @@ When considering instant search results as we type, we generally are speaking of
     </figure>
   </div>
 
-
-
-
-  <div class="img-collection-item" light border>
+  <div class="img-collection-item">
     <figure>
-    <img src="/images/find/napster_autosuggest.gif" alt="auto-suggest on rhapsody music">
+    <img class="light-border" src="/images/find/napster_autosuggest.gif" alt="auto-suggest on rhapsody music">
     <figcaption>Auto suggest brings user to content faster by eliminating the need to perform a search query (Auto-suggest on Rhapsody)</figcaption>
     </figure>
   </div>

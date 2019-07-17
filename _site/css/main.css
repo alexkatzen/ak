@@ -20,7 +20,7 @@ figcaption { font-size: .9em; display: table-caption; caption-side: bottom; marg
 
 .vertical-space { margin: 1em 0; }
 
-img.native { width: auto; }
+img.native { width: auto; border: 1px solid red; }
 
 .img-collection-row { display: flex; flex-direction: row; }
 
