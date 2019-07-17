@@ -100,7 +100,7 @@ The first place collections are introduced is front and center in our UI. Adjace
 
 <img src="/images/find/collection-browser.gif" alt="collection browser">
 
-### Interacting With collections
+## Interacting With collections
 
 When we tap a collection, as expected, the associated content is presented to us. However, we remain in a search context, because collections are not only facets of content we can browse, but facets of content that we can narrow our search by:
 

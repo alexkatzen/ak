@@ -72,6 +72,10 @@ header.project-header {
 .project h2 {
   font-size: 1.5em;
 }
+.project h3 {
+  font-family: $font-primary;
+  margin: 1em 0;
+}
 .project p {
   font-family: $font-primary;
   line-height: 1.6em;
@@ -79,7 +83,10 @@ header.project-header {
   margin: 1em 0 1.5em;
 }
 .project li {
+  font-family: $font-primary;
+  line-height: 1.4em;
   margin-left: 2em;
+  margin-bottom: .5em;
 }
 .project-footer-nav {
   background: $color-site-bg;
