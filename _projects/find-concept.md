@@ -13,6 +13,7 @@ A challenge for any interface dealing with a deep amount of content is findabili
   * Search: The benchmark answer to findability is the search box. The familiar escape hatch that any person who knows how to “Google it” can use. Not only is search expected, but it is expected to be nearly instantaneous.
   * Browse: Users also expect to find content via browsing, whether that means browsing socially via user profiles, on curated pages, through “related” content, or otherwise.
 
+<br>
 <div class="img-collection-row">
 
   <div class="full img-collection-item">
@@ -63,15 +64,18 @@ Using this model as basic infrastructure, we design each fulcra in support of th
   * Designing objects to be social, subjects of conversation
   * Designing objects to be gateways to related content
 
+<br>
+
 ---
 
-> …having identified the objects plus the portal and search as strategic opportunities where leverage affords impact, the trick is weaving them together so that each element becomes a vital part of the whole.
+ …having identified the objects plus the portal and search as strategic opportunities where leverage affords impact, the trick is weaving them together so that each element becomes a vital part of the whole.
 
 — Moreville & Callender
 
 How can this be achieved?
 
 ---
+<br>
 
 ## Collections
 
@@ -115,15 +119,15 @@ When considering instant search results as we type, we generally are speaking of
 
 <div class="img-collection-row">
 
-  <div class="img-collection-item">
-    <figure>
+  <div class="full img-collection-item">
+    <figure class="full">
     <img class="light-border" src="/images/find/appleMusic_autocomplete.gif" alt="auto-complete on apple music">
     <figcaption>Auto-complete resolves partial search terms helping us craft better queries. (Auto-complete on Apple Music)</figcaption>
     </figure>
   </div>
 
-  <div class="img-collection-item">
-    <figure>
+  <div class="full img-collection-item">
+    <figure class="full">
     <img class="light-border" src="/images/find/napster_autosuggest.gif" alt="auto-suggest on rhapsody music">
     <figcaption>Auto suggest brings user to content faster by eliminating the need to perform a search query (Auto-suggest on Rhapsody)</figcaption>
     </figure>

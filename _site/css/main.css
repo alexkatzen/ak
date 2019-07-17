@@ -6,7 +6,7 @@ a:hover { color: CADETBLUE; text-decoration: none; text-decoration: underline; }
 
 figure { font-family: "Helvetica Neue", Helvetica, sans-serif; display: table; }
 
-figcaption { font-size: .9em; display: table-caption; caption-side: bottom; margin: .5em 0; }
+figcaption { font-size: .9em; line-height: 1.5em; display: table-caption; caption-side: bottom; margin: .5em 0; }
 
 .content-container { box-sizing: border-box; padding: 1.5em; }
 
@@ -21,6 +21,8 @@ figcaption { font-size: .9em; display: table-caption; caption-side: bottom; marg
 .vertical-space { margin: 1em 0; }
 
 .full { width: 100%; max-width: 1280px; }
+
+hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 .img-collection-row { display: flex; flex-direction: row; }
 

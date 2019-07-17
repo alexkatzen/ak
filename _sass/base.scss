@@ -30,6 +30,7 @@ figure {
 }
 figcaption {
   font-size: .9em;
+  line-height: 1.5em;
   display: table-caption;
   caption-side: bottom;
   margin: .5em 0;
@@ -63,10 +64,13 @@ figcaption {
   width: 100%;
   max-width: 1280px;
 }
+hr {
+  height: 1px;
+  color: #ccc;
+  background-color: #ccc;
+  border: none;
+}
 // IMAGES
-// img.native {
-//   width: auto;
-// }
 
 .img-collection-row {
   display: flex;
