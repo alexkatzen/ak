@@ -56,7 +56,7 @@ header.project-header { padding: 1.5em; }
 
 .project h2 { font-family: "Times New Roman", Times, serif; margin: 1em 0; }
 
-.role { font-family: "Times New Roman", Times, serif; letter-spacing: 1px; color: ROSYBROWN; font-size: .75em; }
+.role { font-family: "Roboto Mono", monospace; color: ROSYBROWN; font-size: .8em; }
 
 .project { width: 80vw; max-width: 1280px; }
 
