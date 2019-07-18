@@ -8,7 +8,7 @@ $color-primary-dark: #3A1819;
 $color-primary-medium: #6A4444;
 $color-secondary: ROSYBROWN;
 $color-links: CADETBLUE;
-$color-site-bg: CORNSILK;
+$color-site-bg: PAPAYAWHIP;
 
 // TYPOGRAPHY
 @mixin link-style {
@@ -37,14 +37,13 @@ figcaption {
   caption-side: bottom;
   margin: .5em 0;
 }
-
 blockquote{
   font-size: 1.4em;
   width:80%;
   margin:50px auto;
   font-family: "Times New Roman";
   font-style:italic;
-  color: $color-primary-dark;
+  color: $color-primary-medium;
   padding:1.2em 30px 1.2em 60px;
   border-left:8px solid $color-secondary;
   line-height:1.6;
@@ -61,11 +60,9 @@ blockquote::before{
   left: 10px;
   top:-10px;
 }
-
 blockquote::after{
   content: '';
 }
-
 blockquote span{
   display:block;
   color:#333333;

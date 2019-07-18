@@ -8,7 +8,7 @@ figure { font-family: "Roboto Mono", monospace; display: table; }
 
 figcaption { font-size: .8em; color: ROSYBROWN; line-height: 1.5em; display: table-caption; caption-side: bottom; margin: .5em 0; }
 
-blockquote { font-size: 1.4em; width: 80%; margin: 50px auto; font-family: "Times New Roman"; font-style: italic; color: #3A1819; padding: 1.2em 30px 1.2em 60px; border-left: 8px solid ROSYBROWN; line-height: 1.6; position: relative; }
+blockquote { font-size: 1.4em; width: 80%; margin: 50px auto; font-family: "Times New Roman"; font-style: italic; color: #6A4444; padding: 1.2em 30px 1.2em 60px; border-left: 8px solid ROSYBROWN; line-height: 1.6; position: relative; }
 
 blockquote::before { font-family: "Roboto Mono", monospace; content: "\201C"; color: ROSYBROWN; font-size: 2em; position: absolute; left: 10px; top: -10px; }
 
@@ -48,7 +48,7 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 header.project-header { padding: 1.5em; }
 
-.project-index { background: CORNSILK; }
+.project-index { background: PAPAYAWHIP; }
 
 .project-preview { width: 100%; float: left; height: 50vh; min-height: 320px; margin: 0 1em 2em 0; }
 
@@ -78,7 +78,7 @@ header.project-header { padding: 1.5em; }
 
 .project li { font-family: "Roboto Mono", monospace; font-size: .8em; line-height: 1.4em; margin-left: 2em; margin-bottom: .5em; }
 
-.project-footer-nav { background: CORNSILK; padding: 3em 1em; margin-top: 2em; }
+.project-footer-nav { background: #333; padding: 3em 1em; margin-top: 2em; }
 
 .project-footer-nav li { font-family: "Roboto Mono", monospace; display: inline-block; line-height: 1.5em; }
 
@@ -86,7 +86,7 @@ header.project-header { padding: 1.5em; }
 
 .project-footer-nav a:hover { text-decoration: underline; }
 
-.project-footer-nav li a { margin: 0 10px 0 0; font-size: 1.2em; text-decoration: none; font-weight: 500; color: #3A1819; }
+.project-footer-nav li a { margin: 0 10px 0 0; font-size: 1.2em; text-decoration: none; font-weight: 500; color: white; }
 
 .splash { height: 100vh; background-color: black; }
 
