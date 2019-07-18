@@ -64,22 +64,16 @@ Using this model as basic infrastructure, we design each fulcra in support of th
   * Designing objects to be social, subjects of conversation
   * Designing objects to be gateways to related content
 
-<br>
 
----
+<figure>
+  <blockquote> …having identified the objects plus the portal and search as strategic opportunities where leverage affords impact, the trick is weaving them together so that each element becomes a vital part of the whole.</blockquote>
+  <figcaption>— Moreville & Callender</figcaption>
+</figure>
 
- …having identified the objects plus the portal and search as strategic opportunities where leverage affords impact, the trick is weaving them together so that each element becomes a vital part of the whole.
-
-— Moreville & Callender
-
-How can this be achieved?
-
----
-<br>
 
 ## Collections
 
-<img class="full" src="/images/find/collections.jpg" alt="collections">
+
 
 <em>Find</em> hinges around this idea of creating a virtuous cycle between the three fulcra of a music streaming service by introducing a term borrowed from the Search Patterns book: Collections.
 
@@ -100,7 +94,7 @@ The first place collections are introduced is front and center in our UI. Adjace
 
 <img src="/images/find/collection-browser.gif" alt="collection browser">
 
-## Interacting With collections
+## Interacting With Collections
 
 When we tap a collection, as expected, the associated content is presented to us. However, we remain in a search context, because collections are not only facets of content we can browse, but facets of content that we can narrow our search by:
 
