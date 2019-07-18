@@ -48,6 +48,9 @@ header.project-header {
   font-size: .7em;
   line-height: 1.4em;
 }
+.project {
+  width: 100%
+}
 .project h1 {
   font-family: $font-primary;
   color: #3A1819;
@@ -63,10 +66,6 @@ header.project-header {
   font-family: $font-primary;
   color:ROSYBROWN;
   font-size: .8em;
-}
-.project {
-  width: 80vw;
-  max-width: 1280px;
 }
 .project h1 {
   font-size: 2em;
