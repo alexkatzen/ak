@@ -2,7 +2,7 @@ body { color: #6A4444; }
 
 a { color: CADETBLUE; text-decoration: none; }
 
-a:hover { color: CADETBLUE; text-decoration: none; text-decoration: underline; }
+a:hover { color: CADETBLUE; text-decoration: none; text-decoration: line-through; }
 
 figure { font-family: "Roboto Mono", monospace; display: table; }
 

@@ -23,7 +23,7 @@ a {
 }
 a:hover {
   @include link-style;
-  text-decoration: underline;
+  text-decoration: line-through;
 }
 figure {
   font-family: $font-primary;
