@@ -41,6 +41,7 @@ figcaption {
 .content-container {
   box-sizing: border-box;
   padding: 1.5em;
+  overflow: auto;
 }
 .pull-right {
   float: right
@@ -71,11 +72,11 @@ hr {
   background-color: #ccc;
   border: none;
 }
-// IMAGES
 
+// IMAGES
 .img-collection-row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .img-collection-column {
   display: flex;
