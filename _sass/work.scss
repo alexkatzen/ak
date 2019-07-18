@@ -9,11 +9,19 @@ header.project-header {
 .project-index {
   background: $color-site-bg;
 }
+.project-preview {
+  width: 100%;
+  float: left;
+  height: 50vh;
+  min-height: 320px;
+  margin: 0 1em 2em 0;
+}
 .thumbnail-container {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
+  min-height: 200px;
   height: 80%;
   overflow: hidden;
 }
@@ -27,13 +35,6 @@ header.project-header {
   box-shadow: 8px 8px 8px 0px rgba(116, 96, 55, 0.6);
     transition: 0.3s;
     transition-timing-function: ease;
-}
-.project-preview {
-  width: 100%;
-  float: left;
-  height: 30vh;
-  min-height: 350px;
-  margin: 0 1em 2em 0;
 }
 .project-preview h1 {
   font-family: $font-primary;
