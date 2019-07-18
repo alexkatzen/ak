@@ -10,7 +10,7 @@ order: 3
 
 A challenge for any interface dealing with a deep amount of content is findability. On streaming music services, the findability of content typically reflects on how well the service executes in two areas:
 
-  * Search: The benchmark answer to findability is the search box. The familiar escape hatch that any person who knows how to “Google it” can use. Not only is search expected, but it is expected to be nearly instantaneous.
+  * Search: The default answer to findability is the search box. It's the familiar escape hatch that any person who knows how to <em>Google</em> can use. Not only is search expected, but it is expected to be nearly instantaneous.
   * Browse: Users also expect to find content via browsing, whether that means browsing socially via user profiles, on curated pages, through “related” content, or otherwise.
 
 <br>
