@@ -5,16 +5,22 @@ layout: project-index
   <a href="/work"><img class="logo" src="/images/ak-logo.png" alt=""></a><br>
   <span class="project-type">{{ page.project-type }}</span>
 </header>
-{% assign sorted_projects = site.projects | sort:"order" %}
-{% for project in sorted_projects %}
+<ul>
+  {% assign sorted_projects = site.projects | sort:"order" %}
+  {% for project in sorted_projects %}
   {% if project.visible == true %}
-  <a href="{{site.url}}{{ project.url }}">
-    <div class="project-preview">
+
+  <li class="project-preview">
+    <a href="{{site.url}}{{ project.url }}">
+
         <div class="thumbnail-container" style="background-image:url({{site.url}}/{{ project.featured-image}})">
         </div>
         <h1>{{ project.title }}</h1>
         <p>{{ project.description }}</p>
-    </div>
-  </a>
+
+    </a>
+  </li>
+
   {% endif %}
-{% endfor %}
+  {% endfor %}
+</ul>
