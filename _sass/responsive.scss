@@ -1,12 +1,18 @@
 // RESPONSIVE STYLES
 @media (min-width: 480px) {
-
+  .project-preview {
+    width: 400px;
+  }
+  @supports (display: grid) {
+    .project-preview {
+      width: auto;
+    }
+  }
 }
 
 @media (min-width: 768px) {
-  .project-preview {
-    width: 500px;
-    height: 400px;
+  .project-preview-container {
+    flex-direction: row;
   }
   .img-collection-row {
     flex-direction: row;
@@ -21,6 +27,8 @@
     width: 80vw;
     max-width: 1280px;
   }
+
+  // SPLASH PAGE
   .splash-content h1 {
     font-size: 3em;
   }
