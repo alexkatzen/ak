@@ -50,7 +50,7 @@ header.project-header { padding: 1.5em; }
 
 .project-index { background: PAPAYAWHIP; }
 
-.project-preview-container { display: flex; flex-wrap: wrap; flex-direction: column; }
+.project-preview-container { display: flex; flex-wrap: wrap; flex-direction: column; max-width: 1700px; }
 
 .project-preview-container li { list-style-type: none; }
 
