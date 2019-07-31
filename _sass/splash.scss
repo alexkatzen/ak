@@ -38,3 +38,13 @@
   color: white;
   transition: all .4s;
 }
+
+// MEDIA QUERIES
+@media (min-width: 960px) {
+  .splash-content h1 {
+    font-size: 3em;
+  }
+  .splash-content a {
+    margin: 40px;
+  }
+}
