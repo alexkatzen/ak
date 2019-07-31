@@ -46,6 +46,7 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 .header-nav li { list-style-type: none; }
 
+@media (max-width: 768px) { img { width: 100%; } }
 @media (min-width: 768px) { .img-collection-row { flex-direction: row; } }
 header.project-header { padding: 1.5em; }
 
