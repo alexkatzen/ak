@@ -36,7 +36,7 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 .img-collection-column { display: flex; flex-direction: column; }
 
-.img-collection-row .img-collection-item { margin: .5em; }
+.img-collection-item { box-sizing: border-box; padding: .5em; margin: .5em; }
 
 .img-collection-item img { width: 100%; }
 
@@ -46,7 +46,8 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 .header-nav li { list-style-type: none; }
 
-@media (max-width: 768px) { img { width: 100%; } }
+@media (max-width: 768px) { img { width: 100%; }
+  .img-collection-item { margin: .5em 0; } }
 @media (min-width: 768px) { .img-collection-row { flex-direction: row; } }
 header.project-header { padding: 1.5em; }
 
