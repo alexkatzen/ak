@@ -142,6 +142,11 @@ hr {
 }
 
 // MEDIA QUERIES
+// @media (max-width: 768px) {
+//   img {
+//     width: 100%;
+//   }
+// }
 @media (min-width: 768px) {
   .img-collection-row {
     flex-direction: row;
