@@ -8,7 +8,7 @@ $color-primary-dark: #3A1819;
 $color-primary-medium: #6A4444;
 $color-secondary: ROSYBROWN;
 $color-links: CADETBLUE;
-$color-site-bg: PAPAYAWHIP;
+$color-site-bg: #f7f7f7;
 
 // TYPOGRAPHY
 @mixin link-style {
@@ -135,10 +135,6 @@ hr {
   margin: 1.8em .5em 1.5em;
   color: $color-primary-dark;
 }
-// turn on for a header bar
-// .project-header {
-//   background: $color-site-bg;
-// }
 .header-nav li {
   list-style-type: none;
 }

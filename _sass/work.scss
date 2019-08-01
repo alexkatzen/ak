@@ -1,7 +1,3 @@
-header.project-header {
-  padding: 1.5em;
-}
-
 // PROJECT INDEX
 .project-index {
   background: $color-site-bg;
@@ -16,18 +12,14 @@ header.project-header {
   list-style-type: none;
 }
 .project-preview {
-  width: 100%;
+  width: 400px;
+  float: left;
   margin: 0 1em 2em 0;
   list-style-type: none;
   box-sizing: border-box;
 }
-.thumbnail-container {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.project-thumbnail {
   width: 100%;
-  height: 280px;
-  overflow: hidden;
 }
 .thumbnail-container:hover {
   transform: translate(-5px,-5px);
@@ -55,8 +47,12 @@ header.project-header {
 }
 
 // PROJECT PAGES
+.project-header {
+  background: $color-site-bg;
+  padding: 1.5em;
+}
 .project {
-  width: 100%
+  width: 100%;
 }
 .project h1 {
   font-family: $font-primary;
@@ -103,7 +99,7 @@ header.project-header {
   margin-bottom: .5em;
 }
 .project-footer-nav {
-  background: #333;
+  background: $color-site-bg;
   padding: 3em 1em;
   margin-top: 2em;
 }
@@ -127,15 +123,15 @@ header.project-header {
   font-size: 1.2em;
   text-decoration: none;
   font-weight: 500;
-  color: white;
+  color: $color-primary-dark;
 }
 
 // FEATURE QUERIES
 @supports (display: grid) {
   .project-preview-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 8px;
   }
   .project-preview {
     width: auto;
@@ -144,14 +140,9 @@ header.project-header {
 }
 
 // MEDIA QUERIES
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .project-preview {
-    width: 400px;
-  }
-  @supports (display: grid) {
-    .project-preview {
-      width: auto;
-    }
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -167,5 +158,4 @@ header.project-header {
     width: 80vw;
     max-width: 1280px;
   }
-
 }
