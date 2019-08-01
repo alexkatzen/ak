@@ -8,7 +8,7 @@ $color-primary-dark: #3A1819;
 $color-primary-medium: #6A4444;
 $color-secondary: ROSYBROWN;
 $color-links: CADETBLUE;
-$color-site-bg: PAPAYAWHIP;
+$color-site-bg: #f7f7f7;
 
 // TYPOGRAPHY
 @mixin link-style {
@@ -37,7 +37,7 @@ figcaption {
   caption-side: bottom;
   margin: .5em 0;
 }
-blockquote{
+blockquote {
   font-size: 1.4em;
   width:80%;
   margin:50px auto;
@@ -116,7 +116,9 @@ hr {
   display: flex;
   flex-direction: column;
 }
-.img-collection-row .img-collection-item {
+.img-collection-item {
+  box-sizing: border-box;
+  padding: .5em;
   margin: .5em;
 }
 .img-collection-item img {
@@ -133,20 +135,19 @@ hr {
   margin: 1.8em .5em 1.5em;
   color: $color-primary-dark;
 }
-// turn on for a header bar
-// .project-header {
-//   background: $color-site-bg;
-// }
 .header-nav li {
   list-style-type: none;
 }
 
 // MEDIA QUERIES
-// @media (max-width: 768px) {
-//   img {
-//     width: 100%;
-//   }
-// }
+@media (max-width: 768px) {
+  img {
+    width: 100%;
+  }
+  .img-collection-item {
+    margin: .5em 0;
+  }
+}
 @media (min-width: 768px) {
   .img-collection-row {
     flex-direction: row;

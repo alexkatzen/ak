@@ -9,15 +9,13 @@ layout: project-index
   {% assign sorted_projects = site.projects | sort:"order" %}
   {% for project in sorted_projects %}
   {% if project.visible == true %}
+
   <li>
     <div class="project-preview">
       <a href="{{site.url}}{{ project.url }}">
-
-        <div class="thumbnail-container" style="background-image:url({{site.url}}/{{ project.featured-image}})">
-        </div>
+        <img class="project-thumbnail" src="{{ project.featured-image }}">
         <h1>{{ project.title }}</h1>
         <p>{{ project.description }}</p>
-
       </a>
     </div>
   </li>
