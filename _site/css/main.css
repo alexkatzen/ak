@@ -59,7 +59,7 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 .project-thumbnail { width: 100%; }
 
-.thumbnail-container:hover { transform: translate(-5px, -5px); -webkit-transform: translate(-5px, -5px); /** Safari & Chrome **/ -o-transform: translate(-5px, -5px); /** Opera **/ -moz-transform: translate(-5px, -5px); /** Firefox **/ -webkit-box-shadow: 8px 8px 8px 0px rgba(116, 96, 55, 0.6); -moz-box-shadow: 8px 8px 8px 0px rgba(116, 96, 55, 0.6); box-shadow: 8px 8px 8px 0px rgba(116, 96, 55, 0.6); transition: 0.3s; transition-timing-function: ease; }
+.project-thumbnail:hover { transform: translate(-5px, -5px); -webkit-transform: translate(-5px, -5px); /** Safari & Chrome **/ -o-transform: translate(-5px, -5px); /** Opera **/ -moz-transform: translate(-5px, -5px); /** Firefox **/ -webkit-box-shadow: 8px 8px 8px 0px rgba(100, 100, 100, 0.6); -moz-box-shadow: 8px 8px 8px 0px rgba(100, 100, 100, 0.6); box-shadow: 8px 8px 8px 0px rgba(100, 100, 100, 0.6); transition: 0.3s; transition-timing-function: ease; }
 
 .project-preview h1 { font-family: "Roboto Mono", monospace; color: #3A1819; font-size: .9em; font-weight: 700; margin: 1em 0 .5em; }
 
