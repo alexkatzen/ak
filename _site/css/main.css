@@ -1,16 +1,19 @@
-body { color: #6A4444; }
+@font-face { font-family: "univers"; src: url("/fonts/Univers/UniversLTStd.otf"); }
+@font-face { font-family: "univers-bold"; src: url("/fonts/Univers/UniversLTStd-Bold.otf"); }
+@font-face { font-family: "univers-condensed"; src: url("/fonts/Univers/UniversLTStd-Cn.otf"); }
+body { color: #666; }
 
 a { color: CADETBLUE; text-decoration: none; }
 
 a:hover { color: CADETBLUE; text-decoration: none; text-decoration: line-through; }
 
-figure { font-family: "Roboto Mono", monospace; display: table; }
+figure { font-family: "univers"; display: table; }
 
-figcaption { font-size: .8em; color: ROSYBROWN; line-height: 1.5em; display: table-caption; caption-side: bottom; margin: .5em 0; }
+figcaption { font-size: .8em; color: #666; line-height: 1.5em; display: table-caption; caption-side: bottom; margin: .5em 0; }
 
-blockquote { font-size: 1.4em; width: 80%; margin: 50px auto; font-family: "Times New Roman"; font-style: italic; color: #6A4444; padding: 1.2em 30px 1.2em 60px; border-left: 8px solid ROSYBROWN; line-height: 1.6; position: relative; }
+blockquote { font-size: 1.4em; width: 80%; margin: 50px auto; font-family: "Times New Roman"; font-style: italic; color: #666; padding: 1.2em 30px 1.2em 60px; border-left: 8px solid #666; line-height: 1.6; position: relative; }
 
-blockquote::before { font-family: "Roboto Mono", monospace; content: "\201C"; color: ROSYBROWN; font-size: 2em; position: absolute; left: 10px; top: -10px; }
+blockquote::before { font-family: "univers"; content: "\201C"; color: #666; font-size: 2em; position: absolute; left: 10px; top: -10px; }
 
 blockquote::after { content: ''; }
 
@@ -42,7 +45,7 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 .img-collection-item-empty { width: 512px; }
 
-.header-nav { font-family: "Roboto Mono", monospace; font-size: .8em; margin: 1.8em .5em 1.5em; color: #3A1819; }
+.header-nav { font-family: "univers-condensed"; font-size: .8em; margin: 1.8em .5em 1.5em; }
 
 .header-nav li { list-style-type: none; }
 
@@ -61,39 +64,35 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 .project-thumbnail:hover { transform: translate(-5px, -5px); -webkit-transform: translate(-5px, -5px); /** Safari & Chrome **/ -o-transform: translate(-5px, -5px); /** Opera **/ -moz-transform: translate(-5px, -5px); /** Firefox **/ -webkit-box-shadow: 8px 8px 8px 0px rgba(100, 100, 100, 0.6); -moz-box-shadow: 8px 8px 8px 0px rgba(100, 100, 100, 0.6); box-shadow: 8px 8px 8px 0px rgba(100, 100, 100, 0.6); transition: 0.3s; transition-timing-function: ease; }
 
-.project-preview h1 { font-family: "Roboto Mono", monospace; color: #3A1819; font-size: .9em; font-weight: 700; margin: 1em 0 .5em; }
+.project-preview h1 { font-family: "univers-bold"; color: black; font-size: .9em; margin: 1em 0 .5em; }
 
-.project-preview p { font-family: "Roboto Mono", monospace; color: ROSYBROWN; font-size: .7em; line-height: 1.4em; }
+.project-preview p { font-family: "univers"; color: #666; font-size: .7em; line-height: 1.4em; }
 
-.project-header { background: #f7f7f7; padding: 1.5em; }
+.project-header { padding: 1.5em; }
 
 .project { width: 100%; }
 
-.project h1 { font-family: "Roboto Mono", monospace; color: #3A1819; font-weight: 700; margin: 1em 0; font-size: 1.8em; }
+.project h1 { font-family: "univers-bold"; color: black; margin: 1em 0; font-size: 1.8em; line-height: 1.3em; }
 
-.project h2 { font-family: "Times New Roman", Times, serif; margin: 1em 0; }
+.project h2 { font-family: "univers-condensed"; color: black; margin: 1em 0; font-size: 1.4em; }
 
-.role { font-family: "Roboto Mono", monospace; color: ROSYBROWN; font-size: .8em; }
+.project h3 { font-family: "univers"; line-height: 1.2em; margin: 1em 0; }
 
-.project h1 { font-size: 1.8em; line-height: 1.3em; font-weight: 400; }
+.role { font-family: "univers"; color: #666; font-size: .8em; }
 
-.project h2 { font-family: "Roboto Mono", monospace; font-size: 1.4em; }
+.project p { font-family: "univers"; font-size: .8em; line-height: 1.6em; max-width: 1280px; margin: 1em 0 1.5em; }
 
-.project h3 { font-family: "Roboto Mono", monospace; line-height: 1.2em; margin: 1em 0; }
-
-.project p { font-family: "Roboto Mono", monospace; font-size: .8em; line-height: 1.6em; max-width: 1280px; margin: 1em 0 1.5em; }
-
-.project li { font-family: "Roboto Mono", monospace; font-size: .8em; line-height: 1.4em; margin-left: 2em; margin-bottom: .5em; }
+.project li { font-family: "univers"; font-size: .8em; line-height: 1.4em; margin-left: 2em; margin-bottom: .5em; }
 
 .project-footer-nav { background: #f7f7f7; padding: 3em 1em; margin-top: 2em; }
 
-.project-footer-nav li { font-family: "Roboto Mono", monospace; display: inline-block; line-height: 1.5em; }
+.project-footer-nav li { font-family: "univers"; display: inline-block; line-height: 1.5em; }
 
-.project-footer-heading { font-family: "Roboto Mono", monospace; font-size: .8em; display: inline-block; margin-bottom: 1em; color: rosybrown; }
+.project-footer-heading { font-family: "univers"; font-size: .8em; display: inline-block; margin-bottom: 1em; }
 
 .project-footer-nav a:hover { text-decoration: underline; }
 
-.project-footer-nav li a { margin: 0 10px 0 0; font-size: 1.2em; text-decoration: none; font-weight: 500; color: #3A1819; }
+.project-footer-nav li a { margin: 0 10px 0 0; font-family: "univers-bold"; font-size: 1.2em; text-decoration: none; color: black; }
 
 @supports (display: grid) { .project-preview-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 8px; }
   .project-preview { width: auto; margin: 0 0 1em 0; } }
@@ -105,9 +104,9 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 .splash-content { height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
 
-.splash-content h1 { font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: 2em; letter-spacing: -1px; line-height: 1.3em; color: white; font-weight: 700; }
+.splash-content h1 { font-family: "univers-bold"; font-size: 2em; letter-spacing: -1px; line-height: 1.3em; color: white; font-weight: 700; }
 
-.splash a { font-family: "Roboto Mono", monospace; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
+.splash a { font-family: "univers"; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
 
 .splash a:hover { color: white; transition: all .4s; }
 

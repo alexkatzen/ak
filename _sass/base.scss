@@ -1,11 +1,24 @@
 // FONTS
-$font-display: "Helvetica Neue", Helvetica, sans-serif;
-$font-primary: 'Roboto Mono', monospace;
-$font-secondary: "Times New Roman", Times, serif;
+@font-face {
+  font-family: "univers";
+  src: url("/fonts/Univers/UniversLTStd.otf")
+}
+@font-face {
+  font-family: "univers-bold";
+  src: url("/fonts/Univers/UniversLTStd-Bold.otf")
+}
+@font-face {
+  font-family: "univers-condensed";
+  src: url("/fonts/Univers/UniversLTStd-Cn.otf")
+}
+
+$font-display: "univers-bold";
+$font-primary: "univers";
+$font-secondary: "univers-condensed";
 
 // COLOR
-$color-primary-dark: #3A1819;
-$color-primary-medium: #6A4444;
+$color-primary-dark: black;
+$color-primary-medium: #666;
 $color-secondary: ROSYBROWN;
 $color-links: CADETBLUE;
 $color-site-bg: #f7f7f7;
@@ -31,7 +44,7 @@ figure {
 }
 figcaption {
   font-size: .8em;
-  color: $color-secondary;
+  color: $color-primary-medium;
   line-height: 1.5em;
   display: table-caption;
   caption-side: bottom;
@@ -45,7 +58,7 @@ blockquote {
   font-style:italic;
   color: $color-primary-medium;
   padding:1.2em 30px 1.2em 60px;
-  border-left:8px solid $color-secondary;
+  border-left:8px solid $color-primary-medium;
   line-height:1.6;
   position: relative;
   // background:#f4f4f4;
@@ -54,7 +67,7 @@ blockquote {
 blockquote::before{
   font-family:$font-primary;
   content: "\201C";
-  color: $color-secondary;
+  color: $color-primary-medium;
   font-size:2em;
   position: absolute;
   left: 10px;
@@ -130,10 +143,9 @@ hr {
 
 // HEADER
 .header-nav {
-  font-family: $font-primary;
+  font-family: $font-secondary;
   font-size: .8em;
   margin: 1.8em .5em 1.5em;
-  color: $color-primary-dark;
 }
 .header-nav li {
   list-style-type: none;

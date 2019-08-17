@@ -33,50 +33,37 @@
   transition-timing-function: ease;
 }
 .project-preview h1 {
-  font-family: $font-primary;
+  font-family: $font-display;
   color: $color-primary-dark;
   font-size: .9em;
-  font-weight: 700;
   margin: 1em 0 .5em;
 }
 .project-preview p {
   font-family: $font-primary;
-  color: ROSYBROWN;
+  color: $color-primary-medium;
   font-size: .7em;
   line-height: 1.4em;
 }
 
 // PROJECT PAGES
 .project-header {
-  background: $color-site-bg;
+  // background: $color-site-bg;
   padding: 1.5em;
 }
 .project {
   width: 100%;
 }
 .project h1 {
-  font-family: $font-primary;
-  color: #3A1819;
-  font-weight: 700;
+  font-family: $font-display;
+  color: $color-primary-dark;
   margin: 1em 0;
   font-size: 1.8em;
+  line-height: 1.3em;
 }
 .project h2 {
   font-family: $font-secondary;
+  color: $color-primary-dark;
   margin: 1em 0;
-}
-.role {
-  font-family: $font-primary;
-  color:ROSYBROWN;
-  font-size: .8em;
-}
-.project h1 {
-  font-size: 1.8em;
-  line-height: 1.3em;
-  font-weight: 400;
-}
-.project h2 {
-  font-family: $font-primary;
   font-size: 1.4em;
 }
 .project h3 {
@@ -84,6 +71,12 @@
   line-height: 1.2em;
   margin: 1em 0;
 }
+.role {
+  font-family: $font-primary;
+  color: $color-primary-medium;
+  font-size: .8em;
+}
+
 .project p {
   font-family: $font-primary;
   font-size: .8em;
@@ -113,16 +106,15 @@
   font-size: .8em;
   display: inline-block;
   margin-bottom: 1em;
-  color: rosybrown;
 }
 .project-footer-nav a:hover {
   text-decoration: underline;
 }
 .project-footer-nav li a {
   margin: 0 10px 0 0;
+  font-family: $font-display;
   font-size: 1.2em;
   text-decoration: none;
-  font-weight: 500;
   color: $color-primary-dark;
 }
 
