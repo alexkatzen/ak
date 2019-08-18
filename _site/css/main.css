@@ -1,6 +1,7 @@
 @font-face { font-family: "univers"; src: url("/fonts/Univers/UniversLTStd.otf"); }
 @font-face { font-family: "univers-bold"; src: url("/fonts/Univers/UniversLTStd-Bold.otf"); }
 @font-face { font-family: "univers-condensed"; src: url("/fonts/Univers/UniversLTStd-Cn.otf"); }
+@font-face { font-family: "univers-extra-black"; src: url("/fonts/Univers/UniversLTStd-XBlack.otf"); }
 body { color: black; }
 
 a { color: CADETBLUE; text-decoration: none; }
@@ -102,13 +103,14 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 @media (min-width: 960px) { .project { width: 80vw; max-width: 1280px; } }
 .splash { height: 100vh; background-color: black; }
 
-.splash-content { height: 120px; width: 100%; text-align: center; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
+.splash-content { height: 120px; width: 100%; text-align: left; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
 
-.splash-content h1 { font-family: "univers-bold"; font-size: 2em; letter-spacing: -1px; line-height: 1.3em; color: white; font-weight: 700; }
+.splash-content h1 { font-family: "univers-extra-black"; font-size: 3em; line-height: 1.2em; word-spacing: .02em; color: white; }
 
-.splash a { font-family: "univers"; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
+.splash a { font-family: "univers-condensed"; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
 
 .splash a:hover { color: white; transition: all .4s; }
 
-@media (min-width: 960px) { .splash-content h1 { font-size: 3em; }
+@media (min-width: 480px) { .splash-content { text-align: center; } }
+@media (min-width: 960px) { .splash-content h1 { font-size: 4em; }
   .splash-content a { margin: 40px; } }

@@ -6,7 +6,7 @@
 .splash-content {
   height: 120px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
@@ -15,15 +15,14 @@
   transform: translate(0, -45%);
 }
 .splash-content h1 {
-  font-family: $font-display;
-  font-size: 2em;
-  letter-spacing: -1px;
-  line-height: 1.3em;
+  font-family: "univers-extra-black";
+  font-size: 3em;
+  line-height: 1.2em;
+  word-spacing: .02em;
   color: white;
-  font-weight: 700;
 }
 .splash a {
-  font-family: $font-primary;
+  font-family: $font-secondary;
   position: fixed;
   bottom: 0px;
   right: 0px;
@@ -40,9 +39,15 @@
 }
 
 // MEDIA QUERIES
+@media (min-width: 480px) {
+  .splash-content {
+    text-align: center;
+  }
+}
+
 @media (min-width: 960px) {
   .splash-content h1 {
-    font-size: 3em;
+    font-size: 4em;
   }
   .splash-content a {
     margin: 40px;

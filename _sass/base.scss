@@ -9,7 +9,11 @@
 }
 @font-face {
   font-family: "univers-condensed";
-  src: url("/fonts/Univers/UniversLTStd-Cn.otf")
+  src: url("/fonts/Univers/UniversLTStd-Cn.otf");
+}
+@font-face {
+  font-family: "univers-extra-black";
+  src: url("/fonts/Univers/UniversLTStd-XBlack.otf");
 }
 
 $font-display: "univers-bold";
