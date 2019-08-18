@@ -39,7 +39,7 @@
 }
 
 // MEDIA QUERIES
-@media (min-width: 480px) {
+@media (min-width: 960px) {
   .splash-content {
     text-align: center;
   }
@@ -47,7 +47,9 @@
 
 @media (min-width: 960px) {
   .splash-content h1 {
-    font-size: 4em;
+    font-size: 3.5em;
+    word-spacing: -.1em;
+    letter-spacing: 1px;
   }
   .splash-content a {
     margin: 40px;
