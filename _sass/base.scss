@@ -29,13 +29,14 @@ $color-site-bg: #f7f7f7;
   text-decoration: none;
 }
 body {
-  color: $color-primary-medium;
+  color: $color-primary-dark;
 }
 a {
   @include link-style;
 }
 a:hover {
   @include link-style;
+  color: $color-primary-dark;
   text-decoration: line-through;
 }
 figure {
@@ -44,7 +45,6 @@ figure {
 }
 figcaption {
   font-size: .8em;
-  color: $color-primary-medium;
   line-height: 1.5em;
   display: table-caption;
   caption-side: bottom;
@@ -61,7 +61,6 @@ blockquote {
   border-left:8px solid $color-primary-medium;
   line-height:1.6;
   position: relative;
-  // background:#f4f4f4;
 }
 
 blockquote::before{
@@ -143,9 +142,10 @@ hr {
 
 // HEADER
 .header-nav {
-  font-family: $font-secondary;
+  font-family: $font-primary;
   font-size: .8em;
   margin: 1.8em .5em 1.5em;
+  color: $color-primary-dark;
 }
 .header-nav li {
   list-style-type: none;
