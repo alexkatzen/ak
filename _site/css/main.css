@@ -1,7 +1,13 @@
 @font-face { font-family: "univers"; src: url("/fonts/Univers/UniversLTStd.otf"); }
+
 @font-face { font-family: "univers-bold"; src: url("/fonts/Univers/UniversLTStd-Bold.otf"); }
+
 @font-face { font-family: "univers-condensed"; src: url("/fonts/Univers/UniversLTStd-Cn.otf"); }
+
+@font-face { font-family: "univers-black"; src: url("/fonts/Univers/UniversLTStd-Black.otf"); }
+
 @font-face { font-family: "univers-extra-black"; src: url("/fonts/Univers/UniversLTStd-XBlack.otf"); }
+
 body { color: black; }
 
 a { color: CADETBLUE; text-decoration: none; }
@@ -52,7 +58,9 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 @media (max-width: 768px) { img { width: 100%; }
   .img-collection-item { margin: .5em 0; } }
+
 @media (min-width: 768px) { .img-collection-row { flex-direction: row; } }
+
 .project-index { background: #f7f7f7; }
 
 .project-preview-container { display: flex; flex-wrap: wrap; flex-direction: column; max-width: 1700px; }
@@ -97,20 +105,26 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 @supports (display: grid) { .project-preview-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 8px; }
   .project-preview { width: auto; margin: 0 0 1em 0; } }
+
 @media (max-width: 480px) { .project-preview { width: 100%; } }
+
 @media (min-width: 768px) { .project-preview-container { flex-direction: row; }
   .project h1 { font-size: 2.5em; } }
+
 @media (min-width: 960px) { .project { width: 80vw; max-width: 1280px; } }
+
 .splash { height: 100vh; background-color: black; }
 
 .splash-content { height: 120px; width: 100%; text-align: left; margin: 0 auto; padding: 1em; box-sizing: border-box; position: relative; top: 45%; transform: translate(0, -45%); }
 
-.splash-content h1 { font-family: "univers-extra-black"; font-size: 3em; line-height: 1.2em; word-spacing: .02em; color: white; }
+.splash-content h1 { font-family: "univers-black"; font-size: 2.3em; line-height: 1.2em; word-spacing: -.09em; letter-spacing: .01em; color: white; }
 
-.splash a { font-family: "univers-condensed"; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
+.splash a { font-family: "univers-bold"; position: fixed; bottom: 0px; right: 0px; display: inline-block; margin: 40px; text-decoration: none; color: #ffd663; font-weight: 500; transition: color .4s; }
 
 .splash a:hover { color: white; transition: all .4s; }
 
 @media (min-width: 960px) { .splash-content { text-align: center; } }
-@media (min-width: 960px) { .splash-content h1 { font-size: 3.5em; word-spacing: -.1em; letter-spacing: 1px; }
-  .splash-content a { margin: 40px; } }
+
+@media (min-width: 960px) { .splash-content a { margin: 40px; } }
+
+/*# sourceMappingURL=main.css.map */
