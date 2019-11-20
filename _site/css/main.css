@@ -127,4 +127,10 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 @media (min-width: 960px) { .splash-content a { margin: 40px; } }
 
+.music-index { background: yellow; }
+
+.music-index ul li { list-style-type: none; }
+
+.music-index h1 { font-family: "Helvetica"; font-weight: 800; font-size: 2em; color: black; }
+
 /*# sourceMappingURL=main.css.map */

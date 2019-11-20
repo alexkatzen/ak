@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A test post
+title: Boogie Down
 postHero: /images/shark.jpg
 author: Alex Katzen
 ---
