@@ -1,7 +1,7 @@
 .music-index {
   background: yellow;
   ul li {
-    list-style-type: none; 
+    list-style-type: none;
   }
   h1 {
     font-family: "Helvetica";
@@ -9,4 +9,9 @@
     font-size: 2em;
     color: black;
   }
+}
+
+.music-post h1 {
+  font-size: 2em;
+  font-family: $font-display;
 }
