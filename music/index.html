@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<ul class="blog-index">
+  {% for post in site.posts %}
+  <li>
+      <a href="{{site.url}}{{ post.url }}">
+        <img class="project-thumbnail" src="{{ project.featured-image }}">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.author }}</p>
+      </a>
+  </li>
+  {% endfor %}
+</ul>
