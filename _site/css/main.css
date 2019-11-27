@@ -127,7 +127,7 @@ hr { height: 1px; color: #ccc; background-color: #ccc; border: none; }
 
 @media (min-width: 960px) { .splash-content a { margin: 40px; } }
 
-.music-index { background: red; }
+.music-index { background: purple; }
 
 .music-index ul li { list-style-type: none; }
 
