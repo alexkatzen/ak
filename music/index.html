@@ -1,13 +1,20 @@
 ---
 layout: music-index
 ---
-<ul class="music-index">
+<ul>
   {% for post in site.posts %}
-  <li>
+    {% if post.published == true %}
+    <li>
       <a href="{{site.url}}{{ post.url }}">
-        <img class="project-thumbnail" src="{{ project.featured-image }}">
-        <h1>{{ post.title }}</h1>
+        <div class="music-post-thumbnail" style="background-image:url({{ post.postHero }})">
+
+          <!-- <img src="{{ post.postHero }}"> -->
+            <h1>{{ post.postTitle }}</h1>
+
+        </div>
+
       </a>
-  </li>
+    </li>
+    {% endif %}
   {% endfor %}
 </ul>

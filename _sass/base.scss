@@ -20,6 +20,21 @@
   src: url("/fonts/Univers/UniversLTStd-XBlack.otf");
 }
 
+@font-face {
+  font-family: "kabel-heavy";
+  src: url("/fonts/Kabel/KabelLTStd-Heavy.otf");
+}
+@font-face {
+  font-family: "kabel-black";
+  src: url("/fonts/Kabel/KabelLTStd-Black.otf");
+}
+
+// GOOGLE FONTS
+
+// ADOBE FONTS
+// font-family: kaneda-gothic, sans-serif;
+ @import url("https://use.typekit.net/hpq1muq.css");
+
 $font-display: "univers-bold";
 $font-primary: "univers";
 $font-secondary: "univers-condensed";
@@ -45,9 +60,8 @@ a {
 a:hover {
   @include link-style;
   color: $color-primary-dark;
-  text-decoration: line-through;
+  // text-decoration: line-through;
 }
-
 figure {
   font-family: $font-primary;
   display: table;
@@ -71,7 +85,6 @@ blockquote {
   line-height:1.6;
   position: relative;
 }
-
 blockquote::before{
   font-family:$font-primary;
   content: "\201C";

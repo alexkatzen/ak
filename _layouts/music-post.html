@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% include head-music-post.html %}
+
+  <body class="music-post">
+
+    {% include header-music.html %}
+  	<div class="main">
+
+
+      {% if page.youtubeID %}
+      <div class="mediaWrapper">
+        <iframe src="https://www.youtube.com/embed/{{ page.youtubeID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% endif %}
+
+      <h1>{{ page.postTitle }}</h1>
+
+  		<table class="info-table">
+        {% if page.song %}
+        <tr>
+  				<td class="label">Song</td>
+  				<td>{{ page.song }}</td>
+  			</tr>
+        {% endif %}
+        {% if page.release %}
+        <tr>
+          <td class="label">Release</td>
+          <td>{{ page.release }}</td>
+        </tr>
+        {% endif %}
+        {% if page.artist %}
+  			<tr>
+  				<td class="label">Artist</td>
+  				<td>{{ page.artist }}</td>
+  			</tr>
+        {% endif %}
+        {% if page.label %}
+  			<tr>
+  				<td class="label">Label</td>
+  				<td>{{ page.label }}</td>
+  			</tr>
+        {% endif %}
+        {% if page.year %}
+  			<tr>
+  				<td class="label">Year</td>
+  				<td>{{ page.year }}</td>
+  			</tr>
+        {% endif %}
+        {% if page.genre %}
+  			<tr>
+  				<td class="label">Genre</td>
+  				<td>{{ page.genre }}</td>
+  			</tr>
+        {% endif %}
+  		</table>
+
+  		<img class="post-hero" src="{{ page.postHero }}" alt="{{ page.postHero }}">
+      {{ content }}
+    </div>
+  </body>
+</html>
