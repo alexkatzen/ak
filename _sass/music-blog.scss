@@ -1,0 +1,75 @@
+// HEADER NAV
+.header-nav-music {
+  font-family: "univers-black", sans-serif;
+  border: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.header-nav-music ul {
+  list-style: none;
+}
+
+.header-nav-music li a {
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: -.05em;
+}
+
+.header-nav-music li a:hover {
+  opacity: 0.4;
+  transition: all .2s;
+}
+
+// MUSIC INDEX PAGE
+.music-post-thumbnail {
+  height: 60vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.music-index {
+  h1 {
+    font-family: "kabel-black";
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    top: 3rem;
+    color: white;
+    transition: transform 100ms ease-out;
+  }
+  h1:hover {
+    transform: translate(5px, 0);
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // grid-template-columns: 1fr 1fr 1fr;
+  }
+  ul li {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+// VIDEO / MEDIA WRAPPER
+.mediaWrapper {
+	position: relative;
+   // padding as a percentage, based on the width of the containing block.
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+  width: 100%;
+	height: 0;
+}
+.mediaWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  opacity: 0.8;
+}
