@@ -1,15 +1,14 @@
 ---
 layout: project
-title: Heartbeat
-description: Fighting heart disease through preventative cardiology
+title: Heartbeat&#58; Fighting heart disease through preventative cardiology
 role: Product & Visual Design
 featured-image: /images/heartbeat/featured-img.jpg
 order: 1
 visible: true
 ---
 
-Heartbeat Health is a NY-based startup fighting heart disease through <em>preventative cardiology</em>. By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to
-eliminate the disease before it starts. I assisted the team in preparing their product for a Beta release.
+Heartbeat Health is a NY-based startup fighting heart disease through <em>preventative</em> cardiology. By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to
+eliminate the disease before it starts. I worked with the founders for an intense 3-week design sprint to prepare their raw product for a Beta release.
 
 <img class="full" src="/images/heartbeat/stress-test.jpg" alt="stress test">
 
@@ -23,8 +22,7 @@ of a risk assessment people could take online to determine if they should come i
 
 ## Patient-centered Approach
 
-The Heartbeat team had already spent some time categorizing the types of patients they envisioned coming in. We used this initial thinking as a basis to create <a
-  href="https://drive.google.com/drive/folders/1Ve634HA9V070lLvJ198nwLZqZvVMeyeI?usp=sharing" target="_blank">personas</a> from which to write feature stories.
+The Heartbeat team had already spent some time categorizing the types of patients they envisioned coming in. We used this initial thinking as a basis for user personas.
 
 <div class="img-collection-row">
 
@@ -46,9 +44,9 @@ The Heartbeat team had already spent some time categorizing the types of patient
 
 </div>
 
-Next, <a href="https://drive.google.com/open?id=1Ve634HA9V070lLvJ198nwLZqZvVMeyeI" target="_blank">narratives</a> were created behind each patient based on their backstory, demographic, needs and potential solutions. Using these, I then established a
-user story <a href="https://docs.google.com/spreadsheets/d/15tHqNh0g0SuM7EV_haE-IGjNOURVD5s3kRXGKKvDck4/edit?usp=sharing">matrix</a> by which I could then <a
-  href="https://docs.google.com/document/d/1eZWSZU4mbpAtjBvEQlw68SSQ7914zowhIZL20dYBntg/edit?usp=sharing">rank</a> which stories were most impactful across the most patients.
+Next, <strong>narratives</strong> were created behind each persona based on their backstory, demographic, needs and potential solutions. Using these, I then established a <strong>matrix</strong> by which we could rank which user stories were most impactful across the most patients.
+
+<img class="full" src="/images/heartbeat/heartbeat-matrix.png" alt="user story matrix">
 
 ## Voice & Tone
 
@@ -74,20 +72,20 @@ Moving to mockups, we iterated on visuals and communication emphasizing educatio
 <img class="full light-border vertical-space" src="/images/heartbeat/qual.jpg" alt="Qualification">
 <img class="full light-border vertical-space" src="/images/heartbeat/qual+results.jpg" alt="qualification & results">
 
-## Logo Update
+## Logo Refresh
 
 <div class="img-collection-column">
   <div class="img-collection-item">
     <figure class="full">
       <img class="full light-border" src="/images/heartbeat/logo-update-before.jpg" alt="landing screen">
-      <figcaption>before</figcaption>
+      <figcaption>Before</figcaption>
     </figure>
   </div>
 
   <div class="img-collection-item">
     <figure class="full">
       <img class="full light-border" src="/images/heartbeat/logo-update-after.jpg" alt="landing screen">
-      <figcaption>after</figcaption>
+      <figcaption>Updated mark + logotype for the Beta release</figcaption>
     </figure>
   </div>
 </div>

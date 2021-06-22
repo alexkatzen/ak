@@ -4,8 +4,16 @@
   src: url("/fonts/Univers/UniversLTStd.otf")
 }
 @font-face {
+  font-family: "univers-light";
+  src: url("/fonts/Univers/UniversLTStd-Light.otf")
+}
+@font-face {
   font-family: "univers-bold";
   src: url("/fonts/Univers/UniversLTStd-Bold.otf")
+}
+@font-face {
+  font-family: "univers-bold-extended";
+  src: url("/fonts/Univers/UniversLTStd-BoldEx.otf")
 }
 @font-face {
   font-family: "univers-condensed";
@@ -35,9 +43,9 @@
 // font-family: kaneda-gothic, sans-serif;
  @import url("https://use.typekit.net/hpq1muq.css");
 
-$font-display: "univers-bold";
+$font-display: "univers-bold-extended";
 $font-primary: "univers";
-$font-secondary: "univers-condensed";
+$font-secondary: "univers-bold-extended";
 
 // COLOR
 $color-primary-dark: black;
