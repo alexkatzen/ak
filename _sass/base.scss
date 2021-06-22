@@ -4,8 +4,16 @@
   src: url("/fonts/Univers/UniversLTStd.otf")
 }
 @font-face {
+  font-family: "univers-light";
+  src: url("/fonts/Univers/UniversLTStd-Light.otf")
+}
+@font-face {
   font-family: "univers-bold";
   src: url("/fonts/Univers/UniversLTStd-Bold.otf")
+}
+@font-face {
+  font-family: "univers-bold-extended";
+  src: url("/fonts/Univers/UniversLTStd-BoldEx.otf")
 }
 @font-face {
   font-family: "univers-condensed";

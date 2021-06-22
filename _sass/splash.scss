@@ -15,9 +15,9 @@
   transform: translate(0, -45%);
 }
 .splash-content h1 {
-  font-family: "univers";
-  font-size: 2.3em;
-  line-height: 1.4em;
+  font-family: "univers-bold-extended";
+  font-size: 2em;
+  line-height: 1.2em;
   word-spacing: -.09em;
   color: ivory;
 }
@@ -39,14 +39,17 @@
 }
 
 // MEDIA QUERIES
-@media (min-width: 960px) {
-  .splash-content {
-    text-align: center;
-  }
-}
+// @media (min-width: 960px) {
+//   .splash-content {
+//     text-align: center;
+//   }
+// }
 
 @media (min-width: 960px) {
   .splash-content a {
     margin: 40px;
+  }
+  .splash-content h1 {
+    font-size: 4em;
   }
 }
