@@ -3,14 +3,16 @@ layout: project
 title: Heartbeat&#58; Fighting heart disease through preventative cardiology
 role: Product & Visual Design
 featured-image: /images/heartbeat/featured-img.jpg
+hero-image: /images/heartbeat/stress-test.jpg
 order: 1
-visible: false
+visible: visible
 ---
 
-Heartbeat Health is a NY-based startup fighting heart disease through <em>preventative</em> cardiology. By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to
-eliminate the disease before it starts. I worked with the founders for an intense 3-week design sprint to prepare their raw product for a Beta release.
-
 <img class="full" src="/images/heartbeat/stress-test.jpg" alt="stress test">
+
+Heartbeat Health is a NY-based startup fighting heart disease through preventative cardiology.
+By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to
+eliminate the disease before it starts. I worked with the founders for an intense 3-week design sprint to prepare their raw product for a Beta release.
 
 ## A Problem of Awareness
 
@@ -48,12 +50,6 @@ Next, <strong>narratives</strong> were created behind each persona based on thei
 
 <img class="full" src="/images/heartbeat/heartbeat-matrix.png" alt="user story matrix">
 
-## Voice & Tone
-
-Heartbeat was also looking for attention to their brand and visual language. To kick this off I led the team through an exercise with the <a href="https://branding.cards/" target="_blank">Brand Deck</a> to quickly identify values on which to build
-design on.
-
-<img class="full" src="/images/heartbeat/brand-deck-results.jpg" alt="brand deck results">
 
 ## Wireframe Ideation
 
@@ -64,8 +60,13 @@ With an understanding of the patients, a distillation of Heartbeat’s values, a
   <figcaption>Moving the patient from landing page through qualification results.</figcaption>
 </figure>
 
-## Visual Design
 
+## Voice & Tone + Visual Design
+
+Heartbeat was also looking for attention to their brand and visual language. To kick this off I led the team through an exercise with the <a href="https://branding.cards/" target="_blank">Brand Deck</a> to quickly identify values on which to build
+design on.
+
+<img class="full" src="/images/heartbeat/brand-deck-results.jpg" alt="brand deck results">
 Moving to mockups, we iterated on visuals and communication emphasizing education around heart disease risk.
 
 <img class="full light-border vertical-space" src="/images/heartbeat/landing-page-explorations.jpg" alt="landing page explorations">
@@ -89,12 +90,12 @@ Moving to mockups, we iterated on visuals and communication emphasizing educatio
     </figure>
   </div>
 </div>
-
+<!--
 ## Style Documentation
 
-<img class="full" src="/images/heartbeat/style+guide.jpg" alt="style documentation">
+<img class="full" src="/images/heartbeat/style+guide.jpg" alt="style documentation"> -->
 
-## Final Designs
+<!-- ## Final Designs
 
 <div class="img-collection-row">
 
@@ -122,4 +123,4 @@ Moving to mockups, we iterated on visuals and communication emphasizing educatio
   <div class="img-collection-item">
     <img class="full" src="/images/heartbeat/qual-results.png" alt="qualification results">
   </div>
-</div>
+</div> -->
