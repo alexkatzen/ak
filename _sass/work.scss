@@ -57,8 +57,10 @@
   font-family: $font-display;
   color: $color-primary-dark;
   margin: 1em 0;
-  font-size: 1.5em;
+  font-size: 1.8em;
   line-height: 1.1em;
+  word-spacing: -.05em;
+  letter-spacing: -.03em;
 }
 .project h2 {
   font-family: $font-secondary;
@@ -139,7 +141,7 @@
     flex-direction: row;
   }
   .project h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 @media (min-width: 960px) {
