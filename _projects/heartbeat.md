@@ -4,7 +4,7 @@ title: Heartbeat&#58; Fighting heart disease through preventative cardiology
 role: Product & Visual Design
 featured-image: /images/heartbeat/featured-img.jpg
 order: 1
-visible: true
+visible: false
 ---
 
 Heartbeat Health is a NY-based startup fighting heart disease through <em>preventative</em> cardiology. By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to
