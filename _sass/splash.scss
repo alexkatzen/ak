@@ -4,23 +4,27 @@
   background-color: #0d0d0d;
 }
 .splash-content {
-  height: 120px;
+  height: 100%;
   width: 100%;
   text-align: left;
   margin: 0 auto;
-  padding: 1em;
+  padding: 40px;
   box-sizing: border-box;
   position: relative;
-  top: 45%;
-  transform: translate(0, -45%);
+  display: flex;
+  align-items: flex-end;
+  // top: 45%;
+  // transform: translate(0, -45%);
 }
 .splash-content h1 {
   font-family: "univers-bold-extended";
-  font-size: 2em;
+  font-size:6.5vw;
+  max-width: 80vw;
   line-height: 1.2em;
   word-spacing: -.09em;
   letter-spacing: -.04em;
   color: ivory;
+  margin-bottom: 50px;
 }
 .splash a {
   font-family: "univers-bold";
@@ -49,8 +53,5 @@
 @media (min-width: 960px) {
   .splash-content a {
     margin: 40px;
-  }
-  .splash-content h1 {
-    font-size: 2em;
   }
 }

@@ -10,7 +10,6 @@ visible: visible
 
 <img class="full" src="/images/heartbeat/stress-test.jpg" alt="stress test">
 
-Heartbeat Health is a NY-based startup fighting heart disease through preventative cardiology.
 By helping patients to understand heart disease risk and providing access to a team of world class team cardiologists, they proactively work to
 eliminate the disease before it starts. I worked with the founders for an intense 3-week design sprint to prepare their raw product for a Beta release.
 
