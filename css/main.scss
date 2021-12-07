@@ -1,6 +1,19 @@
 ---
 ---
-@import "base";
-@import "work";
-@import "splash";
-@import "music-blog";
+
+// 1 - HELPERS
+@import "1-helpers/mixins";
+@import "1-helpers/variables";
+
+// 2 - TOOLS
+@import "2-tools/normalize";
+
+// 3 - BASICS
+@import "3-basics/base";
+@import "3-basics/typography";
+
+// 4 - LAYOUTS
+@import "4-layouts/layout";
+@import "4-layouts/music-blog";
+@import "4-layouts/splash";
+@import "4-layouts/work";
