@@ -1,53 +1,9 @@
 // SPLASH PAGE
 .splash {
   height: 100vh;
-  background-color: #0d0d0d;
 }
 .splash-content {
   height: 100%;
   width: 100%;
-  text-align: left;
-  margin: 0 auto;
-  padding: 40px;
   box-sizing: border-box;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-}
-.splash-content h1 {
-  font-family: "univers-bold-extended";
-  font-size:5vw;
-  max-width: 80vw;
-  line-height: 1.2em;
-  word-spacing: -.09em;
-  letter-spacing: -.04em;
-  color: ivory;
-  margin-bottom: 50px;
-}
-.splash p {
-  color: white
-}
-.splash a {
-  font-family: "univers-bold";
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  display: inline-block;
-  margin: 40px;
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  transition: color .4s;
-}
-.splash a:hover {
-  color: white;
-  transition: all .4s;
-}
-@media (min-width: 960px) {
-  .splash-content h1 {
-    font-size: 2.5vw;
-  }
-  .splash-content a {
-    margin: 40px;
-  }
 }
