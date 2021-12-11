@@ -25,19 +25,23 @@
   color: white
 }
 .splash a {
-  font-family: "univers-bold";
+  font-family: "univers-bold-extended";
+  font-size: 1.2em;
+  letter-spacing: -7px;
   position: fixed;
   bottom: 0px;
   left: 0px;
   display: inline-block;
   margin: 40px;
   text-decoration: none;
-  color: #444;
+  color: white;
+  opacity: 0.05;
   font-weight: 500;
   transition: color .4s;
 }
 .splash a:hover {
   color: white;
+  opacity: 1;
   transition: all .4s;
 }
 @media (min-width: 960px) {
