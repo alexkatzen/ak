@@ -40,3 +40,52 @@
 // ADOBE FONTS
 // font-family: kaneda-gothic, sans-serif;
  @import url("https://use.typekit.net/hpq1muq.css");
+
+ $font-display: "univers-bold-extended";
+ $font-primary: "univers";
+ $font-secondary: "univers-bold-extended";
+
+
+
+ figure {
+   font-family: $font-primary;
+   display: table;
+ }
+ figcaption {
+   font-size: .8em;
+   line-height: 1.5em;
+   display: table-caption;
+   caption-side: bottom;
+   margin: .5em 0;
+ }
+ blockquote {
+   font-size: 1.4em;
+   width:80%;
+   margin:50px auto;
+   font-family: "Times New Roman";
+   font-style:italic;
+   color: $color-primary-medium;
+   padding:1.2em 30px 1.2em 60px;
+   border-left:8px solid $color-primary-medium;
+   line-height:1.6;
+   position: relative;
+ }
+ blockquote::before{
+   font-family:$font-primary;
+   content: "\201C";
+   color: $color-primary-medium;
+   font-size:2em;
+   position: absolute;
+   left: 10px;
+   top:-10px;
+ }
+ blockquote::after{
+   content: '';
+ }
+ blockquote span {
+   display:block;
+   color:#333333;
+   font-style: normal;
+   font-weight: bold;
+   margin-top:1em;
+ }

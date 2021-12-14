@@ -10,6 +10,17 @@
 .pull-left {
   float: left;
 }
+
+// HEADER
+.header-nav {
+  font-family: $font-primary;
+  font-size: .8em;
+  margin: 1.8em .5em 1.5em;
+  color: $color-primary-dark;
+}
+.header-nav li {
+  list-style-type: none;
+}
 .logo {
   width: 28px;
   height: 28px;
@@ -53,16 +64,6 @@ hr {
   width: 512px;
 }
 
-// HEADER
-.header-nav {
-  font-family: $font-primary;
-  font-size: .8em;
-  margin: 1.8em .5em 1.5em;
-  color: $color-primary-dark;
-}
-.header-nav li {
-  list-style-type: none;
-}
 
 // MEDIA QUERIES
 @media (max-width: 768px) {
