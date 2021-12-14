@@ -1,0 +1,80 @@
+.splash {
+  background-color: #fff;
+}
+.splash-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: radial-gradient(50% 50% at 50% 50%, #FFC000 0%, rgba(219, 255, 0, 0) 100%);
+}
+.r1 {
+  width: 867px;
+  height: 259px;
+  left: 51px;
+  top: 412.81px;
+
+  background: #F2994A;
+  transform: rotate(22.67deg);
+}
+
+.r2 {
+  width: 729px;
+height: 260px;
+left: 51px;
+top: 474.4px;
+
+background: #56CCF2;
+transform: rotate(-24.67deg);
+}
+.r3 {
+width: 1210px;
+height: 259px;
+left: 51px;
+top: 737.63px;
+
+background: #2F80ED;
+transform: rotate(-24.67deg);
+}
+
+.splash-content h1 {
+  font-family: "univers-bold-extended";
+  font-size:5vw;
+  max-width: 80vw;
+  line-height: 1.2em;
+  word-spacing: -.09em;
+  letter-spacing: -.04em;
+  color: ivory;
+  margin-bottom: 50px;
+}
+
+.splash p {
+  color: white
+}
+.splash a {
+  font-family: "univers-bold-extended";
+  font-size: 1.2em;
+  letter-spacing: -4px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  display: inline-block;
+  margin: 40px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.05;
+  font-weight: 500;
+  transition: color .4s;
+}
+.splash a:hover {
+  color: white;
+  opacity: 1;
+  transition: all .4s;
+}
+@media (min-width: 960px) {
+  .splash-content h1 {
+    font-size: 2.5vw;
+  }
+  .splash-content a {
+    margin: 40px;
+  }
+}
