@@ -3,22 +3,59 @@
   height: 100%;
   width: 100%;
   position: relative;
-  background: SkyBlue;
 }
-
-.splash-content h1 {
+.grid-col-4-row-4 {
+  grid-template-areas:
+  "time . temp temp "
+  "rain-chace rain-chance temp temp "
+  ". . forecast . "
+  ". . forecast . ";
+}
+.time, .forecast, .rain-chance {
+  font-size: 3em;
+}
+.temp {
+  grid-area: temp;
+  background-color: Ivory;
+  border-left: 5px solid LightGray;
+  justify-content: center;
+  display: grid;
   font-family: "univers-bold-extended";
-  font-size:5vw;
+}
+.time {
+  grid-area: time;
+  background-color: Ivory;
+  border-right: 5px solid LightGray;
+  justify-content: flex-start;
+  align-items: center;
+  display: grid;
+  font-family: "univers-light";
+}
+.forecast {
+  grid-area: forecast;
+  justify-content: center;
+  display: grid;
+  font-family: "univers-bold";
+}
+.rain-chance {
+  grid-area: rain-chance;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  font-family: "univers";
+}
+.splash-content h1 {
+  display: grid;
+  font-family: "univers-bold-extended";
+  font-size: 24em;
+  color: lightgray;
   max-width: 80vw;
   line-height: 1.2em;
   word-spacing: -.09em;
   letter-spacing: -.04em;
-  color: ivory;
   margin-bottom: 50px;
-}
-.splash p {
-  color: white;
-  font-family: "univers";
+  grid-column: 3/4;
+  grid-row: 2/3;
 }
 .splash a {
   font-family: "univers-bold-extended";
@@ -39,11 +76,11 @@
   opacity: 1;
   transition: all .4s;
 }
-@media (min-width: 960px) {
+/* @media (min-width: 960px) {
   .splash-content h1 {
     font-size: 9vw;
   }
   .splash-content a {
     margin: 40px;
   }
-}
+} */
