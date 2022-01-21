@@ -5,57 +5,51 @@
   position: relative;
 }
 .grid-col-4-row-4 {
+  grid-gap: 16px;
   grid-template-areas:
   "time . temp temp "
   "rain-chace rain-chance temp temp "
-  ". . forecast . "
-  ". . forecast . ";
+  ". forecast . . "
+  ". . . . ";
 }
-.time, .forecast, .rain-chance {
-  font-size: 3em;
-}
+.time,
+.forecast,
+.rain-chance,
 .temp {
-  grid-area: temp;
-  background-color: Ivory;
-  border-left: 5px solid LightGray;
-  justify-content: center;
-  display: grid;
-  font-family: "univers-bold-extended";
+  font-family: "univers-condensed";
+  font-size: 1rem;
 }
 .time {
   grid-area: time;
-  background-color: Ivory;
-  border-right: 5px solid LightGray;
-  justify-content: flex-start;
-  align-items: center;
-  display: grid;
-  font-family: "univers-light";
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
 }
 .forecast {
   grid-area: forecast;
-  justify-content: center;
-  display: grid;
-  font-family: "univers-bold";
+  display: flex;
+  align-items: flex-start;
+  border-right: 1px solid black;
 }
 .rain-chance {
   grid-area: rain-chance;
+  display: flex;
+}
+.temp {
+  grid-area: temp;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: grid;
-  font-family: "univers";
 }
 .splash-content h1 {
-  display: grid;
+  grid-area: temp;
+  display: flex;
   font-family: "univers-bold-extended";
-  font-size: 24em;
-  color: lightgray;
-  max-width: 80vw;
+  font-size: 24vw;
   line-height: 1.2em;
   word-spacing: -.09em;
-  letter-spacing: -.04em;
-  margin-bottom: 50px;
-  grid-column: 3/4;
-  grid-row: 2/3;
+  letter-spacing: -.02em;
 }
 .splash a {
   font-family: "univers-bold-extended";
