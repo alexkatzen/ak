@@ -1,0 +1,80 @@
+
+.splash-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.grid-col-4-row-4 {
+  grid-gap: 16px;
+  grid-template-areas:
+  "time . temp temp "
+  "rain-chace rain-chance temp temp "
+  ". forecast . . "
+  ". . . . ";
+}
+.time,
+.forecast,
+.rain-chance,
+.temp {
+  font-family: "univers-condensed";
+  font-size: 1rem;
+}
+.time {
+  grid-area: time;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+}
+.forecast {
+  grid-area: forecast;
+  display: flex;
+  align-items: flex-start;
+  border-right: 1px solid black;
+}
+.rain-chance {
+  grid-area: rain-chance;
+  display: flex;
+}
+.temp {
+  grid-area: temp;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.splash-content h1 {
+  grid-area: temp;
+  display: flex;
+  font-family: "univers-bold-extended";
+  font-size: 24vw;
+  line-height: 1.2em;
+  word-spacing: -.09em;
+  letter-spacing: -.02em;
+}
+.splash a {
+  font-family: "univers-bold-extended";
+  font-size: 1.2em;
+  letter-spacing: -4px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  display: inline-block;
+  margin: 40px;
+  text-decoration: none;
+  color: black;
+  opacity: 0.08;
+  font-weight: 500;
+  transition: color .4s;
+}
+.splash a:hover {;
+  opacity: 1;
+  transition: all .4s;
+}
+/* @media (min-width: 960px) {
+  .splash-content h1 {
+    font-size: 9vw;
+  }
+  .splash-content a {
+    margin: 40px;
+  }
+} */
