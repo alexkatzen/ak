@@ -12,11 +12,9 @@
 }
 .splash-content {
   display: flex;
-  align-items:flex-end;
+  align-items:center;
   justify-content: space-between;
   flex-direction: row;
-
-  box-sizing: border-box;
   padding: 2rem 2rem 2rem 2rem;
 }
 .splash-content h1 {
