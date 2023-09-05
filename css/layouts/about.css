@@ -1,46 +1,40 @@
 .about {
-  font-family: "univers-bold-extended";
+  font-family: "kabel-black";
   height: 100vh;
   background-color: #0d0d0d;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
+
 .about-content {
+  height: 90vh;
   display: flex;
-  align-items:center;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
   padding: 2rem 2rem 2rem 2rem;
 }
-.about-content h1 {
 
-  font-size: 2rem;
-  line-height: 1.2em;
+.about-content h1 {
+  font-size: 2.5rem;
+  line-height: .85em;
   word-spacing: -.09em;
-  letter-spacing: -.04em;
+
   color: ivory;
   left: 20px;
   bottom: 40px;
 }
 
 a.contact {
-  font-family: "univers-extended";
-  font-size: 1rem;
-  letter-spacing: .1rem;
+  margin-top: 5px;
+  font-family: "univers";
+  font-size: .9rem;
+  letter-spacing: -.04em;
   text-decoration: none;
   color: rgba(255, 255, 255, .5);
   transition: color .4s;
-
 }
+
 a.contact:hover {
-  // color: rgba(255, 255, 255, 1);
-  color: pink;
-  transition: all .4s;
-  // border-width: 3px;
-  // border-color: rgba(255, 255, 255, .7);
-
-
+  color: white;
+  transition: all .2s;
 }
 
 @media (min-width: 960px) {
