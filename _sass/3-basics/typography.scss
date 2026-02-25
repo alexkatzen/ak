@@ -41,17 +41,13 @@
   src: url("/fonts/Kabel/KabelLTStd-Black.otf");
 }
 
- $font-display: "univers-bold-extended";
- $font-primary: "univers";
- $font-secondary: "univers-bold-extended";
-
  figure {
    font-family: $font-primary;
    display: table;
  }
  figcaption {
    font-size: .8em;
-   line-height: 1.5em;
+   line-height: 1.5;
    display: table-caption;
    caption-side: bottom;
    margin: .5em 0;

@@ -17,12 +17,10 @@
 
 .about-content h1 {
   font-family: "univers-light";
-  font-size: 10vw;
-  letter-spacing: -1px;
-  line-height: .85em;
-  word-spacing: -.09em;
-  left: 20px;
-  bottom: 40px;
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  letter-spacing: -0.02em;
+  line-height: 0.85;
+  word-spacing: -0.09em;
 }
 
 .about-content h1 a {
@@ -37,7 +35,6 @@
 
 .about-content p {
   color: ivory;
-  margin-top: 100px;
 }
 
 @media (min-width: 960px) {
