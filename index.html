@@ -5,24 +5,226 @@ layout: about
 <style>
   body {
     margin: 0;
-    background-color: rgba(0, 0, 0, .85);
+    background-color: #08060f;
+    overflow: hidden;
   }
 
-  .canvas-stage {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  canvas#main {
+  #sketch canvas {
     display: block;
+  }
+
+  /* About overlay */
+  #about-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+  }
+
+  #about-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .overlay-content {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    pointer-events: none;
+  }
+
+  .overlay-content h1 {
+    font-family: "univers-light";
+    font-size: clamp(3rem, 10vw, 7.5rem);
+    letter-spacing: -0.02em;
+    line-height: 0.85;
+    word-spacing: -0.09em;
+    margin: 0;
+  }
+
+  .overlay-content h1 a {
+    color: ivory;
+    text-decoration: none;
+    pointer-events: auto;
+  }
+
+  .typewriter-cursor {
+    animation: cursor-blink 0.7s step-end infinite;
   }
 </style>
 
-<a class="page-nav-link" href="/about">about</a>
+<a id="about-btn" class="page-nav-link" href="#">about</a>
 
-<div class="canvas-stage">
-  <canvas id="main" width="800" height="600"></canvas>
+<div id="about-overlay">
+  <div class="overlay-content">
+    <h1><a href="mailto:hello@alexkatzen.com?subject=👋 Hello"><span class="typewriter-text"></span><span class="typewriter-cursor">|</span></a></h1>
+  </div>
 </div>
+
+<div id="sketch"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script>
+// --- Typewriter ---
+var twTimeout = null;
+var twEl      = document.querySelector('.typewriter-text');
+
+function startTypewriter() {
+  var sentences    = [
+    "Alex creates in Berkeley, Ca.",
+    "Alex designs in Berkeley, Ca.",
+    "Alex builds in Berkeley, Ca.",
+    "Alex is a high-agency human."
+  ];
+  var PREFIX        = "Alex ";
+  var sentenceIndex = 0;
+  var charIndex     = 0;
+  var isDeleting    = false;
+  twEl.innerHTML    = '';
+
+  function tick() {
+    var current = sentences[sentenceIndex];
+    if (!isDeleting) {
+      charIndex++;
+      twEl.innerHTML = current.substring(0, charIndex);
+      if (charIndex === current.length) {
+        isDeleting = true;
+        twTimeout  = setTimeout(tick, 1800);
+        return;
+      }
+      twTimeout = setTimeout(tick, 10);
+    } else {
+      charIndex--;
+      twEl.innerHTML = current.substring(0, charIndex);
+      if (charIndex === PREFIX.length) {
+        isDeleting    = false;
+        sentenceIndex = (sentenceIndex + 1) % sentences.length;
+        twTimeout     = setTimeout(tick, 400);
+        return;
+      }
+      twTimeout = setTimeout(tick, 20);
+    }
+  }
+  tick();
+}
+
+function stopTypewriter() {
+  clearTimeout(twTimeout);
+  twTimeout      = null;
+  twEl.innerHTML = '';
+}
+
+// --- Overlay ---
+var overlay  = document.getElementById('about-overlay');
+var aboutBtn = document.getElementById('about-btn');
+
+function openAbout(e) {
+  e.preventDefault();
+  overlay.classList.add('is-open');
+  startTypewriter();
+}
+
+function closeAbout() {
+  overlay.classList.remove('is-open');
+  stopTypewriter();
+}
+
+aboutBtn.addEventListener('click', function(e) {
+  overlay.classList.contains('is-open') ? closeAbout() : openAbout(e);
+});
+
+overlay.addEventListener('click', closeAbout);
+
+// --- p5 sketch ---
+new p5(function(p) {
+  var stars     = [];
+  var NUM_STARS = 600;
+  var MAX_Z     = 2000;
+  var SPEED     = 1.2;
+  var cx, cy;
+
+  p.setup = function() {
+    var c = p.createCanvas(p.windowWidth, p.windowHeight);
+    c.parent('sketch');
+    cx = p.width  / 2;
+    cy = p.height / 2;
+    spawnStars(true);
+  };
+
+  function makeStar(initial) {
+    var z = initial ? p.random(1, MAX_Z) : MAX_Z;
+    return {
+      x:       p.random(-p.width  / 2, p.width  / 2),
+      y:       p.random(-p.height / 2, p.height / 2),
+      z:       z,
+      pz:      z,
+      twinkle: p.random(0.0008, 0.0025),
+      phase:   p.random(p.TWO_PI),
+    };
+  }
+
+  function spawnStars(initial) {
+    stars = [];
+    for (var i = 0; i < NUM_STARS; i++) {
+      stars.push(makeStar(initial));
+    }
+  }
+
+  p.draw = function() {
+    p.background(8, 6, 15);
+    p.translate(cx, cy);
+
+    var ms = p.millis();
+
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+
+      s.pz  = s.z;
+      s.z  -= SPEED;
+
+      if (s.z <= 1) {
+        stars[i] = makeStar(false);
+        continue;
+      }
+
+      // Project to screen
+      var sx = (s.x / s.z)  * cx * 2;
+      var sy = (s.y / s.z)  * cy * 2;
+      var px = (s.x / s.pz) * cx * 2;
+      var py = (s.y / s.pz) * cy * 2;
+
+      if (sx < -cx - 2 || sx > cx + 2 || sy < -cy - 2 || sy > cy + 2) {
+        stars[i] = makeStar(false);
+        continue;
+      }
+
+      var progress = 1 - s.z / MAX_Z; // 0=far, 1=close
+      var starSize = p.map(progress, 0, 1, 0.05, 1.4);
+
+      // Subtle twinkle
+      var flicker   = p.sin(ms * s.twinkle + s.phase);
+      var baseAlpha = p.map(progress, 0, 1, 15, 160);
+      var alpha     = p.map(flicker, -1, 1, baseAlpha * 0.75, baseAlpha);
+
+      // Trail line — very faint, only visible near flyby
+      p.stroke(220, 225, 255, alpha * 0.2);
+      p.strokeWeight(starSize * 0.4);
+      p.line(px, py, sx, sy);
+
+      // Star dot
+      p.noStroke();
+      p.fill(235, 238, 255, alpha);
+      p.ellipse(sx, sy, starSize * 2, starSize * 2);
+    }
+  };
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    cx = p.width  / 2;
+    cy = p.height / 2;
+  };
+}, 'sketch');
+</script>
