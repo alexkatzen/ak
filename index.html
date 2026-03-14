@@ -33,7 +33,8 @@ layout: about
     position: absolute;
     bottom: 2rem;
     left: 2rem;
-    pointer-events: none; /* clicks fall through to overlay for dismissal */
+    pointer-events: none;
+    /* clicks fall through to overlay for dismissal */
   }
 
   .overlay-content h1 {
@@ -51,16 +52,13 @@ layout: about
     pointer-events: auto;
   }
 
-  .typewriter-cursor {
-    animation: cursor-blink 0.7s step-end infinite;
-  }
 </style>
 
 <a id="about-btn" class="page-nav-link" href="#">about</a>
 
 <div id="about-overlay">
   <div class="overlay-content">
-    <h1><a href="mailto:hello@alexkatzen.com?subject=👋 Hello"><span class="typewriter-text"></span><span class="typewriter-cursor">|</span></a></h1>
+    <h1><a href="mailto:hello@alexkatzen.com?subject=👋 Hello"><span class="typewriter-text"></span></a></h1>
   </div>
 </div>
 
@@ -68,188 +66,231 @@ layout: about
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 <script>
-// --- Typewriter ---
-var twTimeout = null;
-var twEl      = document.querySelector('.typewriter-text');
+  // --- Typewriter ---
+  var twTimeout = null;
+  var twEl = document.querySelector('.typewriter-text');
 
-function startTypewriter() {
-  var sentences    = [
-    "Alex is a high-agency human.",
-    "Alex creates solutions.",
-    "Alex is a learner.",
-    "Alex is a designer, builder, and maker.",
-    "Alex crafts user experiences.",
-    "Alex designs at the intersection of brand and user experience.",
-    "Alex is obsessed with golf.",
-    "Alex is struggling with golf."
-  ];
-  var PREFIX        = "Alex ";
-  var sentenceIndex = 0;
-  var charIndex     = 0;
-  var isDeleting    = false;
-  twEl.innerHTML    = '';
+  function startTypewriter() {
+    var sentences = [
+      "Alex is obsessed with golf.",
+      "Alex is struggling at golf.",
+      "Alex is a high-agency human.",
+      "Alex creates solutions.",
+      "Alex is a learner.",
+      "Alex is a designer, builder, and maker.",
+      "Alex crafts user experiences.",
+      "Alex designs at the intersection of brand and user experience."
+    ];
+    var cursor        = '<span class="typewriter-cursor"></span>';
+    var sentenceIndex = 0;
+    var charIndex     = 0;
+    var isDeleting      = false;
+    var isMovingBack    = false;
+    var isMovingForward = false;
+    var moveTarget      = 0;
+    var deleteTarget  = 0;
+    var keepSuffix    = '';
+    var typeTarget    = sentences[0].length;
+    twEl.innerHTML    = '';
 
-  function tick() {
-    var current = sentences[sentenceIndex];
-    if (!isDeleting) {
-      charIndex++;
-      twEl.innerHTML = current.substring(0, charIndex);
-      if (charIndex === current.length) {
-        isDeleting = true;
-        twTimeout  = setTimeout(tick, 2800);
-        return;
-      }
-      twTimeout = setTimeout(tick, 38);
-    } else {
-      charIndex--;
-      twEl.innerHTML = current.substring(0, charIndex);
-      if (charIndex === PREFIX.length) {
-        isDeleting    = false;
-        sentenceIndex = (sentenceIndex + 1) % sentences.length;
-        twTimeout     = setTimeout(tick, 400);
-        return;
-      }
-      twTimeout = setTimeout(tick, 19);
-    }
-  }
-  tick();
-}
-
-function stopTypewriter() {
-  clearTimeout(twTimeout);
-  twTimeout      = null;
-  twEl.innerHTML = '';
-}
-
-// --- Overlay ---
-var overlay  = document.getElementById('about-overlay');
-var aboutBtn = document.getElementById('about-btn');
-
-function openAbout(e) {
-  e.preventDefault();
-  overlay.classList.add('is-open');
-  startTypewriter();
-}
-
-function closeAbout() {
-  overlay.classList.remove('is-open');
-  stopTypewriter();
-}
-
-aboutBtn.addEventListener('click', function(e) {
-  overlay.classList.contains('is-open') ? closeAbout() : openAbout(e);
-});
-
-overlay.addEventListener('click', closeAbout);
-
-// --- p5 sketch ---
-new p5(function(p) {
-  var pg;
-  var stars = [];
-  var SCALE     = 5;
-  var NUM_STARS = 120;
-  var dx, dy;
-
-  p.setup = function() {
-    var c = p.createCanvas(p.windowWidth, p.windowHeight);
-    c.parent('sketch');
-    var angle = p.random(p.TWO_PI);
-    dx = p.cos(angle);
-    dy = p.sin(angle);
-    buildBuffer();
-    spawnStars();
-  };
-
-  function buildBuffer() {
-    pg = p.createGraphics(Math.ceil(p.width / SCALE), Math.ceil(p.height / SCALE));
-    pg.pixelDensity(1);
-  }
-
-  function spawnStars() {
-    stars = [];
-    for (var i = 0; i < NUM_STARS; i++) {
-      stars.push({
-        nx:        p.random(1),
-        ny:        p.random(1),
-        r:         p.random(0.5, 2.0),
-        baseAlpha: p.random(160, 230),
-        twinkle:   p.random(0.0005, 0.0016),
-        phase:     p.random(p.TWO_PI),
-        depth:     p.random(0.5, 1.0),
-      });
-    }
-  }
-
-  function hsbToRgb(h, s, b) {
-    var i  = Math.floor(h * 6);
-    var f  = h * 6 - i;
-    var p0 = b * (1 - s);
-    var q  = b * (1 - f * s);
-    var tv = b * (1 - (1 - f) * s);
-    var r, g, bl;
-    switch (i % 6) {
-      case 0: r = b;  g = tv; bl = p0; break;
-      case 1: r = q;  g = b;  bl = p0; break;
-      case 2: r = p0; g = b;  bl = tv; break;
-      case 3: r = p0; g = q;  bl = b;  break;
-      case 4: r = tv; g = p0; bl = b;  break;
-      case 5: r = b;  g = p0; bl = q;  break;
-    }
-    return [(r * 255) | 0, (g * 255) | 0, (bl * 255) | 0];
-  }
-
-  p.draw = function() {
-    var ms = p.millis();
-    var t  = ms * 0.00011;
-
-    p.background(10, 8, 18);
-
-    p.noStroke();
-    for (var i = 0; i < stars.length; i++) {
-      var s       = stars[i];
-      var flicker = p.sin(ms * s.twinkle + s.phase);
-      var alpha   = p.map(flicker, -1, 1, s.baseAlpha * 0.5, s.baseAlpha) * s.depth;
-      p.fill(235, 235, 255, alpha);
-      p.ellipse(s.nx * p.width, s.ny * p.height, s.r * 2, s.r * 2);
+    function commonPrefixLen(a, b) {
+      var i = 0;
+      while (i < a.length && i < b.length && a[i] === b[i]) i++;
+      return i;
     }
 
-    pg.loadPixels();
-    for (var y = 0; y < pg.height; y++) {
-      for (var x = 0; x < pg.width; x++) {
-        var nx = x / pg.width;
-        var ny = y / pg.height;
+    function commonSuffixLen(a, b, pLen) {
+      var j = 0;
+      while (j < a.length - pLen && j < b.length - pLen &&
+             a[a.length - 1 - j] === b[b.length - 1 - j]) j++;
+      return j;
+    }
 
-        var swell   = p.noise(nx * 2.0 + t * 0.65 * dx, ny * 2.0 + t * 0.65 * dy);
-        var chop    = p.noise(nx * 4.5 + 50 + t * 0.5 * dx, ny * 4.5 + 50 + t * 0.5 * dy);
-        var shimmer = p.noise(nx * 10  + 100 + t * 2.2 * dx, ny * 10 + 100 + t * 2.2 * dy);
-
-        var hue = p.map(swell, 0, 1, 0.48, 0.70);
-        var sat = p.map(chop,  0, 1, 0.52, 0.94);
-        var bri = p.map(swell * 0.55 + chop * 0.3 + shimmer * 0.15, 0, 1, 0.12, 0.80);
-
-        if (shimmer > 0.76) {
-          var gv  = p.map(shimmer, 0.76, 1, 0, 1);
-          bri = p.lerp(bri, 0.96, gv * gv);
-          sat = p.lerp(sat, 0.15, gv * gv);
+    function tick() {
+      var current = sentences[sentenceIndex];
+      if (isMovingBack || isMovingForward) {
+        charIndex += isMovingForward ? 1 : -1;
+        twEl.innerHTML = current.substring(0, charIndex) + cursor + current.substring(charIndex);
+        if (charIndex === moveTarget) {
+          keepSuffix      = current.substring(charIndex);
+          isMovingBack    = false;
+          isMovingForward = false;
+          isDeleting      = true;
+          twTimeout       = setTimeout(tick, 80);
+          return;
         }
-
-        var alpha = (p.map(bri, 0.12, 0.80, 170, 248)) | 0;
-
-        var rgb = hsbToRgb(hue, sat, bri);
-        var idx = 4 * (y * pg.width + x);
-        pg.pixels[idx]     = rgb[0];
-        pg.pixels[idx + 1] = rgb[1];
-        pg.pixels[idx + 2] = rgb[2];
-        pg.pixels[idx + 3] = alpha;
+        twTimeout = setTimeout(tick, 30);
+      } else if (!isDeleting) {
+        charIndex++;
+        twEl.innerHTML = current.substring(0, charIndex) + cursor + keepSuffix;
+        if (charIndex === typeTarget) {
+          var next = sentences[(sentenceIndex + 1) % sentences.length];
+          var pLen = commonPrefixLen(current, next);
+          var sLen = commonSuffixLen(current, next, pLen);
+          deleteTarget = pLen;
+          moveTarget   = current.length - sLen;
+          typeTarget   = next.length - sLen;
+          if (charIndex > moveTarget) {
+            isMovingBack = true;
+          } else if (charIndex < moveTarget) {
+            isMovingForward = true;
+          } else {
+            keepSuffix = current.substring(moveTarget);
+            isDeleting = true;
+          }
+          twTimeout = setTimeout(tick, 2800);
+          return;
+        }
+        twTimeout = setTimeout(tick, 38);
+      } else {
+        charIndex--;
+        twEl.innerHTML = current.substring(0, charIndex) + cursor + keepSuffix;
+        if (charIndex === deleteTarget) {
+          isDeleting    = false;
+          sentenceIndex = (sentenceIndex + 1) % sentences.length;
+          twTimeout     = setTimeout(tick, 100);
+          return;
+        }
+        twTimeout = setTimeout(tick, 19);
       }
     }
-    pg.updatePixels();
-    p.image(pg, 0, 0, p.width, p.height);
-  };
+    tick();
+  }
 
-  p.windowResized = function() {
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
-    buildBuffer();
-  };
-}, 'sketch');
+  function stopTypewriter() {
+    clearTimeout(twTimeout);
+    twTimeout = null;
+    twEl.innerHTML = '';
+  }
+
+  // --- Overlay ---
+  var overlay = document.getElementById('about-overlay');
+
+  function openAbout(e) {
+    e.preventDefault();
+    overlay.classList.add('is-open');
+    startTypewriter();
+  }
+
+  function closeAbout() {
+    overlay.classList.remove('is-open');
+    stopTypewriter();
+  }
+
+  document.getElementById('about-btn').addEventListener('click', function (e) {
+    overlay.classList.contains('is-open') ? closeAbout() : openAbout(e);
+  });
+
+  overlay.addEventListener('click', closeAbout);
+
+  // --- p5 sketch ---
+  new p5(function (p) {
+    var pg;
+    var stars = [];
+    var SCALE = 5;
+    var NUM_STARS = 120;
+    var dx, dy;
+
+    p.setup = function () {
+      var c = p.createCanvas(p.windowWidth, p.windowHeight);
+      c.parent('sketch');
+      var angle = p.random(p.TWO_PI);
+      dx = p.cos(angle);
+      dy = p.sin(angle);
+      buildBuffer();
+      spawnStars();
+    };
+
+    function buildBuffer() {
+      pg = p.createGraphics(Math.ceil(p.width / SCALE), Math.ceil(p.height / SCALE));
+      pg.pixelDensity(1);
+    }
+
+    function spawnStars() {
+      stars = [];
+      for (var i = 0; i < NUM_STARS; i++) {
+        stars.push({
+          nx: p.random(1),
+          ny: p.random(1),
+          r: p.random(0.5, 2.0),
+          baseAlpha: p.random(160, 230),
+          twinkle: p.random(0.0005, 0.0016),
+          phase: p.random(p.TWO_PI),
+          depth: p.random(0.5, 1.0),
+        });
+      }
+    }
+
+    function hsbToRgb(h, s, b) {
+      var i = Math.floor(h * 6);
+      var f = h * 6 - i;
+      var p0 = b * (1 - s);
+      var q = b * (1 - f * s);
+      var tv = b * (1 - (1 - f) * s);
+      var r, g, bl;
+      switch (i % 6) {
+        case 0: r = b; g = tv; bl = p0; break;
+        case 1: r = q; g = b; bl = p0; break;
+        case 2: r = p0; g = b; bl = tv; break;
+        case 3: r = p0; g = q; bl = b; break;
+        case 4: r = tv; g = p0; bl = b; break;
+        case 5: r = b; g = p0; bl = q; break;
+      }
+      return [(r * 255) | 0, (g * 255) | 0, (bl * 255) | 0];
+    }
+
+    p.draw = function () {
+      var ms = p.millis();
+      var t = ms * 0.00011;
+
+      p.background(10, 8, 18);
+
+      p.noStroke();
+      for (var i = 0; i < stars.length; i++) {
+        var s = stars[i];
+        var flicker = p.sin(ms * s.twinkle + s.phase);
+        var alpha = p.map(flicker, -1, 1, s.baseAlpha * 0.5, s.baseAlpha) * s.depth;
+        p.fill(235, 235, 255, alpha);
+        p.ellipse(s.nx * p.width, s.ny * p.height, s.r * 2, s.r * 2);
+      }
+
+      pg.loadPixels();
+      for (var y = 0; y < pg.height; y++) {
+        for (var x = 0; x < pg.width; x++) {
+          var nx = x / pg.width;
+          var ny = y / pg.height;
+
+          var swell = p.noise(nx * 2.0 + t * 0.65 * dx, ny * 2.0 + t * 0.65 * dy);
+          var chop = p.noise(nx * 4.5 + 50 + t * 0.5 * dx, ny * 4.5 + 50 + t * 0.5 * dy);
+          var shimmer = p.noise(nx * 10 + 100 + t * 2.2 * dx, ny * 10 + 100 + t * 2.2 * dy);
+
+          var hue = p.map(swell, 0, 1, 0.48, 0.70);
+          var sat = p.map(chop, 0, 1, 0.52, 0.94);
+          var bri = p.map(swell * 0.55 + chop * 0.3 + shimmer * 0.15, 0, 1, 0.12, 0.80);
+
+          if (shimmer > 0.76) {
+            var gv = p.map(shimmer, 0.76, 1, 0, 1);
+            bri = p.lerp(bri, 0.96, gv * gv);
+            sat = p.lerp(sat, 0.15, gv * gv);
+          }
+
+          var alpha = (p.map(bri, 0.12, 0.80, 170, 248)) | 0;
+
+          var rgb = hsbToRgb(hue, sat, bri);
+          var idx = 4 * (y * pg.width + x);
+          pg.pixels[idx] = rgb[0];
+          pg.pixels[idx + 1] = rgb[1];
+          pg.pixels[idx + 2] = rgb[2];
+          pg.pixels[idx + 3] = alpha;
+        }
+      }
+      pg.updatePixels();
+      p.image(pg, 0, 0, p.width, p.height);
+    };
+
+    p.windowResized = function () {
+      p.resizeCanvas(p.windowWidth, p.windowHeight);
+      buildBuffer();
+    };
+  }, 'sketch');
 </script>
