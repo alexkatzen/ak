@@ -3,6 +3,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  sketches:
+    output: true
+    permalink: /:title/
 
 sass:
   sass_dir: _sass

@@ -3,5 +3,8 @@
   {% include head.html %}
   <body>
     {{ content }}
+    {% if page.previous %}
+    <a class="sketch-prev-link" href="{{ page.previous }}">← previous</a>
+    {% endif %}
   </body>
 </html>
