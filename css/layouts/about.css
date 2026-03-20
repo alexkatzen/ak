@@ -63,13 +63,9 @@ a.page-nav-link:hover {
 
 a.sketch-prev-link {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  font-family: "univers";
-  font-size: 1.05rem;
-  letter-spacing: -.04em;
+  font-size: 2rem;
   text-decoration: none;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .75);
   transition: color .4s;
   z-index: 10;
 }
