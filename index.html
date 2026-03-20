@@ -75,12 +75,15 @@ layout: about
       "Alex is obsessed with golf.",
       "Alex is struggling at golf.",
       "Alex is a high-agency human.",
-      "Alex creates solutions.",
+      "Alex is a CC🪦C alumnus.",
+      "Alex is a sleep enthusiast.",
       "Alex is a learner.",
       "Alex is a designer, builder, and maker.",
-      "Alex crafts user experiences.",
-      "Alex designs at the intersection of brand and user experience."
     ];
+    for (var s = sentences.length - 1; s > 0; s--) {
+      var r = Math.floor(Math.random() * (s + 1));
+      var t = sentences[s]; sentences[s] = sentences[r]; sentences[r] = t;
+    }
     var cursor        = '<span class="typewriter-cursor"></span>';
     var sentenceIndex = 0;
     var charIndex     = 0;
