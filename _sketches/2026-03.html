@@ -1,12 +1,12 @@
 ---
 layout: about
-prev_sketch:
+prev_sketch: /2026-02/
 ---
 
 <style>
   body {
     margin: 0;
-    background-color: #08060f;
+    background-color: #0a0f1e;
     overflow: hidden;
   }
 
@@ -14,7 +14,6 @@ prev_sketch:
     display: block;
   }
 
-  /* About overlay */
   #about-overlay {
     position: fixed;
     inset: 0;
@@ -36,7 +35,6 @@ prev_sketch:
     left: 2rem;
     right: 2rem;
     pointer-events: none;
-    /* clicks fall through to overlay for dismissal */
   }
 
   .overlay-content h1 {
@@ -53,14 +51,13 @@ prev_sketch:
     text-decoration: none;
     pointer-events: auto;
   }
-
 </style>
 
 <a id="about-btn" class="page-nav-link" href="#">about</a>
 
 <div id="about-overlay">
   <div class="overlay-content">
-    <h1><a href="mailto:hello@alexkatzen.com?subject=👋 Hello"><span class="typewriter-text"></span></a></h1>
+    <h1><a href="mailto:hello@alexkatzen.com?subject=Hello"><span class="typewriter-text"></span></a></h1>
   </div>
 </div>
 
@@ -77,7 +74,6 @@ prev_sketch:
       "Alex is obsessed with golf.",
       "Alex is struggling at golf.",
       "Alex is a high-agency human.",
-      "Alex is a CC🪦C alumnus.",
       "Alex is a sleep enthusiast.",
       "Alex is a learner.",
       "Alex is a designer, builder, and maker.",
@@ -189,83 +185,116 @@ prev_sketch:
 
   overlay.addEventListener('click', closeAbout);
 
-  // --- p5 sketch: starfield ---
+  // --- p5 sketch: nebula ---
   new p5(function (p) {
+    var pg;
     var stars = [];
-    var NUM_STARS = 600;
-    var MAX_Z = 2000;
-    var SPEED = 0.6;
-    var cx, cy;
+    var SCALE = 5;
+    var NUM_STARS = 120;
+    var dx, dy;
 
     p.setup = function () {
       var c = p.createCanvas(p.windowWidth, p.windowHeight);
       c.parent('sketch');
-      cx = p.width / 2;
-      cy = p.height / 2;
-      spawnStars(true);
+      var angle = (p.random(1) > 0.5 ? 0 : p.PI) + p.random(-10, 10) * (p.PI / 180);
+      dx = p.cos(angle);
+      dy = p.sin(angle);
+      buildBuffer();
+      spawnStars();
     };
 
-    function makeStar(initial) {
-      var z = initial ? p.random(1, MAX_Z) : MAX_Z;
-      var half = Math.max(p.width, p.height) / 2;
-      return {
-        x: p.random(-half, half),
-        y: p.random(-half, half),
-        z: z,
-        pz: z,
-        twinkle: p.random(0.0008, 0.0025),
-        phase: p.random(p.TWO_PI),
-      };
+    function buildBuffer() {
+      pg = p.createGraphics(Math.ceil(p.width / SCALE), Math.ceil(p.height / SCALE));
+      pg.pixelDensity(1);
     }
 
-    function spawnStars(initial) {
+    function spawnStars() {
       stars = [];
       for (var i = 0; i < NUM_STARS; i++) {
-        stars.push(makeStar(initial));
+        stars.push({
+          nx: p.random(1),
+          ny: p.random(1),
+          r: p.random(0.5, 2.0),
+          baseAlpha: p.random(160, 230),
+          twinkle: p.random(0.0005, 0.0016),
+          phase: p.random(p.TWO_PI),
+          depth: p.random(0.5, 1.0),
+        });
       }
+    }
+
+    function hsbToRgb(h, s, b) {
+      var i = Math.floor(h * 6);
+      var f = h * 6 - i;
+      var p0 = b * (1 - s);
+      var q = b * (1 - f * s);
+      var tv = b * (1 - (1 - f) * s);
+      var r, g, bl;
+      switch (i % 6) {
+        case 0: r = b; g = tv; bl = p0; break;
+        case 1: r = q; g = b; bl = p0; break;
+        case 2: r = p0; g = b; bl = tv; break;
+        case 3: r = p0; g = q; bl = b; break;
+        case 4: r = tv; g = p0; bl = b; break;
+        case 5: r = b; g = p0; bl = q; break;
+      }
+      return [(r * 255) | 0, (g * 255) | 0, (bl * 255) | 0];
     }
 
     p.draw = function () {
-      p.background(8, 6, 15);
-      p.translate(cx, cy);
       var ms = p.millis();
+      var t = ms * 0.000020625;
 
+      p.background(6, 5, 12);
+
+      p.noStroke();
       for (var i = 0; i < stars.length; i++) {
         var s = stars[i];
-        s.pz = s.z;
-        s.z -= SPEED;
-
-        if (s.z <= 1) { stars[i] = makeStar(false); continue; }
-
-        var sx = (s.x / s.z) * cx * 2;
-        var sy = (s.y / s.z) * cy * 2;
-        var px = (s.x / s.pz) * cx * 2;
-        var py = (s.y / s.pz) * cy * 2;
-
-        if (sx < -cx - 2 || sx > cx + 2 || sy < -cy - 2 || sy > cy + 2) {
-          stars[i] = makeStar(false); continue;
-        }
-
-        var progress = 1 - s.z / MAX_Z;
-        var starSize = p.map(progress, 0, 1, 0.05, 1.4);
         var flicker = p.sin(ms * s.twinkle + s.phase);
-        var baseAlpha = p.map(progress, 0, 1, 15, 160);
-        var alpha = p.map(flicker, -1, 1, baseAlpha * 0.75, baseAlpha);
-
-        p.stroke(220, 225, 255, alpha * 0.2);
-        p.strokeWeight(starSize * 0.4);
-        p.line(px, py, sx, sy);
-
-        p.noStroke();
-        p.fill(235, 238, 255, alpha);
-        p.ellipse(sx, sy, starSize * 2, starSize * 2);
+        var alpha = p.map(flicker, -1, 1, s.baseAlpha * 0.5, s.baseAlpha) * s.depth;
+        p.fill(235, 235, 255, alpha);
+        p.ellipse(s.nx * p.width, s.ny * p.height, s.r * 2, s.r * 2);
       }
+
+      var yFreq = Math.max(1.0, pg.height / pg.width);
+
+      pg.loadPixels();
+      for (var y = 0; y < pg.height; y++) {
+        for (var x = 0; x < pg.width; x++) {
+          var nx = x / pg.width;
+          var ny = y / pg.height;
+
+          var swell = p.noise(nx * 2.0 + t * 0.65 * dx, ny * 2.0 * yFreq + t * 0.65 * dy);
+          var chop = p.noise(nx * 4.5 + 50 + t * 0.5 * dx, ny * 4.5 * yFreq + 50 + t * 0.5 * dy);
+          var shimmer = p.noise(nx * 10 + 100 + t * 2.2 * dx, ny * 10 * yFreq + 100 + t * 2.2 * dy);
+
+          var hue = p.map(swell, 0, 1, 0.58, 0.80);
+          var sat = p.map(chop, 0, 1, 0.35, 0.72);
+          var bri = p.map(swell * 0.55 + chop * 0.3 + shimmer * 0.15, 0, 1, 0.08, 0.60);
+
+          if (shimmer > 0.76) {
+            var gv = p.map(shimmer, 0.76, 1, 0, 1);
+            bri = p.lerp(bri, 0.96, gv * gv);
+            sat = p.lerp(sat, 0.15, gv * gv);
+          }
+
+          var alpha = (p.map(bri, 0.12, 0.80, 136, 198)) | 0;
+
+          var rgb = hsbToRgb(hue, sat, bri);
+          var idx = 4 * (y * pg.width + x);
+          pg.pixels[idx] = rgb[0];
+          pg.pixels[idx + 1] = rgb[1];
+          pg.pixels[idx + 2] = rgb[2];
+          pg.pixels[idx + 3] = alpha;
+        }
+      }
+      pg.updatePixels();
+      p.image(pg, 0, 0, p.width, p.height);
     };
 
     p.windowResized = function () {
       p.resizeCanvas(p.windowWidth, p.windowHeight);
-      cx = p.width / 2;
-      cy = p.height / 2;
+      buildBuffer();
     };
   }, 'sketch');
 </script>
