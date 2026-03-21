@@ -1,6 +1,6 @@
 ---
 layout: about
-prev_sketch: /2026-02/
+prev_sketch:
 ---
 
 <style>
@@ -245,9 +245,9 @@ prev_sketch: /2026-02/
 
     p.draw = function () {
       var ms = p.millis();
-      var t = ms * 0.00011;
+      var t = ms * 0.000020625;
 
-      p.background(10, 8, 18);
+      p.background(6, 5, 12);
 
       p.noStroke();
       for (var i = 0; i < stars.length; i++) {
@@ -268,9 +268,9 @@ prev_sketch: /2026-02/
           var chop = p.noise(nx * 4.5 + 50 + t * 0.5 * dx, ny * 4.5 + 50 + t * 0.5 * dy);
           var shimmer = p.noise(nx * 10 + 100 + t * 2.2 * dx, ny * 10 + 100 + t * 2.2 * dy);
 
-          var hue = p.map(swell, 0, 1, 0.48, 0.70);
-          var sat = p.map(chop, 0, 1, 0.52, 0.94);
-          var bri = p.map(swell * 0.55 + chop * 0.3 + shimmer * 0.15, 0, 1, 0.12, 0.80);
+          var hue = p.map(swell, 0, 1, 0.58, 0.80);
+          var sat = p.map(chop, 0, 1, 0.35, 0.72);
+          var bri = p.map(swell * 0.55 + chop * 0.3 + shimmer * 0.15, 0, 1, 0.08, 0.60);
 
           if (shimmer > 0.76) {
             var gv = p.map(shimmer, 0.76, 1, 0, 1);
