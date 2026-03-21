@@ -45,8 +45,8 @@
 
 a.page-nav-link {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
   font-family: "univers";
   font-size: 1.05rem;
   letter-spacing: -.04em;
@@ -59,6 +59,11 @@ a.page-nav-link {
 a.page-nav-link:hover {
   color: white;
   transition: all .2s;
+}
+
+a.page-nav-link.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 a.sketch-prev-link {

@@ -172,14 +172,18 @@ prev_sketch:
   // --- Overlay ---
   var overlay = document.getElementById('about-overlay');
 
+  var aboutBtn = document.getElementById('about-btn');
+
   function openAbout(e) {
     e.preventDefault();
     overlay.classList.add('is-open');
+    aboutBtn.classList.add('is-hidden');
     startTypewriter();
   }
 
   function closeAbout() {
     overlay.classList.remove('is-open');
+    aboutBtn.classList.remove('is-hidden');
     stopTypewriter();
   }
 
@@ -192,7 +196,11 @@ prev_sketch:
   // --- p5 sketch: starfield ---
   new p5(function (p) {
     var stars = [];
-    var NUM_STARS = 600;
+    var cores = navigator.hardwareConcurrency || 2;
+    var isMobile = window.innerWidth < 768;
+    var NUM_STARS = isMobile
+      ? (cores >= 6 ? 2500 : 1500)
+      : (cores >= 8 ? 8000 : cores >= 4 ? 5000 : 3000);
     var MAX_Z = 2000;
     var SPEED = 0.6;
     var cx, cy;
@@ -215,6 +223,8 @@ prev_sketch:
         pz: z,
         twinkle: p.random(0.0008, 0.0025),
         phase: p.random(p.TWO_PI),
+        bright: p.random(1) > 0.5,
+        large: p.random(1) > 0.99,
       };
     }
 
@@ -247,9 +257,9 @@ prev_sketch:
         }
 
         var progress = 1 - s.z / MAX_Z;
-        var starSize = p.map(progress, 0, 1, 0.05, 1.4);
+        var starSize = p.map(progress, 0, 1, 0.05, 1.4) * (s.large ? 1.5 : 1.0);
         var flicker = p.sin(ms * s.twinkle + s.phase);
-        var baseAlpha = p.map(progress, 0, 1, 15, 160);
+        var baseAlpha = p.map(progress, 0, 1, 15, s.bright ? 255 : 160);
         var alpha = p.map(flicker, -1, 1, baseAlpha * 0.75, baseAlpha);
 
         p.stroke(220, 225, 255, alpha * 0.2);
