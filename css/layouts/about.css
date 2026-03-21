@@ -51,7 +51,7 @@ a.page-nav-link {
   font-size: 1.05rem;
   letter-spacing: -.04em;
   text-decoration: none;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .25);
   transition: color .4s;
   z-index: 10;
 }
