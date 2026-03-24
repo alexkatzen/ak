@@ -73,19 +73,41 @@ prev_sketch:
   var twEl = document.querySelector('.typewriter-text');
 
   function startTypewriter() {
-    var sentences = [
+    var golfPair = [
+      "Alex is obsessed with golf.",
       "Alex is struggling at golf.",
+    ];
+    var otherSentences = [
       "Alex is a high-agency human.",
       "Alex is a CCAC alumnus.",
       "Alex is a communications designer.",
+      "Alex is a Bay Area native.",
       "Alex is a graphic designer.",
       "Alex is a product designer.",
       "Alex is a creative.",
     ];
-    for (var s = sentences.length - 1; s > 0; s--) {
-      var r = Math.floor(Math.random() * (s + 1));
-      var t = sentences[s]; sentences[s] = sentences[r]; sentences[r] = t;
+
+    function buildCycle(avoid) {
+      var pool = otherSentences.slice();
+      for (var i = pool.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+      }
+      var pair = Math.random() < 0.5 ? [golfPair[0], golfPair[1]] : [golfPair[1], golfPair[0]];
+      var pos = Math.floor(Math.random() * (pool.length + 1));
+      var cycle = pool.slice(0, pos).concat(pair).concat(pool.slice(pos));
+      if (avoid) {
+        for (var k = 1; k < cycle.length; k++) {
+          if (cycle[k] !== avoid) {
+            var tmp2 = cycle[0]; cycle[0] = cycle[k]; cycle[k] = tmp2;
+            break;
+          }
+        }
+      }
+      return cycle;
     }
+
+    var sentences = buildCycle(null);
     var cursor        = '<span class="typewriter-cursor"></span>';
     var mobile        = window.innerWidth < 768;
     var sentenceIndex = 0;
@@ -124,15 +146,7 @@ prev_sketch:
         twEl.innerHTML = current.substring(0, charIndex) + cursor + keepSuffix;
         if (charIndex === typeTarget) {
           if ((sentenceIndex + 1) % sentences.length === 0) {
-            var last = sentences[sentenceIndex];
-            for (var sr = sentences.length - 1; sr > 0; sr--) {
-              var rr = Math.floor(Math.random() * (sr + 1));
-              var tr = sentences[sr]; sentences[sr] = sentences[rr]; sentences[rr] = tr;
-            }
-            if (sentences[0] === last && sentences.length > 1) {
-              var sw = Math.floor(Math.random() * (sentences.length - 1)) + 1;
-              var tmp = sentences[0]; sentences[0] = sentences[sw]; sentences[sw] = tmp;
-            }
+            sentences = buildCycle(sentences[sentenceIndex]);
           }
           var next = sentences[(sentenceIndex + 1) % sentences.length];
           var pLen = commonPrefixLen(current, next);
