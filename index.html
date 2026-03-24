@@ -74,13 +74,13 @@ prev_sketch:
 
   function startTypewriter() {
     var sentences = [
-      "Alex is obsessed with golf.",
       "Alex is struggling at golf.",
       "Alex is a high-agency human.",
-      "Alex is a CC🪦C alumnus.",
-      "Alex is a sleep enthusiast.",
-      "Alex is a learner.",
-      "Alex is a designer, builder, and maker.",
+      "Alex is a CCAC alumnus.",
+      "Alex is a communications designer.",
+      "Alex is a graphic designer.",
+      "Alex is a product designer.",
+      "Alex is a creative.",
     ];
     for (var s = sentences.length - 1; s > 0; s--) {
       var r = Math.floor(Math.random() * (s + 1));
@@ -105,20 +105,13 @@ prev_sketch:
       return i;
     }
 
-    function commonSuffixLen(a, b, pLen) {
-      var j = 0;
-      while (j < a.length - pLen && j < b.length - pLen &&
-             a[a.length - 1 - j] === b[b.length - 1 - j]) j++;
-      return j;
-    }
-
     function tick() {
       var current = sentences[sentenceIndex];
       if (isMovingBack || isMovingForward) {
         charIndex += isMovingForward ? 1 : -1;
         twEl.innerHTML = current.substring(0, charIndex) + cursor + current.substring(charIndex);
         if (charIndex === moveTarget) {
-          keepSuffix      = current.substring(charIndex);
+          keepSuffix      = '';
           isMovingBack    = false;
           isMovingForward = false;
           isDeleting      = true;
@@ -130,18 +123,28 @@ prev_sketch:
         charIndex++;
         twEl.innerHTML = current.substring(0, charIndex) + cursor + keepSuffix;
         if (charIndex === typeTarget) {
+          if ((sentenceIndex + 1) % sentences.length === 0) {
+            var last = sentences[sentenceIndex];
+            for (var sr = sentences.length - 1; sr > 0; sr--) {
+              var rr = Math.floor(Math.random() * (sr + 1));
+              var tr = sentences[sr]; sentences[sr] = sentences[rr]; sentences[rr] = tr;
+            }
+            if (sentences[0] === last && sentences.length > 1) {
+              var sw = Math.floor(Math.random() * (sentences.length - 1)) + 1;
+              var tmp = sentences[0]; sentences[0] = sentences[sw]; sentences[sw] = tmp;
+            }
+          }
           var next = sentences[(sentenceIndex + 1) % sentences.length];
           var pLen = commonPrefixLen(current, next);
-          var sLen = commonSuffixLen(current, next, pLen);
           deleteTarget = pLen;
-          moveTarget   = current.length - sLen;
-          typeTarget   = next.length - sLen;
+          moveTarget   = current.length;
+          typeTarget   = next.length;
+          keepSuffix   = '';
           if (charIndex > moveTarget) {
             isMovingBack = true;
           } else if (charIndex < moveTarget) {
             isMovingForward = true;
           } else {
-            keepSuffix = current.substring(moveTarget);
             isDeleting = true;
           }
           twTimeout = setTimeout(tick, 2800);
