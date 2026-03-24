@@ -57,7 +57,7 @@ a.page-nav-link {
 }
 
 a.page-nav-link:hover {
-  color: white;
+  color: #f5d84e;
   transition: all .2s;
 }
 

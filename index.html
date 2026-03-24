@@ -127,13 +127,19 @@ prev_sketch:
       return i;
     }
 
+    function commonWordSuffixLen(a, b) {
+      var wa = a.split(' '), wb = b.split(' '), n = 0;
+      while (n < wa.length && n < wb.length && wa[wa.length - 1 - n] === wb[wb.length - 1 - n]) n++;
+      return n === 0 ? 0 : wa.slice(wa.length - n).join(' ').length;
+    }
+
     function tick() {
       var current = sentences[sentenceIndex];
       if (isMovingBack || isMovingForward) {
         charIndex += isMovingForward ? 1 : -1;
         twEl.innerHTML = current.substring(0, charIndex) + cursor + current.substring(charIndex);
         if (charIndex === moveTarget) {
-          keepSuffix      = '';
+          keepSuffix      = current.substring(charIndex);
           isMovingBack    = false;
           isMovingForward = false;
           isDeleting      = true;
@@ -150,15 +156,16 @@ prev_sketch:
           }
           var next = sentences[(sentenceIndex + 1) % sentences.length];
           var pLen = commonPrefixLen(current, next);
+          var sLen = commonWordSuffixLen(current, next);
           deleteTarget = pLen;
-          moveTarget   = current.length;
-          typeTarget   = next.length;
-          keepSuffix   = '';
+          moveTarget   = current.length - sLen;
+          typeTarget   = next.length - sLen;
           if (charIndex > moveTarget) {
             isMovingBack = true;
           } else if (charIndex < moveTarget) {
             isMovingForward = true;
           } else {
+            keepSuffix = current.substring(moveTarget);
             isDeleting = true;
           }
           twTimeout = setTimeout(tick, 2800);
