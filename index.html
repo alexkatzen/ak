@@ -73,38 +73,46 @@ prev_sketch:
   var twEl = document.querySelector('.typewriter-text');
 
   function startTypewriter() {
-    var golfPair = [
-      "Alex is obsessed with golf.",
-      "Alex is struggling at golf.",
+    var pairs = [
+      ["Alex is obsessed with golf.", "Alex is struggling at golf."],
+      ["Alex is a graphic designer.", "Alex is a product designer.", "Alex is a communications designer."],
+      ["Alex has become a morning chronotype.", "It is probably past Alex's bedtime."],
+      ["Alex is still figuring it out.", "Alex has figured it out.", "Alex was wrong."],
     ];
-    var otherSentences = [
+    var singles = [
       "Alex is a high-agency human.",
       "Alex is a CCAC alumnus.",
-      "Alex is a communications designer.",
       "Alex is a Bay Area native.",
-      "Alex is a graphic designer.",
-      "Alex is a product designer.",
       "Alex is a creative.",
+      "Alex should be drawing.",
+      "Alex is powered by black coffee.",
+      "Alex is aggressively mediocre at chess."
     ];
 
     function buildCycle(avoid) {
-      var pool = otherSentences.slice();
+      var pool = singles.slice();
       for (var i = pool.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
       }
-      var pair = Math.random() < 0.5 ? [golfPair[0], golfPair[1]] : [golfPair[1], golfPair[0]];
-      var pos = Math.floor(Math.random() * (pool.length + 1));
-      var cycle = pool.slice(0, pos).concat(pair).concat(pool.slice(pos));
+      for (var p = 0; p < pairs.length; p++) {
+        var group = pairs[p].slice();
+        for (var g = group.length - 1; g > 0; g--) {
+          var h = Math.floor(Math.random() * (g + 1));
+          var tg = group[g]; group[g] = group[h]; group[h] = tg;
+        }
+        var pos = Math.floor(Math.random() * (pool.length + 1));
+        pool = pool.slice(0, pos).concat(group).concat(pool.slice(pos));
+      }
       if (avoid) {
-        for (var k = 1; k < cycle.length; k++) {
-          if (cycle[k] !== avoid) {
-            var tmp2 = cycle[0]; cycle[0] = cycle[k]; cycle[k] = tmp2;
+        for (var k = 1; k < pool.length; k++) {
+          if (pool[k] !== avoid) {
+            var tmp2 = pool[0]; pool[0] = pool[k]; pool[k] = tmp2;
             break;
           }
         }
       }
-      return cycle;
+      return pool;
     }
 
     var sentences = buildCycle(null);
@@ -119,6 +127,7 @@ prev_sketch:
     var deleteTarget  = 0;
     var keepSuffix    = '';
     var typeTarget    = sentences[0].length;
+    var currentSentence = sentences[0];
     twEl.innerHTML    = '';
 
     function commonPrefixLen(a, b) {
@@ -134,7 +143,7 @@ prev_sketch:
     }
 
     function tick() {
-      var current = sentences[sentenceIndex];
+      var current = currentSentence;
       if (isMovingBack || isMovingForward) {
         charIndex += isMovingForward ? 1 : -1;
         twEl.innerHTML = current.substring(0, charIndex) + cursor + current.substring(charIndex);
@@ -152,7 +161,7 @@ prev_sketch:
         twEl.innerHTML = current.substring(0, charIndex) + cursor + keepSuffix;
         if (charIndex === typeTarget) {
           if ((sentenceIndex + 1) % sentences.length === 0) {
-            sentences = buildCycle(sentences[sentenceIndex]);
+            sentences = buildCycle(current);
           }
           var next = sentences[(sentenceIndex + 1) % sentences.length];
           var pLen = commonPrefixLen(current, next);
@@ -173,14 +182,15 @@ prev_sketch:
         }
         twTimeout = setTimeout(tick, mobile ? 70 : 38);
       } else {
-        charIndex--;
-        twEl.innerHTML = current.substring(0, charIndex) + cursor + keepSuffix;
         if (charIndex === deleteTarget) {
-          isDeleting    = false;
-          sentenceIndex = (sentenceIndex + 1) % sentences.length;
-          twTimeout     = setTimeout(tick, 100);
+          isDeleting      = false;
+          sentenceIndex   = (sentenceIndex + 1) % sentences.length;
+          currentSentence = sentences[sentenceIndex];
+          twTimeout       = setTimeout(tick, 100);
           return;
         }
+        charIndex--;
+        twEl.innerHTML = current.substring(0, charIndex) + cursor + keepSuffix;
         twTimeout = setTimeout(tick, mobile ? 35 : 19);
       }
     }
