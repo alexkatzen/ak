@@ -258,7 +258,7 @@ layout: about
 
     // Burst shapes with equal odds of being picked; smiley-face is rolled separately
     // and much more rarely (see explode()).
-    var REGULAR_STYLES = ["peony", "willow", "crackle", "crossette", "strobe", "palm"];
+    var REGULAR_STYLES = ["peony", "willow", "crackle", "crossette", "strobe", "palm", "encore"];
 
     function computeGrid() {
       COLS = Math.max(1, Math.floor(p.width / CELL_W));
@@ -380,6 +380,16 @@ layout: about
       var palm = style === "palm";
       var footAt = palm ? maxLife * (0.22 + Math.random() * 0.1) : 0;
 
+      // ENCORE: every star of this style burns out completely, goes dark for a beat
+      // (darkGapDuration, see the inDarkGap handling in updateSim), then relights and
+      // burns a second, much shorter life while blinking rapidly (encoreActive,
+      // rendered in drawSim) instead of just fading out once.
+      var encoreEligible = style === "encore";
+      var darkGapDuration = encoreEligible ? 0.15 + Math.random() * 0.25 : 0;
+      var encoreMaxLife = encoreEligible ? 0.4 + Math.random() * 0.4 : 0;
+      var encoreRate = encoreEligible ? 10 + Math.random() * 6 : 0; // blinks per second
+      var encorePhase = Math.random();
+
       particles.push({
         x: x, y: y,
         vx: Math.cos(angle) * speed,
@@ -391,6 +401,9 @@ layout: about
         whiteflash: colorMode === "whiteflash",
         willow: style === "willow",
         palm: palm, footAt: footAt,
+        encoreEligible: encoreEligible, reignited: false,
+        inDarkGap: false, darkGapRemaining: 0, darkGapDuration: darkGapDuration,
+        encoreMaxLife: encoreMaxLife, encoreActive: false, encoreRate: encoreRate, encorePhase: encorePhase,
         trailTimer: 0,
         mode: "star",
       });
@@ -511,9 +524,11 @@ layout: about
       // thick fronds that each flare into a bright "foot" near the end (see spawnPalm())
       // strobe = a cascade of tight clusters scattered irregularly around the burst, each
       // dormant until its own delay elapses then popping into a bright flash (see
-      // spawnStrobeClusters()) Â· smiley-face = particles on a circle, with a small face
-      // riding inside (see spawnSmiley()) â only a 1% chance per shell, so it reads as a
-      // special surprise, not a regular shape
+      // spawnStrobeClusters()) Â· encore = explodes and decays normally, then every star
+      // goes completely dark for a beat and relights, blinking rapidly and trailing
+      // sparks as it burns down a second, shorter life Â· smiley-face = particles on a
+      // circle, with a small face riding inside (see spawnSmiley()) â only a 1% chance
+      // per shell, so it reads as a special surprise, not a regular shape
       var style = Math.random() < 0.01 ? "smiley-face" : REGULAR_STYLES[(Math.random() * REGULAR_STYLES.length) | 0];
 
       // --- COLOR MODE picked here (weighted 40/25/20/15) ---
@@ -611,6 +626,22 @@ layout: about
           continue;
         }
 
+        // ENCORE: once act one has fully burned out, the star goes completely dark and
+        // motionless for a short beat before relighting â see the life<=0 handling
+        // below for where inDarkGap gets set, and drawSim for how it stays invisible.
+        if (pt.inDarkGap) {
+          pt.darkGapRemaining -= dt;
+          if (pt.darkGapRemaining <= 0) {
+            pt.inDarkGap = false;
+            pt.reignited = true;
+            pt.life = pt.encoreMaxLife;
+            pt.maxLife = pt.encoreMaxLife;
+            pt.whiteflash = true;
+            pt.encoreActive = true;
+          }
+          continue;
+        }
+
         pt.vy += GRAVITY * pt.gravityScale * dt;
         // Quadratic (velocity-squared) drag: bleeds off speed fast while the star is
         // still moving fast, then tails off slowly once it's down to a gentle drift â
@@ -624,9 +655,10 @@ layout: about
         pt.x += pt.vx * dt; pt.y += pt.vy * dt;
         pt.life -= dt;
 
-        // WILLOW / PALM: both keep emitting trail sparks as they fall, which is what
-        // gives them their drooping, streak-like arms instead of a clean burst outline.
-        if (pt.willow || pt.palm) {
+        // WILLOW / PALM / ENCORE (blink phase): all three keep emitting trail sparks
+        // as they fall, which is what gives them their drooping, streak-like arms
+        // instead of a clean burst outline.
+        if (pt.willow || pt.palm || pt.encoreActive) {
           pt.trailTimer = (pt.trailTimer || 0) + dt;
           if (pt.trailTimer > 0.045 && pt.life > 0.2) {
             pt.trailTimer = 0;
@@ -651,6 +683,15 @@ layout: about
               whiteflash: false, mode: "star",
             });
           }
+        }
+
+        // ENCORE: act one has fully burned out â instead of removing the star, send it
+        // dark for a beat (handled at the top of this loop next frame) before it
+        // relights for act two.
+        if (pt.encoreEligible && !pt.reignited && pt.life <= 0) {
+          pt.inDarkGap = true;
+          pt.darkGapRemaining = pt.darkGapDuration;
+          continue;
         }
 
         if (pt.life <= 0 || pt.y > p.height + 30 || pt.x < -30 || pt.x > p.width + 30) {
@@ -685,6 +726,7 @@ layout: about
       for (var pi = 0; pi < particles.length; pi++) {
         var pt = particles[pi];
         if (pt.ignitionDelay > 0) continue; // still dormant, hasn't popped yet
+        if (pt.inDarkGap) continue; // ENCORE: completely dark during the beat before act two
 
         var b, l, s;
         if (pt.flash) {
@@ -712,6 +754,14 @@ layout: about
             var w = (b - 0.6) / 0.4;
             l = l + w * (94 - l);
             s = s * (1 - w * 0.8);
+          }
+          if (pt.encoreActive) {
+            // ENCORE: a rapid on/off blink layered on top of the fresh decay envelope
+            // â a square wave, not a smooth flicker, for that "blinking as it burns
+            // down a second time" read.
+            var cycle = (time * 0.001 * pt.encoreRate + pt.encorePhase) % 1;
+            b *= cycle < 0.5 ? 1 : 0.12;
+            if (b <= 0.02) continue;
           }
           if (pt.palm && pt.life <= pt.footAt) {
             // PALM FOOT: brightens toward a hot glowing tip as the frond nears the end
