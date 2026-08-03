@@ -224,7 +224,7 @@ layout: about
 
   // --- p5 sketch: ASCII fireworks ---
   // Ambient show only, ported from a standalone p5 sketch that also had HUD
-  // controls (play/pause, manual launch, shape-test buttons) and click-to-launch â
+  // controls (play/pause, manual launch, shape-test buttons) and click-to-launch —
   // none of that made the cut here, just the fireworks themselves.
   new p5(function (p) {
     var CHARSET = " .:-=+*#%@";
@@ -250,7 +250,7 @@ layout: about
     var maxParticles = 1800;
 
     // Curated hue pool for "mono"/"rainbow" shells, and pre-picked pairs for "bicolor"
-    // shells (see colorMode in explode()) â avoids the muddy yellow-green band of a
+    // shells (see colorMode in explode()) — avoids the muddy yellow-green band of a
     // fully random hue.
     var HUES = [0, 18, 32, 45, 330, 300, 275, 210, 190, 150, 170];
     var PAIR_HUES = [[0, 45], [210, 45], [330, 190], [275, 45], [150, 330], [190, 0]];
@@ -340,7 +340,7 @@ layout: about
         gravityScale = 0.75; dragK = 0.015;
         maxLife = 1.6 + Math.random() * 0.8;
       } else if (style === "crackle") {
-        // CRACKLE: real pyrotechnic "gold lace" effect â always gold (forced below,
+        // CRACKLE: real pyrotechnic "gold lace" effect — always gold (forced below,
         // overriding whatever color mode the shell rolled), and instead of fading smoothly
         // it flickers with rapid, sharp glitter flashes for its whole burn.
         maxLife = 1.5 + Math.random() * 0.9;
@@ -356,14 +356,14 @@ layout: about
         crossetteAt = maxLife * (0.55 + Math.random() * 0.2);
       } else if (style === "palm") {
         // PALM: fewer, thick drooping fronds (see explode()'s arm-cluster spawn) that
-        // each flare into a brilliant "foot" near the end of their arc â real palm shells
+        // each flare into a brilliant "foot" near the end of their arc — real palm shells
         // do this with a slower-burning composition at the star's core.
         gravityScale = 1.3; dragK = 0.009;
         maxLife = 2.2 + Math.random() * 1.0;
         sat = 70 + Math.random() * 20;
       }
       // PEONY: no branch above matches, so it just keeps the defaults set at the top
-      // of this function â a plain round burst with no extra physics or effects.
+      // of this function — a plain round burst with no extra physics or effects.
 
       // COLOR MODE TYPES: whiteflash/rainbow tweak the star here; mono/bicolor are resolved
       // up in explode() (hueA/hueB) before makeStar() is ever called.
@@ -471,8 +471,8 @@ layout: about
 
     // STROBE: instead of one smooth burst, the shell is built from tight clusters
     // scattered irregularly around the burst (random angle + radius, not an even
-    // sphere). Clusters are grouped into waves â every cluster in a wave shares
-    // (almost) the same ignitionDelay so several pop together at once â and the
+    // sphere). Clusters are grouped into waves — every cluster in a wave shares
+    // (almost) the same ignitionDelay so several pop together at once — and the
     // waves themselves are staggered across the shell's life so groups of flashes
     // cascade in like separate volleys instead of one uniform twinkle.
     function spawnStrobeClusters(x, y, baseSpeed, colorMode, hueA, hueB, sizeFactor) {
@@ -502,14 +502,14 @@ layout: about
           var hue = (baseHue + (Math.random() - 0.5) * 26 + 360) % 360;
 
           // Per-cluster intensity: some pops are small quick blips, others bigger,
-          // brighter, and slightly longer â so the cascade doesn't read as one flash
+          // brighter, and slightly longer — so the cascade doesn't read as one flash
           // copy-pasted over and over.
           var intensity = 0.65 + Math.random() * 0.9;
 
           var starsInCluster = Math.max(2, Math.round((3 + Math.random() * 3) * intensity));
           for (var j = 0; j < starsInCluster; j++) {
             var jitterAngle = Math.random() * Math.PI * 2;
-            var jitterSpeed = scale * (6 + Math.random() * 8) * intensity; // tight â reads as one flash point, not a spray
+            var jitterSpeed = scale * (6 + Math.random() * 8) * intensity; // tight — reads as one flash point, not a spray
             makeFlashStar(cx, cy, jitterAngle, jitterSpeed, hue, ignitionDelay, intensity);
           }
         }
@@ -518,22 +518,22 @@ layout: about
 
     function explode(x, y) {
       // --- BURST SHAPE picked here (equal odds among the regulars; smiley-face is a rare extra) ---
-      // peony = round burst in all directions Â· willow = drooping, trailing sparks
+      // peony = round burst in all directions · willow = drooping, trailing sparks
       // crackle = gold glitter "lace" that flickers instead of fading smoothly
-      // crossette = each star later snaps into a small 4-point "+" Â· palm = a handful of
+      // crossette = each star later snaps into a small 4-point "+" · palm = a handful of
       // thick fronds that each flare into a bright "foot" near the end (see spawnPalm())
       // strobe = a cascade of tight clusters scattered irregularly around the burst, each
       // dormant until its own delay elapses then popping into a bright flash (see
-      // spawnStrobeClusters()) Â· encore = explodes and decays normally, then every star
+      // spawnStrobeClusters()) · encore = explodes and decays normally, then every star
       // goes completely dark for a beat and relights, blinking rapidly and trailing
-      // sparks as it burns down a second, shorter life Â· smiley-face = particles on a
-      // circle, with a small face riding inside (see spawnSmiley()) â only a 1% chance
+      // sparks as it burns down a second, shorter life · smiley-face = particles on a
+      // circle, with a small face riding inside (see spawnSmiley()) — only a 1% chance
       // per shell, so it reads as a special surprise, not a regular shape
       var style = Math.random() < 0.01 ? "smiley-face" : REGULAR_STYLES[(Math.random() * REGULAR_STYLES.length) | 0];
 
       // --- COLOR MODE picked here (weighted 40/25/20/15) ---
-      // mono = one hue Â· bicolor = two hues from PAIR_HUES Â· whiteflash = white-hot core
-      // cooling to a hue Â· rainbow = every particle its own random hue
+      // mono = one hue · bicolor = two hues from PAIR_HUES · whiteflash = white-hot core
+      // cooling to a hue · rainbow = every particle its own random hue
       var roll = Math.random();
       var colorMode = roll < 0.4 ? "mono" : roll < 0.65 ? "bicolor" : roll < 0.85 ? "whiteflash" : "rainbow";
 
@@ -618,7 +618,7 @@ layout: about
       for (var i3 = particles.length - 1; i3 >= 0; i3--) {
         var pt = particles[i3];
 
-        // STROBE: a flash particle stays dormant â invisible, no physics, life frozen â
+        // STROBE: a flash particle stays dormant — invisible, no physics, life frozen —
         // until its cluster's ignitionDelay elapses, which is what produces the staggered
         // cascade of pops instead of everything igniting at once.
         if (pt.ignitionDelay > 0) {
@@ -627,7 +627,7 @@ layout: about
         }
 
         // ENCORE: once act one has fully burned out, the star goes completely dark and
-        // motionless for a short beat before relighting â see the life<=0 handling
+        // motionless for a short beat before relighting — see the life<=0 handling
         // below for where inDarkGap gets set, and drawSim for how it stays invisible.
         if (pt.inDarkGap) {
           pt.darkGapRemaining -= dt;
@@ -644,7 +644,7 @@ layout: about
 
         pt.vy += GRAVITY * pt.gravityScale * dt;
         // Quadratic (velocity-squared) drag: bleeds off speed fast while the star is
-        // still moving fast, then tails off slowly once it's down to a gentle drift â
+        // still moving fast, then tails off slowly once it's down to a gentle drift —
         // this is what gives the "shoots out fast, hangs and fades slowly" look.
         var speed = Math.hypot(pt.vx, pt.vy);
         if (speed > 0.01) {
@@ -683,9 +683,10 @@ layout: about
               whiteflash: false, mode: "star",
             });
           }
+          pt.life = 0; // retire the original star now that its 4 sparks have spawned
         }
 
-        // ENCORE: act one has fully burned out â instead of removing the star, send it
+        // ENCORE: act one has fully burned out — instead of removing the star, send it
         // dark for a beat (handled at the top of this loop next frame) before it
         // relights for act two.
         if (pt.encoreEligible && !pt.reignited && pt.life <= 0) {
@@ -710,7 +711,7 @@ layout: about
 
     function drawSim(time) {
       // Only clear the cells that actually got painted last frame, instead of the
-      // whole grid â most of the sky is empty at any given moment, so this (and the
+      // whole grid — most of the sky is empty at any given moment, so this (and the
       // matching draw loop below) skips scanning the tens of thousands of dark cells.
       for (var i = 0; i < touched.length; i++) {
         var idx = touched[i];
@@ -730,7 +731,7 @@ layout: about
 
         var b, l, s;
         if (pt.flash) {
-          // STROBE: a punchy flash curve instead of a smooth fade â holds near-peak
+          // STROBE: a punchy flash curve instead of a smooth fade — holds near-peak
           // brightness through most of its short life, runs white-hot for the first
           // instant, then cuts off fast at the very end. Reads as a camera-flash pop
           // rather than a star gradually dimming.
@@ -757,7 +758,7 @@ layout: about
           }
           if (pt.encoreActive) {
             // ENCORE: a rapid on/off blink layered on top of the fresh decay envelope
-            // â a square wave, not a smooth flicker, for that "blinking as it burns
+            // — a square wave, not a smooth flicker, for that "blinking as it burns
             // down a second time" read.
             var cycle = (time * 0.001 * pt.encoreRate + pt.encorePhase) % 1;
             b *= cycle < 0.5 ? 1 : 0.12;
@@ -772,7 +773,7 @@ layout: about
           }
           if (pt.glitter) {
             // CRACKLE: rapid, sharp on/off sparkle layered on top of the overall fade
-            // envelope â most frames a glitter star sits nearly dark, occasionally
+            // envelope — most frames a glitter star sits nearly dark, occasionally
             // flashing bright gold.
             var spark = Math.random() < 0.3 ? 0.9 + Math.random() * 0.1 : 0.08 + Math.random() * 0.14;
             b *= spark;
@@ -781,7 +782,7 @@ layout: about
           }
         }
         // Only some flash particles get the cardinal-neighbor "+" glow (crossGlow,
-        // rolled once at spawn) â at flash brightness and cluster tightness, giving
+        // rolled once at spawn) — at flash brightness and cluster tightness, giving
         // every single one that symmetric glow makes the whole cascade read as
         // identical crosses instead of a mix of point-like and cross-like pops.
         splat(pt.x, pt.y, b, pt.hue, s, l, pt.mode === "star" && (!pt.flash || pt.crossGlow));
