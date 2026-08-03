@@ -3,22 +3,5 @@
   {% include head.html %}
   <body>
     {{ content }}
-    {% if page.prev_sketch %}
-    <a class="sketch-prev-link" href="{{ page.prev_sketch }}">&#x261C;</a>
-    <script>
-      (function() {
-        var el = document.querySelector('.sketch-prev-link');
-        var pad = 2; // rem
-        var rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
-        var elW = 40, elH = 40; // approx size in px
-        var maxX = window.innerWidth  - elW - pad * rem;
-        var maxY = window.innerHeight - elH - pad * rem;
-        var x = Math.random() * maxX;
-        var y = Math.random() * maxY;
-        el.style.left = x + 'px';
-        el.style.top  = y + 'px';
-      })();
-    </script>
-    {% endif %}
   </body>
 </html>
